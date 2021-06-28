@@ -1,0 +1,14 @@
+{
+  "name": "higby.io",
+  "version": "2.0.0",
+  "description": "A place for my ramblings.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Branden Higby",
+  "license": "MIT",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.12.1"
+  }
+}
