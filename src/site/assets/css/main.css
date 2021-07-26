@@ -1,0 +1,126 @@
+@charset "UTF-8";
+/*
+--------------------------------
+Site Theme
+(c) 2021 Branden Higby
+Released under the MIT license
+https://github.com/higby/higby.io/
+--------------------------------
+*/
+*:where(:not(iframe, canvas, img, svg, video, input[type="checkbox"], input[type="radio"]):not(svg *)) { all: unset; display: revert; }
+*, *::before, *::after { box-sizing: inherit; }
+::selection { background-color: #965ee580; color: #000; }
+.higby { color: #965EE5; font-style: normal; font-weight: bold; }
+html { box-sizing: border-box; scroll-behavior: smooth; }
+body { background-color: #fafafa; color: #323232; font-family: "Open Sans", sans-serif; font-size: 1.125rem; line-height: 1.5; margin: 1rem auto; max-width: 600px; }
+h1, h2, h3, h4, h5, h6, header { color: #191919; font-weight: bold; margin: 1rem 0; }
+h1 { font-size: 2.25rem; }
+h2 { font-size: 1.7858rem; }
+h3 { font-size: 1.4174rem; }
+h4 { font-size: 1.125rem; }
+h5 { font-size: .85rem; }
+h6 { font-size: .70rem; }
+header { text-align: center; }
+header h1 a:hover { text-decoration: none; }
+header a, nav a, footer a { color: #191919; }
+header a:hover, nav a:hover, footer a:hover { color: #965EE5; }
+nav ul, nav ol { border-left: 0.25rem #965EE5 solid; list-style: none; margin: 0; padding: 0 .5rem 0 .5rem; }
+nav ul ul, nav ul ol, nav ol ul, nav ol ol { border-left: 0.25rem solid #dedede; display: none; margin: 0 10px; padding-left: calc(.5rem + 2px); }
+nav ul li, nav ol li { margin: 0; }
+nav ul a, nav ol a { color: #191919; }
+nav ul a:hover, nav ol a:hover { color: #965EE5; }
+nav ul svg, nav ol svg { fill: #191919; vertical-align: text-top; }
+nav p { color: #191919; margin: .5rem 0; }
+nav table th, nav table td { border: none; padding: .25rem 0; text-align: left; vertical-align: text-top; }
+nav table td:first-of-type { text-align: right; white-space: nowrap; }
+nav table tr:nth-child(even) { background-color: inherit; }
+nav table time { color: #4b4b4b; }
+nav table time:after { content: "//"; margin: 0 .45rem; }
+nav table a { color: #965EE5; }
+footer { font-size: 1.25rem; }
+footer code { background-color: inherit; font-size: 1.25rem; padding: 0; }
+footer code a { color: #afafaf; }
+p, ol, ul, pre, blockquote, figure, hr, dl, table, form { margin: 1rem auto; }
+ol, ul { margin-left: 1.5rem; }
+ol ol ul, ul ol ul { margin-left: 0; }
+pre { background-color: #eeeeee; border-radius: .25rem; color: #474747; font-family: "Source Code Pro", monospace; font-size: 1rem; overflow: auto; padding: 1rem 1.5rem; white-space: pre; }
+pre code { border-radius: 0; }
+blockquote { border-left: 0.25rem solid #bdbdbd; color: #4b4b4b; padding: 0 0 0 1rem; }
+.note { border: none; color: #575757; display: list-item; font-size: 1rem; list-style-position: outside; list-style-type: ">"; margin-left: .65rem; }
+.note p { font-style: italic; }
+figure img { background-image: linear-gradient(65deg, #965EE5 25%, #eeeeee 25%, #eeeeee 50%, #965EE5 50%, #965EE5 75%, #eeeeee 75%, #eeeeee 100%); background-size: 35.31px 75.72px; }
+hr { border: 0; text-align: center; }
+hr:before { color: #323232; content: '-----'; font-size: 1.125rem; }
+dt { font-weight: bold; margin-top: 1rem; }
+dd { display: list-item; font-style: italic; list-style-type: '- '; margin-left: 1.25rem; }
+a { color: #965EE5; cursor: pointer; text-decoration: none; transition: color .5s; }
+a:hover { text-decoration: underline; }
+strong, b { font-weight: bold; }
+em, i { font-style: italic; }
+cite { display: block; margin: 1rem 0 0 0; }
+cite:before { content: "— "; font-size: 1rem; }
+mark { background-color: #ffe599; margin: 0 -.1rem; padding: 0 .1rem; }
+code { background-color: #eeeeee; border-radius: .25rem; color: #474747; font-family: "Source Code Pro", monospace; font-size: 1rem; padding: .2rem .4rem; }
+kbd { border: 1px solid #dedede; border-radius: .25rem; box-shadow: inset 0 -1px 0 #dedede; color: #474747; font-family: "Source Code Pro", monospace; font-size: 1rem; padding: .125rem .25rem; vertical-align: middle; }
+img, video, canvas { border-radius: .25rem; display: block; height: auto; width: 100%; }
+table { border-collapse: collapse; caption-side: bottom; text-align: center; width: 100%; }
+table thead { border-bottom: 0.125rem #bdbdbd solid; }
+table tfoot { border-top: 0.125rem #bdbdbd solid; color: #191919; }
+table tr:nth-child(even) { background-color: #eeeeee; }
+table th { color: #191919; font-weight: bold; }
+table td { padding: .125rem; text-align: center; }
+form { grid-gap: 1rem; background-color: #F1DFFD; border-radius: .25rem; display: grid; grid-template-columns: repeat(4, 1fr); padding: 1rem; }
+form legend { color: #191919; font-size: 1.7858rem; font-weight: bold; grid-column: span 4; margin: 1rem 0; }
+form legend + p { margin-top: 0; }
+form > legend { margin: 0; }
+form p { color: #191919; grid-column: span 4; }
+form fieldset { grid-column: span 4; }
+form fieldset legend { font-size: 1.4174rem; }
+form label { color: #191919; display: grid; font-weight: bold; grid-column: span 2; grid-template-columns: 1fr; }
+form label input, form label textarea { align-self: end; margin: 1rem 0 0 0; }
+form label p { font-weight: normal; grid-column: span 1; margin: 0; }
+form div label { display: inline; }
+form textarea { min-height: 6rem; resize: vertical; }
+[type=color], [type=date], [type=datetime], [type=datetime-local], [type=email], [type=month], [type=number], [type=password], [type=search], [type=tel], [type=text], [type=url], [type=week], [type=time], select, textarea { background-color: #fafafa; border-radius: .25rem; color: #323232; font-family: "Source Code Pro", monospace; font-size: 1rem; font-weight: normal; height: 2rem; padding: 0.5rem; }
+[type=color]:focus, [type=date]:focus, [type=datetime]:focus, [type=datetime-local]:focus, [type=email]:focus, [type=month]:focus, [type=number]:focus, [type=password]:focus, [type=search]:focus, [type=tel]:focus, [type=text]:focus, [type=url]:focus, [type=week]:focus, [type=time]:focus, select:focus, textarea:focus { box-shadow: 0px 0px 0px 2px #965EE5 inset; }
+button, input[type="button"], input[type="submit"], input[type="reset"] { -webkit-appearance: none; background-color: #965EE5; border-radius: .25rem; color: #fff; cursor: pointer; font-weight: bold; height: 2rem; min-width: 8rem; text-align: center; transition: background-color .3s; }
+button:hover, input[type="button"]:hover, input[type="submit"]:hover, input[type="reset"]:hover { background-color: #7444C4; }
+button:active, input[type="button"]:active, input[type="submit"]:active, input[type="reset"]:active { background-color: #CB9FF7; }
+input[readonly] { color: #191919; }
+input:disabled { background-color: #eeeeee; color: #afafaf; cursor: default; }
+input:disabled::placeholder { color: #afafaf; }
+input:disabled:hover { background-color: #eeeeee; }
+@media screen and (max-width: 700px) { body { margin-left: 2rem; margin-right: 2rem; } form { border-radius: 0; margin: 1rem -2rem; padding: 2rem; } label { grid-column: span 4; } button, input[type="button"], input[type="submit"], input[type="reset"] { grid-column: span 2; } }
+.footnotes { color: #575757; font-size: 1rem; }
+.footnotes:before { color: #323232; content: '----- Footnotes -----'; display: block; font-size: 1.125rem; text-align: center; }
+.footnote:before { content: "{"; }
+.footnote:after { content: "}"; }
+/*
+--------------------------------
+Syntax Styles
+--------------------------------
+*/
+.n, .na, .nb, .nc, .no, .nd, .ni, .ne, .nf, .nl, .nn, .nx, .py, .nt, .nv, .vc, .vg, .vi, .bp { color: #965EE5; }
+.c, .cm, .cp, .c1, .cs { font-style: italic; }
+.k, .kc, .kd, .kn, .kp, .kr, .kt { font-weight: bold; }
+/*
+--------------------------------
+Specific Styles
+--------------------------------
+*/
+header .higby { color: #191919; }
+.draft:after { color: #191919; content: " [draft]"; font-size: .88rem; font-style: normal; font-weight: bold; vertical-align: text-top; }
+.animating:hover { color: #191919; }
+.higby, i[class="65"] { color: #965EE5; font-style: normal; font-weight: bold; }
+.card img { border-radius: 4.75% / 3.5%; }
+.cardList, .boxList { grid-gap: 1.5rem; display: grid; grid-template-columns: repeat(3, 1fr); justify-content: space-between; text-align: center; }
+@media screen and (max-width: 700px) { .cardList, .boxList { grid-template-columns: repeat(2, 1fr); } }
+.imgHolder { background-color: #eeeeee; border-radius: .25rem; padding: .5rem; }
+.ball { display: block; left: .25rem; margin: 0 0 -2rem 0; position: relative; top: .25rem; width: 32px !important; z-index: 1; }
+/*
+--------------------------------
+Print Styles
+(They're gross, don't look)
+--------------------------------
+*/
+@media print { * { background: #fff !important; box-shadow: none !important; color: #000 !important; text-shadow: none !important; } *::before, *::after { background: #fff !important; box-shadow: none !important; color: #000 !important; font-family: "Open Sans", sans-serif; font-size: .85rem; text-shadow: none !important; } body, footer, code, blockquote { font-size: 1rem; } h1 { font-size: 2rem; } h2 { font-size: 1.5874rem; } h3 { font-size: 1.2599rem; } h2, h3 { page-break-after: avoid; } h2, h3, p { orphans: 3; widows: 3; } header { text-align: left; } header a { color: #000 !important; } header .higby { color: #965EE5 !important; } header h1 a { font-size: 1.25rem; } header a, nav a, footer a { text-decoration: none; } nav ul ul, nav ul ol, nav ol ul, nav ol ol { border-left: 0.25rem solid #bdbdbd; display: block; } nav a { color: #000 !important; } nav svg { display: none; } footer { border-top: 0.125rem #bdbdbd solid; padding-top: .5rem; page-break-inside: avoid; } footer code a { font-size: 1.125rem; } p code { margin: 0; padding: 0; } pre { border: 2px solid #bdbdbd; border-radius: .25rem; page-break-inside: avoid; white-space: pre-wrap !important; } blockquote { border-left: 0.25rem solid #bdbdbd; page-break-inside: avoid; } a { color: #965EE5 !important; text-decoration: underline; } a[href]::after { content: " (" attr(href) ")"; text-decoration: none; } a[href^="#"]::after, a[href^="/"]::after, a[href^="/*"]::after, a[href^="javascript:"]::after { content: ""; text-decoration: none; } abbr[title]::after { content: " (" attr(title) ")"; } thead { display: table-header-group; } tr, img { page-break-inside: avoid; } tr:not(:first-of-type) { border-top: 0.125rem #bdbdbd solid; } }
