@@ -1,5 +1,5 @@
 module.exports = {
   eleventyComputed: {
-    tags: data => ["petals", ...data.tags]
+    tags: data => [...data.tags, "petals"]
   }
 };

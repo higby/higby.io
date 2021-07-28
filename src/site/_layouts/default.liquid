@@ -24,8 +24,8 @@ permalink: "{{ page.fileSlug }}/"
       <header>
         <h1>{{ title }}</h1>
         <p><strong><time datetime="{{ page.date | date_to_xmlschema }}">{%- assign date_format = "%b %d, %Y" -%} {{ page.date | date: date_format }}</time></strong></p>
-        {{ content | toc }}
       </header>
+      {{ content | toc }}
       {{ content }}
       <footer>
         <a href="https://instagram.com/higby_" target="_blank" rel="noopener noreferrer">instagram</a><br>
