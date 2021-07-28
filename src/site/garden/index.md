@@ -1,11 +1,14 @@
 ---
 permalink: "/index.html"
+tags: petals
 ---
-Hi
-p pdsdsfdwefrecdcvdvcdhi branden
 
-[shera](/shera.html)
+<ul>
+{% for petal in collections.petals %}
+  {% unless petal.url == "/" %}
+  <li><a class="internal" href="{{ petal.url }}">{{ petal.data.title }}</a><br> {{ petal.data.tags }}</li>
+  {% endunless %}
+{% endfor %}
+</ul>
 
-[paleontology](/paleontology.html)
-
-[2019](/2019.html)
+{{ site.collections.all }}

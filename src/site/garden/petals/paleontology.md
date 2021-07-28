@@ -1,13 +1,16 @@
-# Paleontologists
+---
+title:  "Paleontology, Jobs, and Other Rambling Thoughts"
+date: 2020-04-12 00:05:00
+description: "An Essay Concerned With The Future"
+tags: essays
+---
 
 > **Note:** This was originally written for a Speech and Debate tournament and is in an early/ draft form. Please ignore any strange tenses or references to tournaments/ competitions.
-{: .note}
-
-{% image "assets/images/awkward.jpeg", "Me", "50%" %}
+{.note}
 
 Paleontologists are the first graders of the professional world.
 
-Remember the dinosaur kids back in elementary school? Reading time, they had the dinosaur encyclopedia, lunch, dinosaur lunchbox. And at sleepovers they busted out the dinosaur pajamas, and you got to watch Land Before Time.
+Remember the ==dinosaur== kids back in elementary school? Reading time, they had the dinosaur encyclopedia, lunch, dinosaur lunchbox. And at sleepovers they busted out the dinosaur pajamas, and you got to watch Land Before Time.
 
 And if we go back to career day, back when every first grader was thinking about job security, and whether or not they’ll be able to stay on track with paying their mortgage, y’know since, kids are so intrinsically aware of the housing market, we’ll see veterinarians, painters, basketball players. And of course the dinosaur kid: boots, pink button down, khaki shorts, and accompanied with their T-rex plush best friend.
 

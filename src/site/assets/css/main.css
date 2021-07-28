@@ -7,6 +7,7 @@ Released under the MIT license
 https://github.com/higby/higby.io/
 --------------------------------
 */
+
 *:where(:not(iframe, canvas, img, svg, video, input[type="checkbox"], input[type="radio"]):not(svg *)) { all: unset; display: revert; }
 *, *::before, *::after { box-sizing: inherit; }
 ::selection { background-color: #965ee580; color: #000; }
@@ -24,12 +25,13 @@ header { text-align: center; }
 header h1 a:hover { text-decoration: none; }
 header a, nav a, footer a { color: #191919; }
 header a:hover, nav a:hover, footer a:hover { color: #965EE5; }
+header nav { font-weight: normal; text-align: left; }
 nav ul, nav ol { border-left: 0.25rem #965EE5 solid; list-style: none; margin: 0; padding: 0 .5rem 0 .5rem; }
 nav ul ul, nav ul ol, nav ol ul, nav ol ol { border-left: 0.25rem solid #dedede; display: none; margin: 0 10px; padding-left: calc(.5rem + 2px); }
 nav ul li, nav ol li { margin: 0; }
 nav ul a, nav ol a { color: #191919; }
 nav ul a:hover, nav ol a:hover { color: #965EE5; }
-nav ul svg, nav ol svg { fill: #191919; vertical-align: text-top; }
+nav ul svg, nav ol svg { fill: #191919; display: inline; vertical-align: text-bottom; }
 nav p { color: #191919; margin: .5rem 0; }
 nav table th, nav table td { border: none; padding: .25rem 0; text-align: left; vertical-align: text-top; }
 nav table td:first-of-type { text-align: right; white-space: nowrap; }
@@ -40,7 +42,7 @@ nav table a { color: #965EE5; }
 footer { font-size: 1.25rem; }
 footer code { background-color: inherit; font-size: 1.25rem; padding: 0; }
 footer code a { color: #afafaf; }
-p, ol, ul, pre, blockquote, figure, hr, dl, table, form { margin: 1rem auto; }
+p, ol, ul, pre, blockquote, figure, figcaption, hr, dl, table, form { margin: 1rem auto; }
 ol, ul { margin-left: 1.5rem; }
 ol ol ul, ul ol ul { margin-left: 0; }
 pre { background-color: #eeeeee; border-radius: .25rem; color: #474747; font-family: "Source Code Pro", monospace; font-size: 1rem; overflow: auto; padding: 1rem 1.5rem; white-space: pre; }
@@ -49,6 +51,7 @@ blockquote { border-left: 0.25rem solid #bdbdbd; color: #4b4b4b; padding: 0 0 0 
 .note { border: none; color: #575757; display: list-item; font-size: 1rem; list-style-position: outside; list-style-type: ">"; margin-left: .65rem; }
 .note p { font-style: italic; }
 figure img { background-image: linear-gradient(65deg, #965EE5 25%, #eeeeee 25%, #eeeeee 50%, #965EE5 50%, #965EE5 75%, #eeeeee 75%, #eeeeee 100%); background-size: 35.31px 75.72px; }
+figure { color: #4b4b4b; font-style: italic; text-align: center; }
 hr { border: 0; text-align: center; }
 hr:before { color: #323232; content: '-----'; font-size: 1.125rem; }
 dt { font-weight: bold; margin-top: 1rem; }

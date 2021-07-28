@@ -1,5 +1,5 @@
 ---
-permalink: "{{ page.fileSlug }}.html"
+permalink: "{{ page.fileSlug }}/"
 ---
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -9,8 +9,11 @@ permalink: "{{ page.fileSlug }}.html"
     <link rel="author" href="/humans.txt"/>
     <link rel="icon" type="image/ico" href="/favicon.ico"/>
     <link rel="stylesheet" href="/assets/css/main.css"/>
-    <link rel="preconnect" href="https://fonts.gstatic.com"/>
-    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Source+Code+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <script src="/assets/js/core.js" defer></script>
+    <script src="/assets/js/main.js" defer></script>
     <title>Branden Higby</title>
   </head>
   <body>
@@ -18,7 +21,12 @@ permalink: "{{ page.fileSlug }}.html"
       <h1><a href="/" class="internal">Branden <i class="higby">Higby</i></a></h1>
     </header>
     <main>
-          {{ content | safe }}
+      <header>
+        <h1>{{ title }}</h1>
+        <p><strong><time datetime="{{ page.date | date_to_xmlschema }}">{%- assign date_format = "%b %d, %Y" -%} {{ page.date | date: date_format }}</time></strong></p>
+        {{ content | toc }}
+      </header>
+      {{ content }}
       <footer>
         <a href="https://instagram.com/higby_" target="_blank" rel="noopener noreferrer">instagram</a><br>
         <a href="https://github.com/higby" target="_blank" rel="noopener noreferrer">github</a><br>

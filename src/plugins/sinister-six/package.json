@@ -1,0 +1,16 @@
+{
+  "name": "sinister-six",
+  "version": "1.0.0",
+  "description": "",
+  "main": ".eleventy.js",
+  "author": "Branden Higby",
+  "license": "MIT",
+  "dependencies": {
+    "markdown-it": "^12.1.0",
+    "markdown-it-anchor": "^8.1.2",
+    "markdown-it-attrs": "^4.0.0",
+    "markdown-it-footnote": "^3.0.3",
+    "markdown-it-image-figures": "^1.2.0",
+    "markdown-it-mark": "^3.0.1"
+  }
+}
