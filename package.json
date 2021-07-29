@@ -4,7 +4,7 @@
   "description": "A place for my ramblings.",
   "main": "index.js",
   "scripts": {
-    "eleventy": "npx @11ty/eleventy --serve --watch",
+    "eleventy": "npx @11ty/eleventy --serve",
     "clean": "rimraf build",
     "start": "run-p clean eleventy"
   },

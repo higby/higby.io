@@ -1,6 +1,6 @@
 ---
 permalink: "/index.html"
-tags: petals
+tags: flowers
 ---
 
 [test outgoing link](https://shera.gay)
@@ -8,7 +8,7 @@ tags: petals
 {% capture order %}essays,poetry,collections,programming,misc{% endcapture %}
 {% assign order = order | split: "," %}
 
-{% capture allTags %}{% for post in collections.petals %}{{ post.data.tags[0] }}{% unless forloop.last == true %},{% endunless %}{% endfor %}{% endcapture %}
+{% capture allTags %}{% for post in collections.flowers %}{{ post.data.tags[0] }}{% unless forloop.last == true %},{% endunless %}{% endfor %}{% endcapture %}
 {% assign allTags = allTags | split: "," | uniq %}
 
 <nav>
@@ -23,14 +23,14 @@ tags: petals
       {{ tag | capitalize }}
     </th>
   </tr>
-  {% for petal in collections.petals %}
-  {% if petal.data.tags[0] == tag %}
+  {% for flower in collections.flowers %}
+  {% if flower.data.tags[0] == tag %}
   <tr>
     <td>
-      <time>{%- assign date_format = "%b %d, %Y" -%} {{ petal.date | date: date_format }}</time>
+      <time>{%- assign date_format = "%b %d, %Y" -%} {{ flower.date | date: date_format }}</time>
     </td>
     <td>
-      <a href="{{ petal.url }}" class="internal">{{ petal.data.title }}</a>
+      <a href="{{ flower.url }}" class="internal">{{ flower.data.title }}</a>
     </td>
   </tr>
   {% endif %}
@@ -41,3 +41,4 @@ tags: petals
   {% endfor %}
   {% endfor %}
   </table>
+</nav>

@@ -3,7 +3,7 @@ const markdownIt = require("markdown-it");
 /* The Sinister Six */
 const anchor = require('markdown-it-anchor');
 const attrs = require('markdown-it-attrs');
-const cite = require('./cite');
+const cite = require('./src/cite');
 const footnote = require("markdown-it-footnote");
 const figures = require('markdown-it-image-figures');
 const mark = require("markdown-it-mark");
