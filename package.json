@@ -2,7 +2,6 @@
   "name": "higby.io",
   "version": "3.0.0",
   "description": "A place for my ramblings.",
-  "main": "index.js",
   "scripts": {
     "eleventyServe": "npx @11ty/eleventy --serve",
     "eleventy": "npx @11ty/eleventy",
