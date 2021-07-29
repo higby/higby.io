@@ -4,9 +4,11 @@
   "description": "A place for my ramblings.",
   "main": "index.js",
   "scripts": {
-    "eleventy": "npx @11ty/eleventy --serve",
+    "eleventyServe": "npx @11ty/eleventy --serve",
+    "eleventy": "npx @11ty/eleventy",
     "clean": "rimraf build",
-    "start": "run-p clean eleventy"
+    "dev": "run-p clean eleventyServe",
+    "prod": "run-p clean eleventy"
   },
   "author": "Branden Higby",
   "license": "MIT",
