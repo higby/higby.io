@@ -3,11 +3,13 @@
   "version": "3.0.0",
   "description": "A place for my ramblings.",
   "scripts": {
-    "eleventy": "npx @11ty/eleventy --serve",
+    "eleventy-serve": "npx @11ty/eleventy --serve",
+    "eleventy": "npx @11ty/eleventy",
     "clean": "rimraf build",
-    "sass": "sass --no-source-map src/assets/css:build/assets/css --watch",
-    "start": "run-p clean eleventy sass",
-    "build": "rimraf build & npx @11ty/eleventy & sass --no-source-map src/assets/css:build/assets/css"
+    "sass-watch": "sass --no-source-map src/assets/css:build/assets/css --watch",
+    "sass": "sass --no-source-map src/assets/css:build/assets/css",
+    "start": "run-p clean eleventy-serve sass-watch",
+    "build": "run-p clean eleventy sass"
   },
   "author": "Branden Higby",
   "license": "MIT",
