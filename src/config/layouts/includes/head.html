@@ -1,6 +1,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="{% if description %}{{ description }}{% else %}{{ site.description }}{% endif %}"/>
+  <link rel="canonical" href="{{ site.url }}{{ page.filePathStem | remove: '_garden/_flowers/' }}">
   <link rel="author" href="/humans.txt"/>
   <link rel="icon" type="image/ico" href="/favicon.ico"/>
   <link rel="stylesheet" href="/assets/css/{{ stylesheet }}.css"/>
@@ -9,5 +11,5 @@
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Source+Code+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
   <script src="/assets/js/core.js" defer></script>
   <script src="/assets/js/main.js" defer></script>
-  <title>{{ site.name[0] }} {{ site.name[1] }}</title>
+  <title>{% if title %}{{ title }}{% else %}{{ site.name[0] }} {{ site.name[1] }}{% endif %}</title>
 </head>
