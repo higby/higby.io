@@ -137,13 +137,16 @@ footer {
     }
   }
 }
-p, ol, ul, pre, blockquote, figure, hr, dl, table, form {
+p, ol, ul, pre, blockquote, figure, figcaption, hr, dl, table, form {
   margin: 1rem auto;
 }
 ol, ul {
   margin-left: 1.5rem;
-  ol ul {
-    margin-left: 0;
+  li {
+    ol, ul {
+      margin: 0 0 0 1.5rem;
+
+    }
   }
 }
 pre {
@@ -181,6 +184,10 @@ figure {
     background-image: linear-gradient(65deg, $space 25%, $lightGrey 25%, $lightGrey 50%, $space 50%, $space 75%, $lightGrey 75%, $lightGrey 100%);
     background-size: 35.31px 75.72px;
   }
+}
+figcaption {
+  text-align: center;
+  font-style: italic;
 }
 hr {
   border: 0;
