@@ -8,6 +8,9 @@ tags: programming
 
 ## Me
 
+I am {{ site.name[0] }} {{ site.name[1] }}.
+{.higby}
+
 Email: {{ site.email }}
 
 Location: 🌧 ️Oregon
@@ -28,25 +31,13 @@ Favorite TV Shows:
 
 Favorite Number: <i class="65">65</i>
 
-## Thanks
-
-[MDN Web Docs](https://developer.mozilla.org/en-US/) - the best reference
-
-[w3schools](https://www.w3schools.com/) - for helping a kid get started
-
-[JSFiddle](https://jsfiddle.net/) - perfect for on the fly testing
-
-[Spotify](https://open.spotify.com/playlist/1u6D5NJ3MOzLeXZU3B6MU1?si=8ef03bee2c48407b) - ~99,342 minutes listened (updated 12/1/2020)
-
-## Site
-
-**`Major Revision 3`**
+## Site <code>Version 3</code>
 
 Inital Commit: `2020-04-10, 17:57:00 PDT`
 
 Last updated: `{{ "now" | technical }}`
 
-Built with [Jekyll](https://github.com/jekyll/jekyll) and hosted on [Netlify](https://www.netlify.com/)
+Built with [Eleventy](https://github.com/11ty/eleventy/) and hosted on [Netlify](https://www.netlify.com/)
 
 ### Fonts:
 
@@ -82,16 +73,55 @@ Built with [Jekyll](https://github.com/jekyll/jekyll) and hosted on [Netlify](ht
   - [normalize.css](https://github.com/necolas/normalize.css/) *probably*
   - [reseter.css](https://github.com/krishdevdb/reseter.css/)
 
+### Dependencies:
 
-### Jekyll Plugins:
+"cheerio": "^1.0.0-rc.10",
+"eleventy-plugin-safe-external-links": "^0.1.5",
+"js-beautify": "^1.14.0",
+"jsdom": "^16.6.0",
+"markdown-it": "^12.1.0",
+"markdown-it-anchor": "^8.1.2",
+"markdown-it-attrs": "^4.0.0",
+"markdown-it-footnote": "^3.0.3",
+"markdown-it-image-figures": "^1.2.0",
+"markdown-it-mark": "^3.0.1",
+"moment-timezone": "^0.5.33",
+"node-fetch": "^2.6.1",
+"npm-run-all": "^4.1.5",
+"rimraf": "^2.7.1",
+"sass": "^1.36.0",
+"sharp": "^0.28.3"
 
-- [Jekyll Liquify](https://github.com/gemfarmer/jekyll-liquify/)
-- [Jekyll Tagories](https://github.com/ashmaroli/jekyll-tagories/)
-- [Jekyll Target Blank](https://github.com/keithmifsud/jekyll-target-blank/)
-- [jekyll Tidy](https://github.com/apsislabs/jekyll-tidy/)
-- [Jekyll TOC](https://github.com/allejo/jekyll-toc)
+https://mtm.dev/eleventy-date-off-by-one-day
 
+https://www.npmjs.com/package/markdown-it-implicit-figures
+
+https://github.com/jdsteinbach/eleventy-plugin-toc
+
+https://github.com/dweidner/markdown-it-attribution/blob/master/dist/markdown-it-attribution.js
+
+https://github.com/liamfiddler/eleventy-plugin-lazyimages
+
+https://www.11ty.dev/docs/quicktips/not-found/
+
+https://github.com/pdehaan/11ty-dynamic-permalink-test
+
+https://github.com/kohrongying/11ty-blog-starter/tree/master/src
+
+https://todoist.com/showTask?id=4939346441
+
+https://todoist.com/showTask?id=4939346445
 
 ### Software:
 
 - Atom
+
+## Thanks
+
+[MDN Web Docs](https://developer.mozilla.org/en-US/) - the best reference
+
+[w3schools](https://www.w3schools.com/) - for helping a kid get started
+
+[JSFiddle](https://jsfiddle.net/) - perfect for on the fly testing
+
+[Spotify](https://open.spotify.com/playlist/1u6D5NJ3MOzLeXZU3B6MU1?si=8ef03bee2c48407b) - ~99,342 minutes listened (updated 12/1/2020)
