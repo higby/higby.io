@@ -1,0 +1,109 @@
+[
+  {
+    "name": "Metroid",
+    "species": "Araquanid",
+    "caught_as": "Araquanid",
+    "ot": "Branden",
+    "id_umber": 575059,
+    "level": 55,
+    "ball": "net",
+    "gender": "male",
+    "original_game": "Moon",
+    "type_1": "Water",
+    "type_2": "Bug",
+    "ability": "Water Bubble",
+    "nature": "Calm",
+    "catch_date": "12-10-2016",
+    "shiny": true
+  },
+  {
+    "name": "Ooze",
+    "species": "Crustle",
+    "caught_as": "Crustle",
+    "ot": "Higby",
+    "id_umber": 780101,
+    "level": 41,
+    "ball": "regular",
+    "gender": "female",
+    "original_game": "Sword",
+    "type_1": "Bug",
+    "type_2": "Rock",
+    "ability": "Sturdy",
+    "nature": "Gentle",
+    "catch_date": "11-26-2019",
+    "shiny": true
+  },
+  {
+    "name": "Lucky",
+    "species": "Malamar",
+    "caught_as": "Malamar",
+    "ot": "Higby",
+    "id_umber": 780101,
+    "level": [
+      "FILL IN"
+    ],
+    "ball": "regular",
+    "gender": "female",
+    "original_game": "Sword",
+    "type_1": "Dark",
+    "type_2": "Psychic",
+    "ability": "suction cups",
+    "nature": [
+      "FILL IN"
+    ],
+    "catch_date": [
+      "FILL IN"
+    ],
+    "shiny": true
+  },
+  {
+    "name": "Petrikov",
+    "species": "Zubat",
+    "caught_as": "Zubat",
+    "ot": [
+      "FILL IN"
+    ],
+    "id_umber": [
+      "FILL IN"
+    ],
+    "level": 11,
+    "ball": "regular",
+    "gender": "male",
+    "original_game": "Emerald",
+    "type_1": "Flying",
+    "type_2": "Poison",
+    "ability": [
+      "FILL IN"
+    ],
+    "nature": [
+      "FILL IN"
+    ],
+    "catch_date": "01-22-2021",
+    "shiny": true
+  },
+  {
+    "name": "Lemon Boy",
+    "species": "Bayleef",
+    "caught_as": "Chikorita",
+    "ot": [
+      "FILL IN"
+    ],
+    "id_umber": [
+      "FILL IN"
+    ],
+    "level": 11,
+    "ball": "regular",
+    "gender": "male",
+    "original_game": "Crystal",
+    "type_1": "Grass",
+    "type_2": "na",
+    "ability": [
+      "FILL IN"
+    ],
+    "nature": [
+      "FILL IN"
+    ],
+    "catch_date": "11-25-2020",
+    "shiny": true
+  }
+]

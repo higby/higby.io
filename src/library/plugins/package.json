@@ -1,8 +1,0 @@
-{
-  "name": "plugins",
-  "version": "1.0.0",
-  "description": "",
-  "main": ".eleventy.js",
-  "author": "Branden Higby",
-  "license": "MIT"
-}

@@ -1,0 +1,132 @@
+@use "imports/primary";
+@use "imports/variables" as *;
+
+/*
+--------------------------------
+DnD CSS
+Colors and Background Image Source:
+https://github.com/naturalcrit/homebrewery/
+--------------------------------
+*/
+
+$velvet: #9d0a0e;
+$gold: #c9ad6a;
+$tea: #e0e5c1;
+$tealeaf: #43443a;
+
+$background-color: #eee5ce;
+$lightGrey: $tea;
+$mediumGrey: $gold;
+$darkGrey: $gold;
+
+$primary-text: #302e29;
+$header-text: $velvet;
+$code-text:  #5f5f5f;
+$quote-text:  #727272;
+
+$primary-font: "Bookinsanity";
+$mono-font: "Bookinsanity";
+
+@font-face {
+  src: url("../fonts/Bookinsanity/Bookinsanity.otf") format("opentype");
+  font-family: "Bookinsanity";
+  font-weight: normal;
+}
+
+@font-face {
+  src: url("../fonts/Bookinsanity/Bookinsanity Bold.otf") format("opentype");
+  font-family: "Bookinsanity Bold";
+  font-style: normal;
+  font-weight: bold;
+}
+
+@font-face {
+  src: url("../fonts/Mr Eaves/Mr Eaves Small Caps.otf") format("opentype");
+  font-family: "Mr Eaves Small Caps";
+  font-weight: normal;
+}
+
+@font-face {
+  src: url("../fonts/Scaly Sans Caps/Scaly Sans Caps.otf") format("opentype");
+  font-family: "Scala Sans Caps";
+  font-weight: normal;
+}
+
+@font-face {
+  src: url("../fonts/Scaly Sans/Scaly Sans.otf") format("opentype");
+  font-family: "Scala Sans";
+  font-weight: normal;
+}
+
+@font-face {
+  src: url("../fonts/Solbera Imitation/Solbera Imitation.otf")
+    format("opentype");
+  font-family: "Solbera Imitation";
+  font-weight: normal;
+}
+body {
+  background: $background-color url(/assets/images/dnd.jpg);
+  font-family: $primary-font;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Mr Eaves Small Caps";
+}
+h3 {
+  border-bottom: 2px solid $gold;
+}
+body > header h1 a {
+  color: $primary-text;
+}
+header time {
+  color: $primary-text;
+  font-family: $primary-font;
+}
+nav {
+  ul, ol {
+    border-left: .25rem $velvet solid;
+    ul, ol {
+      border-left: .25rem solid $mediumGrey;
+    }
+    a {
+      color: $primary-text;
+      &:hover {
+        color: $velvet;
+      }
+    }
+    svg {
+      fill: $primary-text;
+    }
+  }
+}
+article > p:first-of-type:first-letter {
+  float: left;
+  font-family: "Solbera Imitation";
+  font-size: 10em;
+  line-height: 0.8em;
+  overflow: visible;
+}
+blockquote {
+  background-color: $tea;
+  border-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAA8CAMAAADG+c2+AAAANlBMVEX///8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABHL6OuAAAAEXRSTlMABAwYJDRIXHSLo7fL2+fz+6go4VUAAAB6SURBVHgB7dg5DsJQAANRZ9+Xuf9lQUKKEHT5LlL4HWB6W5d61m1zrT/dhm5j6/RjPCkJco761ixQFoSl0aXfKQ+y9/qoJnAEYar01q64gqytNBz4ghyDMPMHnyYiIiIiIgIzYeYfj/Z56x3g7ovAf2L4bxb/EWS/ql7LZCDx/Ry3RwAAAABJRU5ErkJggg==)
+    11;
+  border-image-outset: 9px 0;
+  border-style: solid;
+  border-width: 11px;
+  color: $tealeaf;
+}
+a {
+  color: $velvet;
+}
+strong, b {
+  font-family: "Bookinsanity Bold";
+}
+table {
+  font-family: "Scala Sans";
+  thead {
+    border-bottom: 0;
+    font-family: "Scala Sans Caps";
+  }
+  tr {
+    color: $primary-text;
+  }
+}

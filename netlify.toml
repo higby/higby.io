@@ -1,3 +1,23 @@
 [build]
   publish = "build"
-  command = "npm run prod"
+  command = "npm run build"
+[[redirects]]
+  from = "https://skeletor.gay/*"
+  to = "https://www.higby.io/:splat"
+  status = 301
+  force = true
+[[redirects]]
+  from = "https://www.skeletor.gay/*"
+  to = "https://www.higby.io/:splat"
+  status = 301
+  force = true
+[[redirects]]
+  from = "https://brandenhigby.com/*"
+  to = "https://www.higby.io/:splat"
+  status = 301
+  force = true
+[[redirects]]
+  from = "https://www.brandenhigby.com/*"
+  to = "https://www.higby.io/:splat"
+  status = 301
+  force = true

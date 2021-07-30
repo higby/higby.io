@@ -1,0 +1,420 @@
+@use "variables" as *;
+
+*:where(:not(iframe, canvas, img, svg, video, input[type="checkbox"], input[type="radio"]):not(svg *)){
+    all: unset;
+    display: revert;
+}
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+::selection {
+  background-color: $highlight;
+  color: #000;
+}
+.higby {
+  color: $space;
+  font-style: normal;
+  font-weight: bold;
+}
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+body {
+  max-width: 600px;
+  margin: 1rem auto;
+  font-family: $primary-font;
+  background-color: $background-color;
+  color: $primary-text;
+  font-size: 1.125rem;
+  line-height: 1.5;
+}
+h1, h2, h3, h4, h5, h6, header {
+  color: $header-text;
+  font-weight: bold;
+  margin: 1rem 0;
+}
+h1 {
+  font-size: 2.25rem;
+}
+h2 {
+  font-size: 1.7858rem;
+}
+h3 {
+  font-size: 1.4174rem;
+}
+h4 {
+  font-size: 1.125rem;
+}
+h5 {
+  font-size: .85rem;
+}
+h6 {
+  font-size: .70rem;
+}
+header {
+  text-align: center;
+  h1 a:hover {
+    text-decoration: none;
+  }
+}
+header, nav, footer {
+  a {
+    color: $header-text;
+    &:hover {
+      color: $space;
+    }
+  }
+}
+nav {
+  ul, ol {
+    border-left: .25rem $space solid;
+    list-style: none;
+    margin: 0;
+    padding: 0 .5rem 0 .5rem;
+    ul, ol {
+      border-left: .25rem solid $mediumGrey;
+      display: none;
+      margin: 0 10px;
+      padding-left: calc(.5rem + 2px);
+    }
+    li {
+      margin: 0;
+    }
+    a {
+      color: $header-text;
+      &:hover {
+        color: $space;
+      }
+    }
+    svg {
+      fill: $header-text;
+      vertical-align: text-top;
+    }
+  }
+  p {
+    color: $header-text;
+    margin: .5rem 0;
+  }
+  table {
+    th, td {
+      border: none;
+      padding: .25rem 0;
+      text-align: left;
+      vertical-align: text-top;
+    }
+    td:first-of-type {
+      text-align: right;
+      white-space: nowrap;
+    }
+    tr:nth-child(even) {
+      background-color: inherit;
+    }
+    time {
+      color: $quote-text;
+      &:after {
+        content: "//";
+        margin: 0 .45rem;
+      }
+    }
+    a {
+      color: $space;
+    }
+  }
+}
+footer {
+  font-size: 1.25rem;
+  code {
+    background-color: inherit;
+    padding: 0;
+    font-size: 1.25rem;
+
+    a {
+      color: $pgp-text;
+    }
+  }
+}
+p, ol, ul, pre, blockquote, figure, hr, dl, table, form {
+  margin: 1rem auto;
+}
+ol, ul {
+  margin-left: 1.5rem;
+  ol ul {
+    margin-left: 0;
+  }
+}
+pre {
+  font-family: $mono-font;
+  white-space: pre;
+  background-color: $lightGrey;
+  padding: 1rem 1.5rem;
+  overflow: auto;
+  border-radius: .25rem;
+  color: $code-text;
+  font-size: 1rem;
+  code {
+    border-radius: 0;
+  }
+}
+blockquote {
+  border-left: .25rem solid $darkGrey;
+  color: $quote-text;
+  padding: 0 0 0 1rem;
+}
+.note {
+  border: none;
+  color: $note-text;
+  display:list-item;
+  font-size: 1rem;
+  list-style-position: outside;
+  list-style-type: ">";
+  margin-left: .65rem;
+  p {
+    font-style: italic;
+  }
+}
+figure {
+  img {
+    background-image: linear-gradient(65deg, $space 25%, $lightGrey 25%, $lightGrey 50%, $space 50%, $space 75%, $lightGrey 75%, $lightGrey 100%);
+    background-size: 35.31px 75.72px;
+  }
+}
+hr {
+  text-align: center;
+  border: 0;
+  &:before {
+    content: '-----';
+    font-size: 1.125rem;
+    color: $primary-text;
+  }
+}
+dt {
+  font-weight: bold;
+  margin-top: 1rem;
+}
+dd {
+  font-style: italic;
+  display: list-item;
+  list-style-type: '- ';
+  margin-left: 1.25rem;
+}
+a {
+  color: $space;
+  cursor: pointer;
+  text-decoration: none;
+  transition: color .5s;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+strong, b {
+  font-weight: bold;
+}
+em, i {
+  font-style: italic;
+}
+cite {
+  display: block;
+  margin: 1rem 0 0 0;
+  &:before {
+    content: "— ";
+    font-size: 1rem;
+  }
+}
+mark {
+  background-color: $mark;
+  margin: 0 -.1rem;
+  padding: 0 .1rem;
+}
+code {
+  background-color: $lightGrey;
+  color: $code-text;
+  font-family: $mono-font;
+  border-radius: .25rem;
+  font-size: 1rem;
+  padding: .2rem .4rem;
+}
+kbd {
+  border: 1px solid $mediumGrey;
+  box-shadow: inset 0 -1px 0 $mediumGrey;
+  color: $code-text;
+  font-family: $mono-font;
+  font-size: 1rem;
+  padding: .125rem .25rem;
+  border-radius: .25rem;
+  vertical-align: middle;
+}
+img, video, canvas {
+  border-radius: .25rem;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+table {
+  border-collapse: collapse;
+  caption-side: bottom;
+  text-align: center;
+  width: 100%;
+  thead {
+    border-bottom: .125rem $darkGrey solid;
+  }
+  tfoot {
+    border-top: .125rem $darkGrey solid;
+    color: $header-text;
+  }
+  tr {
+    &:nth-child(even) {
+      background-color: $lightGrey;
+    }
+  }
+  th {
+    color: $header-text;
+    font-weight: bold;
+  }
+  td {
+    padding: .125rem;
+    text-align: center;
+  }
+}
+form {
+  grid-gap: 1rem;
+  background-color: $space-100;
+  border-radius: .25rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 1rem;
+  legend {
+    font-size: 1.7858rem;
+    font-weight: bold;
+    grid-column: span 4;
+    color: $header-text;
+    margin: 1rem 0;
+    &+ p {
+      margin-top: 0;
+    }
+  }
+  &> legend {
+    margin: 0;
+  }
+  p {
+    grid-column: span 4;
+    color: $header-text;
+  }
+  fieldset {
+    grid-column: span 4;
+    legend {
+      font-size: 1.4174rem;
+    }
+  }
+  label {
+    grid-column: span 2;
+    display: grid;
+    color: $header-text;
+    font-weight: bold;
+    grid-template-columns: 1fr;
+    input, textarea {
+      align-self: end;
+      margin: 1rem 0 0 0;
+    }
+    p {
+      margin: 0;
+      grid-column: span 1;
+      font-weight: normal;
+    }
+  }
+  div label {
+    display: inline;
+  }
+  textarea {
+    min-height: 6rem;
+    resize: vertical;
+  }
+}
+[type=color], [type=date], [type=datetime], [type=datetime-local], [type=email], [type=month], [type=number], [type=password], [type=search], [type=tel], [type=text], [type=url], [type=week], [type=time], select, textarea {
+  background-color: $background-color;
+  font-weight: normal;
+  font-family: $mono-font;
+  font-size: 1rem;
+  border-radius: .25rem;
+  padding: 0.5rem;
+  color: $primary-text;
+  height: 2rem;
+  &:focus {
+    box-shadow: 0px 0px 0px 2px $space inset;
+  }
+}
+button,
+input[type="button"],
+input[type="submit"],
+input[type="reset"] {
+  -webkit-appearance: none;
+  background-color: $space;
+  border-radius: .25rem;
+  color: #fff;
+  cursor: pointer;
+  text-align: center;
+  font-weight: bold;
+  height: 2rem;
+  min-width: 8rem;
+  transition: background-color .3s;
+  &:hover {
+    background-color: $space-600; // make a variable
+  }
+  &:active {
+    background-color: $space-300; // replzce with a proper animation
+  }
+}
+input[readonly] {
+  color: $header-text;
+}
+input:disabled {
+  background-color: $lightGrey;
+  color: $pgp-text;
+  cursor: default;
+  &::placeholder {
+    color: $pgp-text;
+  }
+  &:hover {
+    background-color: $lightGrey;
+
+  }
+}
+@media screen and (max-width: 700px) {
+  body {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+  form {
+    border-radius: 0;
+    margin: 1rem -2rem;
+    padding: 2rem;
+  }
+  label {
+    grid-column: span 4;
+  }
+  button,
+  input[type="button"],
+  input[type="submit"],
+  input[type="reset"] {
+    grid-column: span 2;
+  }
+}
+.footnotes {
+  color: $note-text;
+  font-size: 1rem;
+  &:before {
+    content: '----- Footnotes -----';
+    text-align: center;
+    display: block;
+    font-size: 1.125rem;
+    color: $primary-text;
+  }
+}
+.footnote {
+  &:before {
+    content: "{";
+  }
+  &:after {
+    content: "}";
+  }
+}

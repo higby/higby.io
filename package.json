@@ -3,11 +3,11 @@
   "version": "3.0.0",
   "description": "A place for my ramblings.",
   "scripts": {
-    "eleventyServe": "npx @11ty/eleventy --serve",
-    "eleventy": "npx @11ty/eleventy",
+    "eleventy": "npx @11ty/eleventy --serve",
     "clean": "rimraf build",
-    "dev": "run-p clean eleventyServe",
-    "prod": "run-p clean eleventy"
+    "sass": "sass --no-source-map src/assets/css:build/assets/css --watch",
+    "start": "run-p clean eleventy sass",
+    "build": "rimraf build & npx @11ty/eleventy & sass --no-source-map src/assets/css:build/assets/css"
   },
   "author": "Branden Higby",
   "license": "MIT",
@@ -15,10 +15,9 @@
     "@11ty/eleventy": "^0.12.1"
   },
   "dependencies": {
-    "npm-run-all": "^4.1.5",
-    "rimraf": "^2.7.1",
     "cheerio": "^1.0.0-rc.10",
     "eleventy-plugin-safe-external-links": "^0.1.5",
+    "js-beautify": "^1.14.0",
     "jsdom": "^16.6.0",
     "markdown-it": "^12.1.0",
     "markdown-it-anchor": "^8.1.2",
@@ -26,8 +25,11 @@
     "markdown-it-footnote": "^3.0.3",
     "markdown-it-image-figures": "^1.2.0",
     "markdown-it-mark": "^3.0.1",
+    "moment-timezone": "^0.5.33",
     "node-fetch": "^2.6.1",
-    "prettier": "^2.3.2",
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^2.7.1",
+    "sass": "^1.36.0",
     "sharp": "^0.28.3"
   }
 }

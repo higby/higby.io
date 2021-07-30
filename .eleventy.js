@@ -1,17 +1,20 @@
-const plugins = require('./src/library/plugins');
+const plugins = require('./src/config/plugins/index');
 
 module.exports = function(eleventyConfig) {
-    eleventyConfig.addPassthroughCopy({ "src/static": "/" });
-    eleventyConfig.addWatchTarget("./src/static/");
-    eleventyConfig.addPlugin(plugins);
-
-    return {
+  eleventyConfig.setBrowserSyncConfig({ files: './build/assets/css/**/*.css' });
+  eleventyConfig.addPassthroughCopy("src/assets/fonts");
+  eleventyConfig.addPassthroughCopy("src/assets/images");
+  eleventyConfig.addPassthroughCopy("src/assets/js");
+  eleventyConfig.addPassthroughCopy("src/favicon.ico");
+  eleventyConfig.addWatchTarget("./src/assets/");
+  eleventyConfig.addPlugin(plugins);
+  return {
     dir: {
       input: "src",
       output: "build",
-      layouts: "library/layouts",
-      includes: "library/includes",
-      data: "library/data"
+      layouts: "config/layouts",
+      includes: "config/layouts/includes",
+      data: "config/data"
     }
   };
 };

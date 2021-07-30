@@ -1,0 +1,51 @@
+// Space Gradient
+
+$space-100: #F1DFFD;
+$space-200: #E1C0FC;
+$space-300: #CB9FF7;
+$space-400: #B585EF;
+$space-500: #965EE5;
+$space-600: #7444C4;
+$space-700: #562FA4;
+$space-800: #3B1D84;
+$space-900: #28126D;
+
+// Reusable Colors
+
+$space: $space-500;
+$highlight: #965ee580;
+$mark: #ffe599;
+
+// Light Mode
+
+$background-color: #fafafa;
+$lightGrey: #eeeeee;
+$mediumGrey: #dedede;
+$darkGrey: #bdbdbd;
+
+$pgp-text: #afafaf;
+$note-text: #575757;
+$quote-text: #4b4b4b;
+$code-text: #474747;
+$primary-text: #323232;
+$header-text: #191919;
+
+// Dark Mode
+/*
+$background-color: #111010;
+$lightGrey: #212121;
+$mediumGrey: #616161;
+$darkGrey: #424242;
+
+$pgp-text: #585858;
+$note-text: #acacac;
+$quote-text: #b8b8b8;
+$code-text: #bdbdbd;
+$primary-text: #cfcfcf;
+$header-text: #e8e8e8;
+*/
+// Fonts
+
+$primary-font: "Open Sans", sans-serif;
+$primary-font1: 'Source Code Pro', monospace;
+$mono-font: 'Source Code Pro', monospace;

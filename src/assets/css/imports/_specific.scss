@@ -1,0 +1,60 @@
+/*
+--------------------------------
+Specific Styles
+--------------------------------
+*/
+
+@use "variables" as *;
+
+header .higby {
+  color: $header-text; //Only during animation
+}
+.draft {
+  &:after {
+    color: $header-text;
+    content: " [draft]";
+    font-size: .88rem;
+    font-style: normal;
+    font-weight: bold;
+    vertical-align: text-top;
+  }
+}
+.animating:hover {
+  color: $header-text;
+}
+.higby, i[class="65"] {
+  color: $space;
+  font-style: normal;
+  font-weight: bold;
+}
+.card {
+  img {
+    border-radius: 4.75% / 3.5%;
+  }
+}
+.cardList,.boxList {
+  grid-gap: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: space-between;
+  text-align: center;
+}
+@media screen and (max-width: 700px) {
+  .cardList,.boxList {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.imgHolder {
+  background-color: $lightGrey;
+  border-radius: .25rem;
+  padding: .5rem;
+}
+.ball {
+  display: block;
+  left: .25rem;
+  margin: 0 0 -2rem 0;
+  position: relative;
+  top: .25rem;
+  width: 32px !important;
+  z-index: 1;
+}
