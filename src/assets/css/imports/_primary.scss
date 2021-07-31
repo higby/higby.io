@@ -75,11 +75,13 @@ nav {
     list-style: none;
     margin: 0;
     padding: 0 .5rem 0 .5rem;
-    ul, ol {
-      border-left: .25rem solid $mediumGrey;
-      display: none;
-      margin: 0 10px;
-      padding-left: calc(.5rem + 2px);
+    li {
+      ul, ol {
+        border-left: .25rem solid $mediumGrey;
+        display: none;
+        margin: 0 10px;
+        padding-left: calc(.5rem + 2px);
+      }
     }
     li {
       margin: 0;
@@ -131,7 +133,6 @@ footer {
     background-color: inherit;
     font-size: 1.25rem;
     padding: 0;
-
     a {
       color: $pgp-text;
     }
@@ -232,7 +233,7 @@ cite {
   }
 }
 mark {
-  background-color: $mark;
+  border-bottom: 3px dashed $space;
   margin: 0 -.1rem;
   padding: 0 .1rem;
 }
@@ -288,7 +289,7 @@ table {
 }
 form {
   grid-gap: 1rem;
-  background-color: $space-100;
+  background-color: $space-300;
   border-radius: .25rem;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
