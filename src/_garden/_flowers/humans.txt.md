@@ -3,12 +3,9 @@ title: humans.txt
 description: "The Many Tools That Helped Me Make This"
 setup:
   toc: false
-tags: programming
 ---
-## Me
 
 ==I am {{ site.name[0] }} {{ site.name[1] }}.==
-
 
 Email: {{ site.email }}
 
@@ -32,11 +29,12 @@ Favorite TV Shows:
 
 Favorite Number: <i class="65">65</i>
 
-## Site <code>Major Revision 3</code>
+<div class="stretch">
+  <h2> higby.io <code> Major Revision 3</code></h2>
+  <p>Inital Commit: <code>2017-10-12, 17:56:00 PDT</code></p>
+  <p>Last Updated: <code>{{ "now" | technical }}</code></p>
+</div>
 
-Inital Commit: `2017-10-12, 17:56:00 PDT`
-
-Last updated: `{{ "now" | technical }}`
 
 ### General
 

@@ -27,6 +27,31 @@ header .higby {
   font-style: normal;
   font-weight: bold;
 }
+.stretch {
+  font-size: 1.25rem;
+  color: $header-text;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  text-align: center;
+  h2 {
+    grid-column: span 2;
+  }
+  p {
+    display: grid;
+    color: $header-text;
+    grid-template-rows: 1fr 1fr;
+  }
+}
+@media screen and (max-width: 650px) {
+  .stretch {
+    font-size: 1.125rem;
+    display: block;
+    p {
+      display: block;
+      text-align: left;
+    }
+  }
+}
 .card {
   img {
     border-radius: 4.75% / 3.5%;

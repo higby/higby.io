@@ -60,6 +60,11 @@ header {
   h1 a:hover {
     text-decoration: none;
   }
+  nav {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: space-around;
+}
 }
 header, nav, footer {
   a {
@@ -233,7 +238,8 @@ cite {
   }
 }
 mark {
-  border-bottom: 3px dashed $space;
+  text-decoration: underline dashed $space 3px;
+  text-underline-position: under;
   margin: 0 -.1rem;
   padding: 0 .1rem;
 }
@@ -390,26 +396,6 @@ input:disabled {
 
   }
 }
-@media screen and (max-width: 700px) {
-  body {
-    margin-left: 2rem;
-    margin-right: 2rem;
-  }
-  form {
-    border-radius: 0;
-    margin: 1rem -2rem;
-    padding: 2rem;
-  }
-  label {
-    grid-column: span 4;
-  }
-  button,
-  input[type="button"],
-  input[type="submit"],
-  input[type="reset"] {
-    grid-column: span 2;
-  }
-}
 .footnotes {
   color: $note-text;
   font-size: 1rem;
@@ -427,5 +413,37 @@ input:disabled {
   }
   &:after {
     content: "}";
+  }
+}
+@media screen and (max-width: 700px) {
+  body {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+  body > header {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    nav {
+      margin: auto 0 auto 1rem;
+      display: block;
+      text-align: left;
+      a {
+        display: block;
+      }
+    }
+  }
+  form {
+    border-radius: 0;
+    margin: 1rem -2rem;
+    padding: 2rem;
+  }
+  label {
+    grid-column: span 4;
+  }
+  button,
+  input[type="button"],
+  input[type="submit"],
+  input[type="reset"] {
+    grid-column: span 2;
   }
 }

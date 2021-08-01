@@ -2,40 +2,14 @@
 permalink: "/index.html"
 tags: flowers
 ---
-{% capture order %}essays,poetry,collections,programming,misc{% endcapture %}
-{% assign order = order | split: "," %}
 
-{% capture allTags %}{% for post in collections.flowers %}{{ post.data.tags[0] }}{% unless forloop.last == true %},{% endunless %}{% endfor %}{% endcapture %}
-{% assign allTags = allTags | split: "," | uniq %}
 
-<nav>
-  <table>
-  {% for heading in order %}
-  {% for tag in allTags %}
-  {% if tag == heading %}
+==Branden Higby== is a [writer](/garden), computer programmer, [cartoon watcher](/library), dungeon master, noun, and idk like another noun based in Oregon.
 
-<tbody>
-  <tr>
-    <th colspan="2">
-      {{ tag | capitalize }}
-    </th>
-  </tr>
-  {% for flower in collections.flowers %}
-  {% if flower.data.tags[0] == tag and flower.data.draft != true %}
-  <tr>
-    <td>
-      <time>{{ flower.date | common }}</time>
-    </td>
-    <td>
-      <a href="{{ flower.url }}" {% unless flower.data.stylesheet != "main" %}class="internal"{% endunless %}>{{ flower.data.title }}</a>
-    </td>
-  </tr>
-  {% endif %}
-  {% endfor %}
+I am currently a staff writer at Slate, and my work has appeared in The New York Times, The Atlantic, Vanity Fair, VICE, and New York Magazine.
 
-  </tbody>
-  {% endif %}
-  {% endfor %}
-  {% endfor %}
-  </table>
-</nav>
+My writing partner and I are currently writing for an upcoming Netflix show, an independent video game, and a tabletop adventure for Quest. We’d love to write for you, too!
+
+You can find my writing on culture, as well as the scripts/screenplays we are working on, below.
+
+The text above was stolen!
