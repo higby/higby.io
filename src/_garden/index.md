@@ -4,7 +4,7 @@ tags: flowers
 ---
 
 
-==Branden Higby== is a [writer](/garden), computer programmer, [cartoon watcher](/library), dungeon master, noun, and idk like another noun based in Oregon.
+==Branden Higby== is a [writer](/garden){.internal}, computer programmer, [cartoon watcher](/library){.internal}, dungeon master, noun, and idk like another noun based in Oregon.
 
 I am currently a staff writer at Slate, and my work has appeared in The New York Times, The Atlantic, Vanity Fair, VICE, and New York Magazine.
 

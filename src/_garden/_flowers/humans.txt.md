@@ -1,39 +1,15 @@
 ---
-title: humans.txt
+title: "humans.txt"
 description: "The Many Tools That Helped Me Make This"
 setup:
   toc: false
 ---
 
-==I am {{ site.name[0] }} {{ site.name[1] }}.==
-
-Email: {{ site.email }}
-
-Location: 🌧 ️Oregon
-
-Favorite Pokemon: <a class="internal" href="/pokemon">Metroid</a>, my shiny Araquanid
-
-Favorite Book: Dune by Frank Herbert
-
-Favorite Movie: Back To The Future
-
-Favorite TV Shows:
-
-- Avatar: TLA
-- Arrested Development
-- She-Ra And The Princesses Of Power
-- Gravity Falls
-- Adventure Time
-
-[Spotify](https://open.spotify.com/playlist/1u6D5NJ3MOzLeXZU3B6MU1?si=8ef03bee2c48407b): ~99,342 minutes listened (updated 12/1/2020)
-
-Favorite Number: <i class="65">65</i>
-
-<div class="stretch">
+<section>
   <h2> higby.io <code> Major Revision 3</code></h2>
-  <p>Inital Commit: <code>2017-10-12, 17:56:00 PDT</code></p>
-  <p>Last Updated: <code>{{ "now" | technical }}</code></p>
-</div>
+  <p>v1 Inital Commit: <code>2017-10-12, 17:56:00 PDT</code></p>
+  <p>v3 Last Updated: <code>{{ "now" | technical }}</code></p>
+</section>
 
 
 ### General
@@ -41,7 +17,7 @@ Favorite Number: <i class="65">65</i>
 Built with [Eleventy](https://github.com/11ty/eleventy/) and hosted on [Netlify](https://www.netlify.com/)
 - File directory structure inspired by [11ty-blog-starter](https://github.com/kohrongying/11ty-blog-starter/) by [Rong Ying](https://github.com/kohrongying/)
 - [eleventy-plugin-toc](https://github.com/jdsteinbach/eleventy-plugin-toc/) for table of contents
-- My image-dimensions plugin is inspired (programming-wise) by [LazyImages](https://github.com/liamfiddler/eleventy-plugin-lazyimages/) and (reasoning-wise) by [Images, Correctly.](https://robert-buchberger.com/blog/2021/responsive_images.html/), written by [Robert Buchberger](https://github.com/rbuchberger/)
+- My image-dimensions plugin is inspired (programming-wise) by [LazyImages](https://github.com/liamfiddler/eleventy-plugin-lazyimages/) and (reasoning-wise) by [Images, Correctly.](https://robert-buchberger.com/blog/2021/responsive_images.html), written by [Robert Buchberger](https://github.com/rbuchberger/)
   - Uses [sharp](https://github.com/lovell/sharp/) and [Node Fetch](https://github.com/node-fetch/node-fetch/)
 - Dates plugin is a modified version of [Mark Thomas Miller's](https://mtm.dev/eleventy-date-off-by-one-day/) method
   - Uses [Moment Timezone](https://github.com/moment/moment-timezone/)
