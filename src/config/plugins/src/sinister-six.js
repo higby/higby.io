@@ -4,7 +4,7 @@ const markdownIt = require("markdown-it");
 const anchor = require('markdown-it-anchor');
 const attrs = require('markdown-it-attrs');
 const cite = require('./src/cite');
-const footnote = require("markdown-it-footnote");
+const footnote = require("./src/footnote");
 const figures = require('markdown-it-image-figures');
 const mark = require("markdown-it-mark");
 

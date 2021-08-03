@@ -1,8 +1,8 @@
 @use "variables" as *;
 
-*:where(:not(iframe, canvas, img, svg, video, input[type="checkbox"], input[type="radio"]):not(svg *)){
-    all: unset;
-    display: revert;
+*:where(:not(iframe, canvas, img, svg, video, input[type="checkbox"], input[type="radio"]):not(svg *)) {
+  all: unset;
+  display: revert;
 }
 *, *::before, *::after {
   box-sizing: inherit;
@@ -10,11 +10,6 @@
 ::selection {
   background-color: $highlight;
   color: #000;
-}
-.higby {
-  color: $space;
-  font-style: normal;
-  font-weight: bold;
 }
 html {
   box-sizing: border-box;
@@ -37,7 +32,7 @@ h1, h2, h3, h4, h5, h6, header {
   font-weight: bold;
   margin: 1rem 0;
   code {
-    font-size: .9em;
+    font-size: .89em;
   }
 }
 h1 {
@@ -58,6 +53,14 @@ h5 {
 h6 {
   font-size: .70rem;
 }
+header, nav, footer {
+  a {
+    color: $header-text;
+    &:hover {
+      color: $space;
+    }
+  }
+}
 header {
   text-align: center;
   h1 a:hover {
@@ -67,14 +70,6 @@ header {
     display: grid;
     grid-auto-flow: column;
     justify-content: space-around;
-  }
-}
-header, nav, footer {
-  a {
-    color: $header-text;
-    &:hover {
-      color: $space;
-    }
   }
 }
 nav {
@@ -147,16 +142,13 @@ footer {
     }
   }
 }
-p, ol, ul, pre, blockquote, figure, figcaption, hr, dl, table, form {
+p, ol, ul, pre, blockquote, figure, figcaption, hr, dl {
   margin: 1rem auto;
 }
 ol, ul {
   margin-left: 1.5rem;
-  li {
-    ol, ul {
-      margin: 0 0 0 1.5rem;
-
-    }
+  li ol, li ul {
+    margin: 0 0 0 1.5rem;
   }
 }
 pre {
@@ -177,18 +169,6 @@ blockquote {
   color: $quote-text;
   padding: 0 0 0 1rem;
 }
-.note {
-  border: none;
-  color: $note-text;
-  display:list-item;
-  font-size: 1rem;
-  list-style-position: outside;
-  list-style-type: ">";
-  margin-left: .65rem;
-  p {
-    font-style: italic;
-  }
-}
 figure {
   img {
     background-image: linear-gradient(65deg, $space 25%, $lightGrey 25%, $lightGrey 50%, $space 50%, $space 75%, $lightGrey 75%, $lightGrey 100%);
@@ -204,7 +184,7 @@ hr {
   text-align: center;
   &:before {
     color: $primary-text;
-    content: '-----';
+    content: '///////';
     font-size: 1.125rem;
   }
 }
@@ -242,9 +222,9 @@ cite {
   }
 }
 mark {
-  margin: 0 -.1rem;
-  padding: 0 .1rem;
-  text-decoration: underline dashed $space 3px;
+  margin: 0 -0.1rem;
+  padding: 0 0.1rem;
+  text-decoration: underline dashed $space 2px;
   text-underline-position: under;
 }
 code {
@@ -252,7 +232,7 @@ code {
   border-radius: .25rem;
   color: $code-text;
   font-family: $mono-font;
-  font-size: 0.889em;
+  font-size: 1rem;
   padding: .2rem .4rem;
 }
 kbd {
@@ -400,24 +380,58 @@ input:disabled {
 
   }
 }
+.higby {
+  color: $space;
+  font-style: normal;
+  font-weight: bold;
+}
+.note {
+  border: none;
+  color: $note-text;
+  display:list-item;
+  font-size: 1rem;
+  list-style-position: outside;
+  list-style-type: ">";
+  margin-left: .65rem;
+  p {
+    font-style: italic;
+  }
+}
+.info {
+  background-color: $space-100;
+  border-radius: .25rem;
+  color: $header-text;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 1rem;
+  text-align: center;
+  h1, h2, h3, h4, h5, h6, header, ol {
+    grid-column: span 2;
+  }
+  p {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+  }
+}
 .footnotes {
   color: $note-text;
   font-size: 1rem;
+}
+.footnotes-sep {
   &:before {
     color: $primary-text;
-    content: '----- Footnotes -----';
+    content: '///// Footnotes /////';
     display: block;
     font-size: 1.125rem;
     text-align: center;
   }
 }
-.footnote {
-  &:before {
-    content: "{";
-  }
-  &:after {
-    content: "}";
-  }
+.footnote-ref {
+  font-size: .85rem;
+  vertical-align: text-top;
+}
+.qr {
+  display: none;
 }
 @media screen and (max-width: 700px) {
   body {
@@ -440,14 +454,28 @@ input:disabled {
     border-radius: 0;
     margin: 1rem -2rem;
     padding: 2rem;
-  }
-  label {
-    grid-column: span 4;
+    label {
+      grid-column: span 4;
+    }
   }
   button,
   input[type="button"],
   input[type="submit"],
   input[type="reset"] {
     grid-column: span 2;
+  }
+}
+@media screen and (max-width: 650px) {
+  .info {
+    border-radius: 0;
+    margin: 1rem -2rem;
+    padding: 2rem;
+    h1, h2, h3, h4, h5, h6, header, ol {
+      display: grid;
+      grid-template-rows: 1fr 1fr;
+    }
+    p {
+      grid-column: span 2;
+    }
   }
 }

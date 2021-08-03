@@ -1,5 +1,0 @@
-{
-  "layout": "default.html",
-  "permalink": "{{ page.filePathStem | remove: '_garden/_flowers' }}/",
-  "stylesheet": "main"
-}

@@ -53,6 +53,9 @@ Print Styles
     h1 a {
       font-size: 1.25rem;
     }
+    nav {
+      display: none;
+    }
   }
   header a, nav a, footer a {
     text-decoration: none;
@@ -117,5 +120,15 @@ Print Styles
   }
   tr:not(:first-of-type) {
     border-top: 0.125rem #bdbdbd solid;
+  }
+  form {
+    display: none;
+  }
+  .qr {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 15vw;
   }
 }

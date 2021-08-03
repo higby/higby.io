@@ -9,58 +9,8 @@ Specific Styles
 header .higby {
   color: $header-text; //Only during animation
 }
-.draft {
-  &:after {
-    color: $header-text;
-    content: " [draft]";
-    font-size: .88rem;
-    font-style: normal;
-    font-weight: bold;
-    vertical-align: text-top;
-  }
-}
 .animating:hover {
   color: $header-text;
-}
-.higby, i[class="65"] {
-  color: $space;
-  font-style: normal;
-  font-weight: bold;
-}
-section {
-  background-color: $space-100;
-  border-radius: .25rem;
-  color: $header-text;
-  display: grid;
-
-  grid-template-columns: 1fr 1fr;
-  padding: 1rem;
-  text-align: center;
-  h2 {
-    grid-column: span 2;
-  }
-  p {
-    color: $header-text;
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-  }
-}
-@media screen and (max-width: 650px) {
-  section {
-    border-radius: 0;
-    margin: 1rem -2rem;
-    padding: 2rem;
-  //  text-align: left;
-
-    p {
-      grid-column: span 2;
-
-    }
-    h2 {
-      display: grid;
-      grid-template-rows: 1fr 1fr;
-    }
-  }
 }
 .card {
   img {

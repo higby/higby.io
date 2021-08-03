@@ -122,8 +122,9 @@ A paragraph `<p>` of lorem ipsum after the heading. Cascading Style Sheets (CSS)
   </fieldset>
   <label for="name">
     Your Name
-    <p><i>Or nickname</i>
-    <input name="Name" id="name" type="text" placeholder="Branden" /></label>
+    <p><i>Or nickname</i></p>
+    <input name="Name" id="name" type="text" placeholder="Branden" />
+  </label>
   <label for="animal">Favorite Animal<input name="Animal" id="animal" type="text" placeholder="Puppy" /></label>
   <label for="color">Favorite Color<input name="Color" id="color" type="text" placeholder="#965ee5" /></label>
   <label for="url">Do you have your own website? Blah blah blah<input name="Site" id="url" type="url" placeholder="https://skeletor.gay" /></label>

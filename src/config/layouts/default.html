@@ -1,5 +1,6 @@
 ---
 ---
+{% capture url %}{{ site.url }}{{ page.filePathStem | remove: '_garden/_flowers/' }}{% endcapture %}
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   {% include head.html %}
@@ -12,6 +13,7 @@
           {% if date and setup.date != false %}
           <time> {{ page.date | common }}</time>
           {% endif %}
+          {% qrcode url %}
         </header>
       {% endif %}
       {% unless setup.toc == false %}
