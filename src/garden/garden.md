@@ -1,5 +1,5 @@
 ---
-title: "Garden"
+title: "My Garden"
 permalink: "/garden/index.html"
 setup:
   toc: false

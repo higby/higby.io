@@ -1,8 +1,8 @@
 ---
 permalink: "/index.html"
 tags: flowers
+title: "A Little About Me"
 ---
-
 
 ==Branden Higby== is a [writer](/garden){.internal}, actor, computer programmer, video producer, dungeon master, and [cartoon watcher](/library){.internal} based in Oregon.
 
