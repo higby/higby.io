@@ -5,6 +5,11 @@ setup:
   toc: false
 ---
 
+This is where I'll put all my shit and projects I've made.
+
+Ya yeet
+
+
 ## Me
 
 ==I am {{ site.name[0] }} {{ site.name[1] }}.==
