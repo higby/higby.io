@@ -1,7 +1,7 @@
 ---
 title:  "Paleontology, Jobs, and Other Rambling Thoughts"
 date: 2020-04-12 00:05:00
-description: "An Essay Concerned With The Future"
+description: "Remember the dinosaur kids back in elementary school? Reading time, they had the dinosaur encyclopedia, lunch, dinosaur lunchbox. And at sleepovers they busted out the dinosaur pajamas, and you got to watch Land Before Time."
 tags: essays
 ---
 

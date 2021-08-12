@@ -12,7 +12,7 @@ Ya yeet
 
 ## Me
 
-==I am {{ site.name[0] }} {{ site.name[1] }}.==
+I am {{ site.name[0] }} {{ site.name[1] }}.
 
 Email: {{ site.email }}
 

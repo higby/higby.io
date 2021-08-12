@@ -15,55 +15,36 @@ html {
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
+.higby {
+  color: $space;
+  font-style: normal;
+  font-weight: bold;
+}
 body {
-  background-color: $background-color;
-  color: $primary-text;
   font-family: $primary-font;
   font-size: 1.125rem;
-  line-height: 1.65;
-  margin: 1rem auto;
   max-width: 600px;
-  &> header {
-    margin: 0 0 2rem 0;
-    h1 {
-      font-family: $mono-font;
-    }
+  margin: 1rem auto;
+  line-height: 1.65;
+  background-color: $background-color;
+  color: $primary-text;
+  &> header h1 {
+    margin-bottom: .5rem;
   }
 }
 h1, h2, h3, h4, h5, h6, header {
-  color: $header-text;
   font-weight: bold;
   margin: 1rem 0;
   code {
-    font-size: .89em;
+    font-size: .9em;
   }
 }
-h1 {
-  font-size: 2.25rem;
-}
-h2 {
-  font-size: 1.7858rem;
-}
-h3 {
-  font-size: 1.4174rem;
-}
-h4 {
-  font-size: 1.125rem;
-}
-h5 {
-  font-size: .85rem;
-}
-h6 {
-  font-size: .70rem;
-}
-header, nav, footer {
-  a {
-    color: $header-text;
-    &:hover {
-      color: $space;
-    }
-  }
-}
+h1 { font-size: 2rem; }
+h2 { font-size: 1.5rem; }
+h3 { font-size: 1.25rem; }
+h4 { font-size: 1.125rem; }
+h5 { font-size: .85rem; }
+h6 { font-size: .70rem; }
 header {
   text-align: center;
   h1 a:hover {
@@ -75,7 +56,15 @@ header {
     justify-content: space-around;
   }
 }
-nav {
+header, .toc, footer {
+  a {
+    color: $header-text;
+    &:hover {
+      color: $space;
+    }
+  }
+}
+.toc {
   ul, ol {
     border-left: .25rem $space solid;
     list-style: none;
@@ -107,35 +96,38 @@ nav {
     color: $header-text;
     margin: .5rem 0;
   }
-  table {
-    th, td {
-      border: none;
-      padding: .25rem 0;
-      text-align: left;
-      vertical-align: text-top;
-    }
-    td:first-of-type {
-      text-align: right;
-      white-space: nowrap;
-    }
-    tr:nth-child(even) {
-      background-color: inherit;
-    }
-    time {
-      color: $quote-text;
-      &:after {
-        content: "//";
-        margin: 0 .45rem;
+}
+.garden {
+  list-style: none;
+  color: $header-text;
+  ol {
+    margin: 0;
+    border-left: .25rem $space solid;
+    padding: 0 0 0 1rem;
+
+    li {
+      display: grid;
+      grid-template-columns: auto auto;
+      margin: 1rem 0;
+      font-size: 1rem;
+      grid-gap: .5rem;
+      a {
+        font-size: 1.25rem;
       }
-    }
-    a {
-      color: $space;
+      time {
+        text-align: right;
+        color: $quote-text;
+      }
+      p {
+        color: $code-text;
+        grid-column: span 2;
+        margin: 0;
+      }
     }
   }
 }
 footer {
   font-size: 1.25rem;
-  margin: 2rem 0 0 0;
   code {
     background-color: inherit;
     font-size: 1.25rem;
@@ -145,22 +137,25 @@ footer {
     }
   }
 }
-p, ol, ul, pre, blockquote, figure, figcaption, hr, dl {
+p, ol, ul, pre, blockquote, figure, figcaption, hr, dl, table, form {
   margin: 1rem auto;
 }
 ol, ul {
   margin-left: 1.5rem;
-  li ol, li ul {
-    margin: 0 0 0 1.5rem;
+  li {
+    ol, ul {
+      margin: 0 0 0 1.5rem;
+
+    }
   }
 }
 pre {
   background-color: $lightGrey;
   border-radius: .25rem;
   color: $code-text;
-  font-family: $mono-font;
   font-size: 1rem;
   overflow: auto;
+  font-family: $mono-font;
   padding: 1rem 1.5rem;
   white-space: pre;
   code {
@@ -172,6 +167,18 @@ blockquote {
   color: $quote-text;
   padding: 0 0 0 1rem;
 }
+.note {
+  border: none;
+  color: $note-text;
+  display:list-item;
+  font-size: 1rem;
+  list-style-position: outside;
+  list-style-type: ">";
+  margin-left: .65rem;
+  p {
+    font-style: italic;
+  }
+}
 figure {
   img {
     background-image: linear-gradient(65deg, $space 25%, $lightGrey 25%, $lightGrey 50%, $space 50%, $space 75%, $lightGrey 75%, $lightGrey 100%);
@@ -179,15 +186,16 @@ figure {
   }
 }
 figcaption {
-  font-style: italic;
   text-align: center;
+  font-style: italic;
 }
+
 hr {
   border: 0;
   text-align: center;
   &:before {
-    color: $primary-text;
-    content: '///////';
+    color: #323232;
+    content: "///////";
     font-size: 1.125rem;
   }
 }
@@ -225,17 +233,16 @@ cite {
   }
 }
 mark {
-  margin: 0 -0.1rem;
-  padding: 0 0.1rem;
-  text-decoration: underline dashed $space 2px;
-  text-underline-position: under;
+  background-color: $mark;
+  margin: 0 -.1rem;
+  padding: 0 .1rem;
 }
 code {
   background-color: $lightGrey;
   border-radius: .25rem;
   color: $code-text;
   font-family: $mono-font;
-  font-size: 1rem;
+  font-size: 0.889em;
   padding: .2rem .4rem;
 }
 kbd {
@@ -380,25 +387,24 @@ input:disabled {
   }
   &:hover {
     background-color: $lightGrey;
-
   }
 }
-.higby {
-  color: $space;
-  font-style: normal;
-  font-weight: bold;
+.footnotes-sep {
+  &:before {
+    color: $primary-text;
+    content: '----- Footnotes -----';
+    display: block;
+    font-size: 1.125rem;
+    text-align: center;
+  }
 }
-.note {
-  border: none;
+.footnotes {
   color: $note-text;
-  display:list-item;
   font-size: 1rem;
-  list-style-position: outside;
-  list-style-type: ">";
-  margin-left: .65rem;
-  p {
-    font-style: italic;
-  }
+}
+.footnote-ref {
+  font-size: .95rem;
+  vertical-align: super;
 }
 .info {
   background-color: $space-100;
@@ -415,23 +421,6 @@ input:disabled {
     display: grid;
     grid-template-rows: 1fr 1fr;
   }
-}
-.footnotes {
-  color: $note-text;
-  font-size: 1rem;
-}
-.footnotes-sep {
-  &:before {
-    color: $primary-text;
-    content: '///// Footnotes /////';
-    display: block;
-    font-size: 1.125rem;
-    text-align: center;
-  }
-}
-.footnote-ref {
-  font-size: .85rem;
-  vertical-align: text-top;
 }
 .qr {
   display: none;
@@ -451,6 +440,14 @@ input:disabled {
       a {
         display: block;
       }
+    }
+  }
+  .garden ol li {
+    span {
+      grid-column: span 2;
+    }
+    time {
+
     }
   }
   form {
