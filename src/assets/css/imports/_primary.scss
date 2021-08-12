@@ -21,18 +21,19 @@ html {
   font-weight: bold;
 }
 body {
-  font-family: $primary-font;
-  font-size: 1.125rem;
-  max-width: 600px;
-  margin: 1rem auto;
-  line-height: 1.65;
   background-color: $background-color;
   color: $primary-text;
+  font-family: $primary-font;
+  font-size: 1.125rem;
+  line-height: 1.65;
+  margin: 1rem auto;
+  max-width: 600px;
   &> header h1 {
     margin-bottom: .5rem;
   }
 }
 h1, h2, h3, h4, h5, h6, header {
+  color: $header-text;
   font-weight: bold;
   margin: 1rem 0;
   code {
@@ -98,25 +99,25 @@ header, .toc, footer {
   }
 }
 .garden {
-  list-style: none;
   color: $header-text;
+  list-style: none;
   ol {
     margin: 0;
-    border-left: .25rem $space solid;
-    padding: 0 0 0 1rem;
 
     li {
+      grid-gap: .5rem;
+      border-left: .25rem $space solid;
       display: grid;
+      font-size: 1rem;
       grid-template-columns: auto auto;
       margin: 1rem 0;
-      font-size: 1rem;
-      grid-gap: .5rem;
+      padding: 0 0 0 1rem;
       a {
         font-size: 1.25rem;
       }
       time {
-        text-align: right;
         color: $quote-text;
+        text-align: right;
       }
       p {
         color: $code-text;
@@ -153,9 +154,9 @@ pre {
   background-color: $lightGrey;
   border-radius: .25rem;
   color: $code-text;
+  font-family: $mono-font;
   font-size: 1rem;
   overflow: auto;
-  font-family: $mono-font;
   padding: 1rem 1.5rem;
   white-space: pre;
   code {
@@ -186,8 +187,8 @@ figure {
   }
 }
 figcaption {
-  text-align: center;
   font-style: italic;
+  text-align: center;
 }
 
 hr {
