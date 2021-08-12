@@ -9,7 +9,7 @@ header .higby {
 header a:hover {
   color: #965ee5;
 }
-nav ul li ul,.subposts {
+.toc ol li ol {
   display: block;
 }
 nav svg {

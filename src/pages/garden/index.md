@@ -16,18 +16,18 @@ setup:
 {% for tag in allTags %}
 {% if tag == heading %}
 <h2>{{ tag | capitalize }}</h2>
-<ol>
+<ul>
   {% for flower in collections.flowers %}
   {% if flower.data.tags[0] == tag and flower.data.draft != true %}
   <li>
     <div><a href="{{ flower.url }}" {% unless flower.data.stylesheet != "main" %}class="internal"{% endunless %}>{{ flower.data.title }}</a></div>
     <time>{{ flower.date | common }}</time>
-    <p>{{ flower.data.description }}</p>
+    {% if flower.data.description %}<p>{{ flower.data.description }}</p>{% endif %}
 
   </li>
   {% endif %}
   {% endfor %}
-</ol>
+</ul>
 {% endif %}
 {% endfor %}
 {% endfor %}

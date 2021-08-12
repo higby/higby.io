@@ -1,10 +1,19 @@
 ---
 permalink: "/index.html"
 tags: flowers
-title: "A Little About Me"
+setup:
+  toc: false
 ---
 
-Branden Higby is a [writer](/garden){.internal}, actor, computer programmer, video producer, dungeon master, and [cartoon watcher](/library){.internal} based in Oregon.
+<div class="me">
+
+![Me, Awkwardly](/assets/images/mugshot.jpeg)
+
+<div>Branden Higby is a <a href="/garden" class="internal">writer</a>, noun, computer programmer, other noun, dungeon master, and <a href="/library" class="internal">cartoon watcher</a> based in Oregon.</div>
+
+</div>
+
+
 
 My favorite number is *65*{.higby}, and my favorite Pokemon is my shiny Araquanid, [Metroid](/pokemon){.internal}.
 

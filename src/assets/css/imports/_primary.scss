@@ -105,7 +105,7 @@ header, .toc, .garden, footer {
 .garden {
   color: $header-text;
   list-style: none;
-  ol {
+  ul {
     margin: 0;
     li {
       grid-gap: .5rem;
@@ -427,6 +427,24 @@ input:disabled {
     grid-template-rows: 1fr 1fr;
   }
 }
+.me {
+  background-color: $space-100;
+  border-radius: .25rem;
+  color: $header-text;
+  display: flex;
+  font-weight: 600;
+  padding: .5rem;
+  font-size: 1.25rem;
+  flex-direction: row-reverse;
+
+  div {
+    margin: auto 1rem;
+  }
+  figure {
+    width: 95%;
+    margin-right: -3rem;
+  }
+}
 .qr {
   display: none;
 }
@@ -447,7 +465,7 @@ input:disabled {
       }
     }
   }
-  .garden ol li {
+  .garden ul li {
     div {
       grid-column: span 2;
     }
@@ -455,10 +473,18 @@ input:disabled {
       text-align: left;
     }
   }
-  .info {
+  .info, .me {
     border-radius: 0;
     margin: 1rem -2rem;
     padding: 2rem;
+  }
+  .me  {
+    display: block;
+    padding: 1rem;
+    figure {
+      margin: 1rem auto;
+      width: 45%;
+    }
   }
   form {
     border-radius: 0;
