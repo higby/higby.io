@@ -18,7 +18,7 @@ html {
 .higby {
   color: $space;
   font-style: normal;
-  font-weight: bold;
+  font-weight: 600;
 }
 body {
   background-color: $background-color;
@@ -48,16 +48,20 @@ h5 { font-size: .85rem; }
 h6 { font-size: .70rem; }
 header {
   text-align: center;
+  .higby {
+    font-weight: bold;
+  }
   h1 a:hover {
     text-decoration: none;
   }
   nav {
     display: grid;
     grid-auto-flow: column;
+    font-weight: 600;
     justify-content: space-around;
   }
 }
-header, .toc, footer {
+header, .toc, .garden, footer {
   a {
     color: $header-text;
     &:hover {
@@ -103,7 +107,6 @@ header, .toc, footer {
   list-style: none;
   ol {
     margin: 0;
-
     li {
       grid-gap: .5rem;
       border-left: .25rem $space solid;
@@ -114,6 +117,7 @@ header, .toc, footer {
       padding: 0 0 0 1rem;
       a {
         font-size: 1.25rem;
+        font-weight: 600;
       }
       time {
         color: $quote-text;
@@ -444,12 +448,17 @@ input:disabled {
     }
   }
   .garden ol li {
-    span {
+    div {
       grid-column: span 2;
     }
     time {
-
+      text-align: left;
     }
+  }
+  .info {
+    border-radius: 0;
+    margin: 1rem -2rem;
+    padding: 2rem;
   }
   form {
     border-radius: 0;
@@ -466,11 +475,8 @@ input:disabled {
     grid-column: span 2;
   }
 }
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 600px) {
   .info {
-    border-radius: 0;
-    margin: 1rem -2rem;
-    padding: 2rem;
     h1, h2, h3, h4, h5, h6, header, ol {
       display: grid;
       grid-template-rows: 1fr 1fr;

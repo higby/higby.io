@@ -11,9 +11,11 @@ This is a collection of [classless](https://medium.com/@ubershmekel/the-next-css
 - Responsive
 - Good browser support
 - Beautiful
-- Small size ==(< a few kb)== - you don't waste bytes on every widget imaginable
+- Small size ==(< a few kb)== - you don't waste bytes on every widget imaginable[^1]
 - No learning curve - use HTML as you would normally instead of going to the docs to learn which class does what and having to fight the framework otherwise.
 - [Original Hacker News Thread](https://news.ycombinator.com/item?id=19593866)
+
+[^1]: I do have a few classed things though, but the main theme is classless
 
 ## Is it responsive?
 
@@ -23,7 +25,9 @@ In fact, try resizing this page. Everything flows super nicely as you'll see.
 
 ## Element demos
 
-This is supposed to be a demo page so we need more elements!
+This is supposed to be a demo page so we need more elements![^2]
+
+[^2]: It works pretty well TBH
 
 ### Code
 
@@ -77,12 +81,6 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque dictum hendreri
 3. Ordered list item 3
 
 Links with `mailto:`, `tel:`, `sms:` addresses might be styled...
-
-<address>
-  [john.doe@example.com](mailto:john.doe@example.com)
-  [778-330-2389](tel:778-330-2389)
-  [666-666-6666](666-666-6666)
-</address>
 
 # Heading 1
 
