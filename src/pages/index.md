@@ -7,7 +7,7 @@ setup:
 
 <div class="me">
 
-![Me, Awkwardly](/assets/images/mugshot.jpeg)
+![Me, Awkwardly](/assets/images/headshot.jpeg)
 
 <div>Branden Higby is a <a href="/garden" class="internal">writer</a>, noun, computer programmer, other noun, dungeon master, and <a href="/library" class="internal">cartoon watcher</a> based in Oregon.</div>
 
