@@ -10,7 +10,8 @@ module.exports = function (eleventyConfig) {
         keep_array_indentation: true,
         space_before_conditional: false,
         indent_inner_html: true,
-        extra_liners: ''
+        extra_liners: '',
+        unformatted: "noscript"
       });
     }
   });
