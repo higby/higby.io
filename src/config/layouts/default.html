@@ -16,10 +16,12 @@
           {% qrcode url %}
         </header>
       {% endif %}
-      {% unless setup.toc == false %}
-        {{ content | toc }}
-      {% endunless %}
-      {{ content }}
+      <article>
+        {% unless setup.toc == false %}
+          {{ content | toc }}
+        {% endunless %}
+        {{ content }}
+      </article>
       {% include footer.html %}
     </main>
   </body>

@@ -36,17 +36,15 @@ function render_footnote_ref(tokens, idx, options, env, slf) {
     refid += ':' + tokens[idx].meta.subId;
   }
 
-  return '<sup class="footnote-ref"><a href="#fn' + id + '" id="fnref' + refid + '">' + caption + '</a></sup>';
+  return '<a href="#fn' + id + '" class="footnote">' + caption + '</a>';
 }
 
 function render_footnote_block_open(tokens, idx, options) {
-  return (options.xhtmlOut ? '<hr class="footnotes-sep" />\n' : '<hr class="footnotes-sep">\n') +
-         '<section class="footnotes">\n' +
-         '<ol class="footnotes-list">\n';
+  return '<ol class="footnotes">\n';
 }
 
 function render_footnote_block_close() {
-  return '</ol>\n</section>\n';
+  return '</ol>\n';
 }
 
 function render_footnote_open(tokens, idx, options, env, slf) {
@@ -56,7 +54,7 @@ function render_footnote_open(tokens, idx, options, env, slf) {
     id += ':' + tokens[idx].meta.subId;
   }
 
-  return '<li id="fn' + id + '" class="footnote-item">';
+  return '<li id="fn' + id + '">';
 }
 
 function render_footnote_close() {

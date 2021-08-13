@@ -15,11 +15,7 @@ html {
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
-.higby {
-  color: $space;
-  font-style: normal;
-  font-weight: 600;
-}
+
 body {
   background-color: $background-color;
   color: $primary-text;
@@ -48,9 +44,6 @@ h5 { font-size: .85rem; }
 h6 { font-size: .70rem; }
 header {
   text-align: center;
-  .higby {
-    font-weight: bold;
-  }
   h1 a:hover {
     text-decoration: none;
   }
@@ -69,68 +62,7 @@ header, .toc, .garden, footer {
     }
   }
 }
-.toc {
-  ul, ol {
-    border-left: .25rem $space solid;
-    list-style: none;
-    margin: 0;
-    padding: 0 .5rem 0 .5rem;
-    li {
-      ul, ol {
-        border-left: .25rem solid $mediumGrey;
-        display: none;
-        margin: 0 10px;
-        padding-left: calc(.5rem + 2px);
-      }
-    }
-    li {
-      margin: 0;
-    }
-    a {
-      color: $header-text;
-      &:hover {
-        color: $space;
-      }
-    }
-    svg {
-      fill: $header-text;
-      vertical-align: text-top;
-    }
-  }
-  p {
-    color: $header-text;
-    margin: .5rem 0;
-  }
-}
-.garden {
-  color: $header-text;
-  list-style: none;
-  ul {
-    margin: 0;
-    li {
-      grid-gap: .5rem;
-      border-left: .25rem $space solid;
-      display: grid;
-      font-size: 1rem;
-      grid-template-columns: auto auto;
-      margin: 1rem 0;
-      padding: 0 0 0 1rem;
-      a {
-        font-size: 1.25rem;
-        font-weight: 600;
-      }
-      time {
-        color: $quote-text;
-        text-align: right;
-      }
-      p {
-        color: $code-text;
-        grid-column: span 2;
-        margin: 0;
-      }
-    }
-  }
-}
+
 footer {
   font-size: 1.25rem;
   code {
@@ -172,18 +104,7 @@ blockquote {
   color: $quote-text;
   padding: 0 0 0 1rem;
 }
-.note {
-  border: none;
-  color: $note-text;
-  display:list-item;
-  font-size: 1rem;
-  list-style-position: outside;
-  list-style-type: ">";
-  margin-left: .65rem;
-  p {
-    font-style: italic;
-  }
-}
+
 figure {
   img {
     background-image: linear-gradient(65deg, $space 25%, $lightGrey 25%, $lightGrey 50%, $space 50%, $space 75%, $lightGrey 75%, $lightGrey 100%);
@@ -265,6 +186,12 @@ img, video, canvas {
   display: block;
   height: auto;
   width: 100%;
+}
+section {
+  background-color: $space-100;
+  border-radius: .25rem;
+  color: $header-text;
+  padding: 1rem;
 }
 table {
   border-collapse: collapse;
@@ -394,7 +321,9 @@ input:disabled {
     background-color: $lightGrey;
   }
 }
-.footnotes-sep {
+.footnotes {
+  color: $note-text;
+  font-size: 1rem;
   &:before {
     color: $primary-text;
     content: '----- Footnotes -----';
@@ -403,52 +332,11 @@ input:disabled {
     text-align: center;
   }
 }
-.footnotes {
-  color: $note-text;
-  font-size: 1rem;
-}
-.footnote-ref {
+.footnote {
   font-size: .95rem;
   vertical-align: super;
 }
-.info {
-  background-color: $space-100;
-  border-radius: .25rem;
-  color: $header-text;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  padding: 1rem;
-  text-align: center;
-  h1, h2, h3, h4, h5, h6, header, ol {
-    grid-column: span 2;
-  }
-  p {
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-  }
-}
-.me {
-  background-color: $space-100;
-  border-radius: .25rem;
-  color: $header-text;
-  display: flex;
-  font-weight: 600;
-  padding: .5rem;
-  font-size: 1.25rem;
-  flex-direction: row-reverse;
-  margin-bottom: 2.5rem;
-  p {
-    margin: auto 1rem;
-  }
-  figure {
-    width: 95%;
-    margin-right: -1.5rem;
-    margin-bottom: -1.5rem;
-  }
-}
-.qr {
-  display: none;
-}
+
 @media screen and (max-width: 700px) {
   body {
     margin-left: 2rem;
@@ -466,27 +354,7 @@ input:disabled {
       }
     }
   }
-  .garden ul li {
-    div {
-      grid-column: span 2;
-    }
-    time {
-      text-align: left;
-    }
-  }
-  .info, .me {
-    border-radius: 0;
-    margin: 1rem -2rem;
-    padding: 2rem;
-  }
-  .me  {
-    display: block;
-    padding: 1rem;
-    figure {
-      margin: 1rem auto;
-      width: 45%;
-    }
-  }
+
   form {
     border-radius: 0;
     margin: 1rem -2rem;
@@ -500,16 +368,5 @@ input:disabled {
   input[type="submit"],
   input[type="reset"] {
     grid-column: span 2;
-  }
-}
-@media screen and (max-width: 600px) {
-  .info {
-    h1, h2, h3, h4, h5, h6, header, ol {
-      display: grid;
-      grid-template-rows: 1fr 1fr;
-    }
-    p {
-      grid-column: span 2;
-    }
   }
 }

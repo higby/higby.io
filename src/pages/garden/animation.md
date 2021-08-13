@@ -1,6 +1,5 @@
 ---
 title: "TV ANIMATION WRITING RESOURCES"
-tags: essays
 ---
 
 ## Software
