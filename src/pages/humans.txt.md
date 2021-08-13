@@ -5,7 +5,7 @@ setup:
   toc: false
 ---
 
-<div class="info">
+<div class="what">
   <h2> higby.io <code> Major Revision 3</code></h2>
   <p>v1 Inital Commit: <code>2017-10-12, 17:56:00 PDT</code></p>
   <p>v3 Last Updated: <code>{{ "now" | technical }}</code></p>

@@ -4,9 +4,6 @@ Print Styles
 (They're gross, don't look)
 --------------------------------
 */
-
-@use "variables" as *;
-
 @media print {
   * {
     background: #fff !important;
@@ -123,12 +120,5 @@ Print Styles
   }
   form {
     display: none;
-  }
-  .qr {
-    display: block;
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 15vw;
   }
 }

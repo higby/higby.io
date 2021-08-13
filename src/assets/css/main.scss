@@ -7,8 +7,5 @@ https://github.com/higby/higby.io/
 --------------------------------
 */
 
-@use "imports/variables" as *;
-@use "imports/primary";
-@use "imports/syntax";
-@use "imports/specific";
-@use "imports/print";
+@import "imports/variables";
+@import "imports/primary";

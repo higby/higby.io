@@ -36,15 +36,15 @@ function render_footnote_ref(tokens, idx, options, env, slf) {
     refid += ':' + tokens[idx].meta.subId;
   }
 
-  return '<a href="#fn' + id + '" class="footnote">' + caption + '</a>';
+  return '<sup><a href="#fn' + id + '">' + caption + '</a></sup>';
 }
 
 function render_footnote_block_open(tokens, idx, options) {
-  return '<ol class="footnotes">\n';
+  return '<section>\n<ol>\n';
 }
 
 function render_footnote_block_close() {
-  return '</ol>\n';
+  return '</ol>\n</section>';
 }
 
 function render_footnote_open(tokens, idx, options, env, slf) {
@@ -69,7 +69,7 @@ function render_footnote_anchor(tokens, idx, options, env, slf) {
   }
 
   /* ↩ with escape code to prevent display as Apple Emoji on iOS */
-  return ' <a href="#fnref' + id + '" class="footnote-backref">\u21a9\uFE0E</a>';
+  return ' <sup><a href="#fnref' + id + '">\u21a9\uFE0E</a></sup>';
 }
 
 

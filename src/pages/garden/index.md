@@ -11,7 +11,7 @@ setup:
 {% capture allTags %}{% for post in collections.flowers %}{{ post.data.tags[0] }}{% unless forloop.last == true %},{% endunless %}{% endfor %}{% endcapture %}
 {% assign allTags = allTags | split: "," | uniq %}
 
-<nav class="garden">
+<nav>
 {% for heading in order %}
 {% for tag in allTags %}
 {% if tag == heading %}

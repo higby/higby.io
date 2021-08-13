@@ -6,8 +6,8 @@
     "eleventy-serve": "npx @11ty/eleventy --serve",
     "eleventy": "npx @11ty/eleventy",
     "clean": "rimraf build",
-    "sass-watch": "sass --no-source-map src/assets/css:build/assets/css --watch",
-    "sass": "sass --no-source-map src/assets/css:build/assets/css",
+    "sass-watch": "sass --no-source-map --style=compressed src/assets/css:build/assets/css --watch",
+    "sass": "sass --no-source-map --style=compressed src/assets/css:build/assets/css",
     "start": "run-p clean eleventy-serve sass-watch",
     "build": "run-p clean eleventy sass"
   },

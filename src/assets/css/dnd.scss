@@ -1,6 +1,5 @@
-@use "imports/primary";
-@use "imports/variables" as *;
-@use "imports/print";
+@import "imports/variables";
+
 
 /*
 --------------------------------
@@ -27,6 +26,7 @@ $quote-text:  #727272;
 
 $primary-font: "Bookinsanity";
 $mono-font: "Bookinsanity";
+@import "imports/primary";
 
 @font-face {
   src: url("../fonts/Bookinsanity/Bookinsanity.otf") format("opentype");

@@ -1,28 +1,31 @@
 ---
 ---
+
 {% capture url %}{{ site.url }}{{ page.filePathStem | remove: '_garden/_flowers/' }}{% endcapture %}
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  {% include head.html %}
+  <head>
+    {% include head.html %}
+  </head>
   <body>
-    {% include header.html %}
+    <header>
+      {% include header.html %}
+    </header>
     <main>
       {% if title %}
         <header>
           <h1>{{ title }}</h1>
-          {% if date and setup.date != false %}
-          <time> {{ page.date | common }}</time>
-          {% endif %}
-          {% qrcode url %}
+          {% if date and setup.date != false %}<time>{{ page.date | common }}</time>{% endif %}
+          {% if setup.toc != false %}{{ content | toc }}{% endif %}
         </header>
       {% endif %}
       <article>
-        {% unless setup.toc == false %}
-          {{ content | toc }}
-        {% endunless %}
         {{ content }}
       </article>
-      {% include footer.html %}
+      <footer>
+        {% include footer.html %}
+      </footer>
     </main>
   </body>
   {% include higby.html %}
