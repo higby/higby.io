@@ -1,9 +1,16 @@
+{% capture headTitle %}{% if title %}{{ title }}{% else %}{{ site.name[0] }} {{ site.name[1] }}{% endif %}{% endcapture %}
+{% capture headDesc %}{% if description %}{{ description }}{% else %}{{ site.description }}{% endif %}{% endcapture %}
+{% capture headUrl %}{{ site.url }}{{ page.filePathStem | remove: '_garden/_flowers/' }}{% endcapture %}
+
 <meta charset="utf-8">
+<title>{{ headTitle}}</title>
+<meta name="description" content="{{ headDesc }}"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<meta name="description" content="{% if description %}{{ description }}{% else %}{{ site.description }}{% endif %}"/>
-<link rel="canonical" href="{{ site.url }}{{ page.filePathStem | remove: '_garden/_flowers/' }}">
-<link rel="author" href="/humans.txt"/>
 <link rel="icon" type="image/ico" href="/favicon.ico"/>
+<meta name="theme-color" content="#965ee5">
+<link rel="author" href="/humans.txt"/>
+<link rel="canonical" href="{{ headUrl}}">
+
 <link rel="stylesheet" href="/assets/css/{{ stylesheet }}.css"/>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,4 +18,15 @@
 <noscript><link rel="stylesheet" href="/assets/css/noscript.css"/></noscript>
 <script src="/assets/js/core.js" defer></script>
 <script src="/assets/js/main.js" defer></script>
-<title>{% if title %}{{ title }}{% else %}{{ site.name[0] }} {{ site.name[1] }}{% endif %}</title>
+
+
+
+
+
+<meta property="og:title" content="{{ headTitle }}">
+<meta property="og:description" content="{{ headDesc}}">
+<meta property="og:url" content="{{ headUrl}}">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://html5boilerplate.com/icon.png">
+
+<meta name="twitter:creator" content="@iamhigby">
