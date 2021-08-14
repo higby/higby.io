@@ -9,7 +9,7 @@ setup:
 
 ![Me, Awkwardly](/assets/images/headshot.jpeg)
 
-**Branden Higby** is a writer, noun, computer programmer, other noun, dungeon master, and cartoon watcher based in Oregon.
+**Branden Higby** is a writer, noun, computer programmer, other noun, dungeon master, and cartoon watcher based in Oregon. 💜
 
 </div>
 
