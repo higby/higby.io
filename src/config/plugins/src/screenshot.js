@@ -15,7 +15,7 @@ module.exports = function (eleventyConfig) {
     if( link && outputPath.endsWith(".md") ) {
       const browser = await puppeteer.launch({defaultViewport: null});
       const page = await browser.newPage();
-      await page.setViewport({ width: 1200, height: 600 });
+      await page.setViewport({ width: 1200, height: 630 });
       await page.setContent(content);
       await page.screenshot({ path: 'build/assets/images/opengraph/' + link + '.png' });
       await browser.close();
