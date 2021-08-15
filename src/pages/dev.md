@@ -1,5 +1,5 @@
 ---
-title: CSS Bed
+title: "Paleontology, Jobs, and Other Rambling Thoughts"
 description: Classless CSS snippet gallery. A less ugly way to start a web page.
 date: 2020-04-12 00:05:00
 layout: screenshot.html
