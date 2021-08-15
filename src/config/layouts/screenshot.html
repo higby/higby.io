@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400;1,700&family=Source+Code+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+	<main>
+		<h1>{{ title }}</h1>
+		{% if date and setup.date != false %}<time>{{ date | common }}</time>{% endif %}
+		<p>From <i class="branden">Branden</i> <i class="higby">Higby</i>'s Garden</p>
+		<img src="https://beta.higby.io/assets/images/headshot.jpeg" width="300" height="300">
+	</main>
+	<style>
+		*:where(:not(iframe, canvas, img, svg, video, input[type="checkbox"], input[type="radio"]):not(svg *)){all:unset;display:revert}*{border-radius:.25rem}body{font-family:"Open Sans",sans-serif;margin:2rem;height:calc(100vh - 6rem);display:grid;color:#191919}main{margin:auto 0;width:calc(100% - 6rem);height:calc(100% - 4rem);background-color:#f1dffd;display:grid;padding:2rem;grid-template-columns:auto auto}h1{font-size:5rem;font-weight:bold}time{font-size:2rem;justify-self:end;color:#474747}p{align-self:flex-end;font-size:2rem}img{margin-bottom:-4rem;margin-right:-4rem;place-self:end end;}.branden,.higby{font-weight:bold}.higby{color:#965ee5}
+	</style>
+</body>
+</html>
