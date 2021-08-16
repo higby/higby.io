@@ -98,7 +98,6 @@ $("header h1 a").ready(function() {
 function fancyName() {
   var headerClass = $("header h1 a").attr("class");
   var headerColor = $("header h1 a").css("color");
-  console.log(headerColor);
   if ($.type( headerClass ) === "undefined") {
     $("header h1 a").attr("class", "animating");
   } else {
