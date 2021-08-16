@@ -8,7 +8,7 @@
     "clean": "rimraf build",
     "sass-watch": "sass --no-source-map --style=compressed src/assets/css:build/assets/css --watch",
     "sass": "sass --no-source-map --style=compressed src/assets/css:build/assets/css",
-    "opengraph": "npx @11ty/eleventy --dryrun --config=.opengraph.js",
+    "opengraph": "rimraf src/assets/images/opengraph && npx @11ty/eleventy --dryrun --config=.opengraph.js",
     "start": "run-p clean eleventy-serve sass-watch",
     "build": "run-p clean eleventy sass"
   },
