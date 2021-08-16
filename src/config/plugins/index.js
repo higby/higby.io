@@ -5,7 +5,6 @@ const safeLinks = require('./src/safeLinks');
 const serve404 = require('./src/serve404');
 const sinisterSix = require('./src/sinister-six');
 const qr = require('./src/qr');
-const screenshot = require('./src/screenshot');
 const toc = require('./src/toc');
 
 
@@ -17,6 +16,5 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(sinisterSix);
   eleventyConfig.addPlugin(toc);
   eleventyConfig.addPlugin(qr);
-  eleventyConfig.addPlugin(screenshot);
   eleventyConfig.addPlugin(beautify); /* Has to be last */
 }

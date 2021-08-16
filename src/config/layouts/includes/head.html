@@ -1,7 +1,7 @@
 {% capture headTitle %}{% if title %}{{ title }}{% else %}{{ site.name[0] }} {{ site.name[1] }}{% endif %}{% endcapture %}
 {% capture twitterTitle %}{% if title %}{{ title }}{% else %}higby.io{% endif %}{% endcapture %}
 {% capture headDesc %}{% if description %}{{ description }}{% else %}{{ site.description }}{% endif %}{% endcapture %}
-{% capture headUrl %}{{ site.url }}{{ page.filePathStem | remove: '_garden/_flowers/' }}{% endcapture %}
+{% capture headUrl %}{{ site.url }}{{ page.filePathStem | remove: '/pages/' | remove: 'garden/' }}{% endcapture %}
 
 <meta charset="utf-8">
 <title>{{ headTitle}}</title>
@@ -24,7 +24,7 @@
 <meta property="og:description" content="{{ headDesc}}">
 <meta property="og:url" content="{{ headUrl}}">
 <meta property="og:type" content="website">
-<meta property="og:image" content="https://beta.higby.io/assets/images/opengraph/dev.png">
+<meta property="og:image" content="https://beta.higby.io/assets/images/opengraph/{{ page.filePathStem | remove: '/pages/' | remove: 'garden/' }}.png">
 
 <meta name="twitter:creator" content="@iamhigby">
 <meta name="twitter:card" content="summary_large_image">
