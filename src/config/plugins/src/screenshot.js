@@ -6,9 +6,16 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addLinter("screenshots", async function(content, outputPath) {
 
     const dom = new JSDOM(content);
-    var link = dom.window.document.querySelector("body").getAttribute('data-attribute').split('/');
-    var path = link.pop();
-    link = link.join("/");
+    var link = dom.window.document.querySelector("body").getAttribute('data-attribute');
+    if (link == null) {
+      link = "opengraph";
+      path = "index";
+    } else {
+      link = link.split('/');
+      var path = link.pop();
+      link = link.join("/");
+
+    }
     if (!fs.existsSync("src/assets/images/" + link)){
       fs.mkdirSync("src/assets/images/" + link);
     }

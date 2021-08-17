@@ -1,6 +1,7 @@
 ---
 title: "My Garden"
 permalink: "/garden/index.html"
+tags: flowers
 setup:
   toc: false
 ---

@@ -1,8 +1,10 @@
 module.exports = {
-  name: ["Branden", "Higby"],
-  url: "https://higby.io",
+  name: "Branden Higby",
   description: "A collection of Branden Higby's ramblings",
   email: "branden@higby.io",
   github: "higby",
-  instagram: "iamhigby"
+  instagram: "iamhigby",
+  twitter: "iamhigby",
+  url: "higby.io",
+  vanityUrls: ["skeletor.gay", "brandenhigby.com"]
 };

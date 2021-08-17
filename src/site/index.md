@@ -1,13 +1,12 @@
 ---
 permalink: "/index.html"
-tags: flowers
 setup:
   toc: false
 ---
 
 <div class="who">
 
-![Me, Awkwardly](/assets/images/headshot.jpeg)
+![Me, Awkwardly](/img/headshot.jpeg)
 
 **Branden Higby** is a writer, noun, computer programmer, other noun, dungeon master, and cartoon watcher based in Oregon. 💜
 

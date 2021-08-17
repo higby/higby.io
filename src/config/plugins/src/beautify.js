@@ -14,5 +14,6 @@ module.exports = function (eleventyConfig) {
         unformatted: "noscript"
       });
     }
+    return content;
   });
 }

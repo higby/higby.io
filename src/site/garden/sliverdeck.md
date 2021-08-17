@@ -25,13 +25,13 @@ tags: collections
     {% if card.amount %}
       {% for i in (1..card.amount) %}
   <figure id="{{card.name | slug }}-{{i}}" class="card">
-    <img loading="lazy" width="488" height="680" src="/assets/images/cards/sliver/sliver-{{card.name | slug }}-{{i}}.jpeg">
+    <img loading="lazy" width="488" height="680" src="/img/cards/sliver/sliver-{{card.name | slug }}-{{i}}.jpeg">
     <span>{{card.name}}</span>
   </figure>
       {% endfor %}
     {% else %}
   <figure id="{{card.name | slug }}" class="card">
-    <img loading="lazy" width="488" height="680" src="/assets/images/cards/sliver/{{card.name | slug }}.jpeg">
+    <img loading="lazy" width="488" height="680" src="/img/cards/sliver/{{card.name | slug }}.jpeg">
     <span>{{card.name}}</span>
   </figure>
     {% endif %}

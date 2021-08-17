@@ -4,9 +4,8 @@ const imageDimensions = require('./src/image-dimensions');
 const safeLinks = require('./src/safeLinks');
 const serve404 = require('./src/serve404');
 const sinisterSix = require('./src/sinister-six');
-const qr = require('./src/qr');
 const toc = require('./src/toc');
-
+const qr = require('./src/qr');
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(dates);

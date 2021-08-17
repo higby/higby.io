@@ -1,30 +1,31 @@
-{% capture headTitle %}{% if title %}{{ title }}{% else %}{{ site.name[0] }} {{ site.name[1] }}{% endif %}{% endcapture %}
+{% assign name = site.name | split: " " %}
+{% capture headTitle %}{% if title %}{{ title }}{% else %}{{ name[0] }} {{ name[1] }}{% endif %}{% endcapture %}
 {% capture twitterTitle %}{% if title %}{{ title }}{% else %}higby.io{% endif %}{% endcapture %}
 {% capture headDesc %}{% if description %}{{ description }}{% else %}{{ site.description }}{% endif %}{% endcapture %}
-{% capture headUrl %}{{ site.url }}{{ page.filePathStem | remove: '/pages/' | remove: 'garden/' }}{% endcapture %}
+{% capture headUrl %}https://beta.{{ site.url }}{{ page.url }}{% endcapture %}
 
 <meta charset="utf-8">
 <title>{{ headTitle}}</title>
-<meta name="description" content="{{ headDesc }}"/>
+<meta name="description" content="{% if description %}{{ description }}{% else %}{{ site.description }}{% endif %}"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <link rel="icon" type="image/ico" href="/favicon.ico"/>
 <meta name="theme-color" content="#965ee5">
 <link rel="author" href="/humans.txt"/>
-<link rel="canonical" href="{{ headUrl}}">
+<link rel="canonical" href="{{ headUrl }}">
 
-<link rel="stylesheet" href="/assets/css/{{ stylesheet }}.css"/>
+<link rel="stylesheet" href="/css/{{ stylesheet }}.css"/>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400;1,700&family=Source+Code+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 <noscript><link rel="stylesheet" href="/assets/css/noscript.css"/></noscript>
-<script src="/assets/js/core.js" defer></script>
-<script src="/assets/js/main.js" defer></script>
+<script src="/js/core.js" defer></script>
+<script src="/js/main.js" defer></script>
 
 <meta property="og:title" content="{{ twitterTitle }}">
-<meta property="og:description" content="{{ headDesc}}">
-<meta property="og:url" content="{{ headUrl}}">
+<meta property="og:description" content="{{ headDesc }}">
+<meta property="og:url" content="{{ headUrl }}">
 <meta property="og:type" content="website">
-<meta property="og:image" content="https://beta.higby.io/assets/images/opengraph/{{ page.filePathStem | remove: '/pages/' | remove: 'garden/' }}.png">
+<meta property="og:image" content="{{ headUrl }}opengraph">
 
 <meta name="twitter:creator" content="@iamhigby">
 <meta name="twitter:card" content="summary_large_image">

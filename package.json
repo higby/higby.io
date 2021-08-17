@@ -6,17 +6,28 @@
     "eleventy-serve": "npx @11ty/eleventy --serve",
     "eleventy": "npx @11ty/eleventy",
     "clean": "rimraf build",
-    "sass-watch": "sass --no-source-map --style=compressed src/assets/css:build/assets/css --watch",
-    "sass": "sass --no-source-map --style=compressed src/assets/css:build/assets/css",
-    "opengraph": "rimraf src/assets/images/opengraph && npx @11ty/eleventy --dryrun --config=.opengraph.js",
+    "sass-watch": "sass --no-source-map --style=compressed src/assets/sass:build/css --watch",
+    "sass": "sass --no-source-map --style=compressed src/assets/sass:build/css",
+    "opengraph": "rimraf src/assets/images/opengraph && npx @11ty/eleventy --serve --config=.opengraph.js",
     "start": "run-p clean eleventy-serve sass-watch",
     "build": "run-p clean eleventy sass"
   },
   "author": "Branden Higby",
   "license": "MIT",
-  "devDependencies": {
-    "@11ty/eleventy": "^0.12.1"
+  "main": ".eleventy.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/higby/higby.io.git"
   },
+  "keywords": [
+    "blog",
+    "eleventy",
+    "markdown"
+  ],
+  "bugs": {
+    "url": "https://github.com/higby/higby.io/issues"
+  },
+  "homepage": "https://github.com/higby/higby.io#readme",
   "dependencies": {
     "cheerio": "^1.0.0-rc.10",
     "js-beautify": "^1.14.0",
@@ -35,19 +46,5 @@
     "rimraf": "^2.7.1",
     "sass": "^1.36.0",
     "sharp": "^0.28.3"
-  },
-  "main": ".eleventy.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/higby/higby.io.git"
-  },
-  "keywords": [
-    "blog",
-    "eleventy",
-    "markdown"
-  ],
-  "bugs": {
-    "url": "https://github.com/higby/higby.io/issues"
-  },
-  "homepage": "https://github.com/higby/higby.io#readme"
+  }
 }
