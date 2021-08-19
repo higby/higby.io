@@ -2,7 +2,7 @@
 {% capture headTitle %}{% if title %}{{ title }}{% else %}{{ name[0] }} {{ name[1] }}{% endif %}{% endcapture %}
 {% capture twitterTitle %}{% if title %}{{ title }}{% else %}higby.io{% endif %}{% endcapture %}
 {% capture headDesc %}{% if description %}{{ description }}{% else %}{{ site.description }}{% endif %}{% endcapture %}
-{% capture headUrl %}https://beta.{{ site.url }}{{ page.url }}{% endcapture %}
+{% capture headUrl %}https://{{ site.url }}{{ page.url }}{% endcapture %}
 
 <meta charset="utf-8">
 <title>{{ headTitle}}</title>
