@@ -123,7 +123,7 @@ function fancyName() {
           value: headerColor,
         },
         {
-          value: "#965ee5",
+          value: "#8654E8",
         },
       ],
     })
@@ -135,7 +135,7 @@ function fancyName() {
         },
       ],
       complete: function () {
-        $("header h1 i").css("color", "#965ee5");
+        $("header h1 i").css("color", "#8654E8");
         header.deletterize();
         if ($.type( headerClass ) !== "undefined") {
           $("header h1 a").attr("class", "internal");

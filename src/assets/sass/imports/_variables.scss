@@ -1,19 +1,19 @@
 // Space Gradient
 
-$space-100: #F1DFFD;
-$space-200: #E1C0FC;
-$space-300: #CB9FF7;
-$space-400: #B585EF;
-$space-500: #965EE5;
-$space-600: #7444C4;
-$space-700: #562FA4;
-$space-800: #3B1D84;
-$space-900: #28126D;
+$space-100: #ECDDFD;
+$space-200: #D8BCFC;
+$space-300: #BF99F8;
+$space-400: #A87DF1;
+$space-500: #8654E8;
+$space-600: #673DC7;
+$space-700: #4B2AA7;
+$space-800: #341A86;
+$space-900: #23106F;
 
 // Reusable Colors
 
 $space: $space-500;
-$highlight: #965ee580;
+$highlight: #8654E880;
 $mark: #ffe599;
 
 // Light Mode
@@ -23,11 +23,12 @@ $lightGrey: #eeeeee;
 $mediumGrey: #dedede;
 $darkGrey: #bdbdbd;
 
-$pgp-text: #afafaf;
-$note-text: #575757;
-$quote-text: #4b4b4b;
-$code-text: #474747;
-$primary-text: #323232;
+$comment-text: #6B6B6B;
+$pgp-text: #575757;
+$note-text: #4b4b4b;
+$quote-text: #474747;
+$code-text: #323232;
+$primary-text: #292929;
 $header-text: #191919;
 
 // Dark Mode
