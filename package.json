@@ -6,8 +6,8 @@
     "eleventy-serve": "npx @11ty/eleventy --serve",
     "eleventy": "npx @11ty/eleventy",
     "clean": "rimraf build",
-    "sass-watch": "sass --no-source-map --style=compressed src/assets/sass:build/css --watch",
-    "sass": "sass --no-source-map --style=compressed src/assets/sass:build/css",
+    "sass-watch": "sass --no-source-map --style=compressed src/assets/sass:src/config/layouts/includes --watch",
+    "sass": "sass --no-source-map --style=compressed src/assets/sass:src/config/layouts/includes",
     "opengraph": "rimraf src/assets/images/opengraph && npx @11ty/eleventy --serve --config=.opengraph.js",
     "start": "run-p clean eleventy-serve sass-watch",
     "build": "run-p clean eleventy sass"
