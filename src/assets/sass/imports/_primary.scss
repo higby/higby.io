@@ -18,7 +18,6 @@ html {
   font-style: normal;
 }
 body {
-  accent-color: $space;
   background-color: $background-color;
   color: $primary-text;
   font-family: $primary-font;
@@ -125,50 +124,6 @@ article {
        }
      }
     }
-  }
-  &> div {
-    background-color: $space-100;
-    border-radius: .25rem;
-    color: $header-text;
-    font-size: 1.25rem;
-  }
-  .who {
-    display: flex;
-    flex-direction: row-reverse;
-    margin-bottom: 2.5rem;
-    padding: .5rem;
-    p {
-      margin: auto 1rem;
-    }
-    figure {
-      margin-bottom: -1.5rem;
-      margin-right: -1.5rem;
-      width: 95%;
-    }
-  }
-  .what {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 1rem;
-    text-align: center;
-    h1, h2, h3, h4, h5, h6, header, ol {
-      grid-column: span 2;
-    }
-    p {
-      display: grid;
-      grid-template-rows: 1fr 1fr;
-    }
-  }
-}
-section {
-  color: $note-text;
-  font-size: 1rem;
-  &:before {
-    color: $primary-text;
-    content: '----- Footnotes -----';
-    display: block;
-    font-size: 1.125rem;
-    text-align: center;
   }
 }
 footer {
@@ -438,6 +393,51 @@ input:disabled {
     background-color: $lightGrey;
   }
 }
+.who, .what {
+  background-color: $space-100;
+  border-radius: .25rem;
+  color: $header-text;
+  font-size: 1.25rem;
+}
+.who {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-bottom: 2.5rem;
+  margin-right: 1rem;
+  padding: .5rem;
+  p {
+    margin: auto 1rem;
+  }
+  figure {
+    margin-bottom: -1.5rem;
+    margin-right: -1.5rem;
+    width: 95%;
+  }
+}
+.what {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 1rem;
+  text-align: center;
+  h1, h2, h3, h4, h5, h6, header, ol {
+    grid-column: span 2;
+  }
+  p {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+  }
+}
+.footnotes {
+  color: $note-text;
+  font-size: 1rem;
+  &:before {
+    color: $primary-text;
+    content: '/// Footnotes ///';
+    display: block;
+    font-size: 1.125rem;
+    text-align: center;
+  }
+}
 @media screen and (max-width: 700px) {
   body {
     margin-left: 2rem;
@@ -452,6 +452,7 @@ input:disabled {
       text-align: left;
       a {
         display: block;
+        margin: .65rem 0;
       }
     }
   }
@@ -462,19 +463,6 @@ input:disabled {
       }
       time {
         text-align: left;
-      }
-    }
-    &> div {
-      border-radius: 0;
-      margin: 1rem -2rem;
-      padding: 2rem;
-    }
-    .who {
-      display: block;
-      padding: 1rem;
-      figure {
-        margin: 1rem auto;
-        width: 45%;
       }
     }
   }
@@ -491,6 +479,19 @@ input:disabled {
   input[type="submit"],
   input[type="reset"] {
     grid-column: span 2;
+  }
+  .who, .what {
+    border-radius: 0;
+    margin: 1rem -2rem;
+    padding: 2rem;
+  }
+  .who {
+    display: block;
+    padding: 1rem;
+    figure {
+      margin: 1rem auto;
+      width: 45%;
+    }
   }
 }
 @media screen and (max-width: 600px) {

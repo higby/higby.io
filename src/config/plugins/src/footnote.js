@@ -40,7 +40,7 @@ function render_footnote_ref(tokens, idx, options, env, slf) {
 }
 
 function render_footnote_block_open(tokens, idx, options) {
-  return '<section>\n<ol>\n';
+  return '<section class="footnotes">\n<ol>\n';
 }
 
 function render_footnote_block_close() {

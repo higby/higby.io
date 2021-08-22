@@ -1,7 +1,7 @@
 const plugins = require('./src/config/plugins/index');
 
 module.exports = function(eleventyConfig) {
-  eleventyConfig.setBrowserSyncConfig({ files: './build/assets/sass/**/*.scss' });
+  eleventyConfig.setBrowserSyncConfig({ files: './build/css/**/*.css' });
   eleventyConfig.addPassthroughCopy({ 'src/assets/static': '/' });
   eleventyConfig.addPlugin(plugins);
   return {
