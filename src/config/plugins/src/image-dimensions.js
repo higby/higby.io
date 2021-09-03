@@ -14,7 +14,7 @@ async function imageData(content, outputPath) {
         elem = await sharp(buffer).metadata();
       }
       else {
-        let url = "./src/" + src;
+        let url = "./src/assets/static" + src;
         elem = await sharp(url).metadata();
       }
       images[i].setAttribute('loading', 'lazy');

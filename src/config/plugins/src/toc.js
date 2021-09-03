@@ -1,5 +1,5 @@
-const buildTOC = require('./src/BuildTOC')
-const parseOptions = require('./src/ParseOptions')
+const buildTOC = require('./BuildTOC')
+const parseOptions = require('./ParseOptions')
 
 module.exports = (eleventyConfig, globalOpts) => {
   globalOpts = globalOpts || {}

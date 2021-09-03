@@ -4,8 +4,9 @@ const imageDimensions = require('./src/image-dimensions');
 const safeLinks = require('./src/safeLinks');
 const serve404 = require('./src/serve404');
 const sinisterSix = require('./src/sinister-six');
+const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const toc = require('./src/toc');
-
+const qr = require('./src/qr');
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(dates);
@@ -13,6 +14,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(safeLinks);
   eleventyConfig.addPlugin(serve404);
   eleventyConfig.addPlugin(sinisterSix);
+  eleventyConfig.addPlugin(syntaxHighlight);
   eleventyConfig.addPlugin(toc);
+  eleventyConfig.addPlugin(qr);
   eleventyConfig.addPlugin(beautify); /* Has to be last */
 }
