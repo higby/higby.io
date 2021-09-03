@@ -36,7 +36,7 @@ function render_footnote_ref(tokens, idx, options, env, slf) {
     refid += ':' + tokens[idx].meta.subId;
   }
 
-  return '<sup><a href="#fn' + id + '">' + caption + '</a></sup>';
+  return '<sup><a href="#fn' + id + '" id="fnref' + refid + '">' + caption + '</a></sup>';
 }
 
 function render_footnote_block_open(tokens, idx, options) {
