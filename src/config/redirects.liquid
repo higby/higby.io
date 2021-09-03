@@ -4,5 +4,5 @@ eleventyExcludeFromCollections: true
 ---
 {% for URL in site.vanityUrls %}https://{{ URL }}/*    https://www.higby.io/:splat 301!
 https://www.{{ URL }}/*    https://www.higby.io/:splat 301!
-{% endfor %}{% for page in collections.all %}{{ page.url | replace: '.html', '/' }}opengraph    /img/opengraph{{ page.url | replace: '.html', '/' | append: 'yeet' | replace: '/yeet', '.png' }} 200
+{% endfor %}{% for page in collections.all %}{{ page.url | replace: '.html', '/' }}og    https://og.bhig.by/https%3A%2F%2Fwww.higby.io%2Fopengraph{{ page.url | replace: '.html', '%2F' | replace: '/', '%2F' }}/opengraph/ 200
 {% endfor %}

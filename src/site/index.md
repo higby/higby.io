@@ -8,11 +8,9 @@ setup:
 
 ![Me, Awkwardly](/img/headshot.webp)
 
-**Branden Higby** is a writer, noun, computer programmer, other noun, dungeon master, and cartoon watcher based in Oregon. 💜
+**Branden Higby** is a writer, video producer, computer programmer, procrastinator, dungeon master, and cartoon watcher based in Oregon. 💜
 
 </div>
-
-
 
 My favorite number is *65*{.higby}, and my favorite Pokemon is my shiny Araquanid, [Metroid](/pokemon){.internal}.
 

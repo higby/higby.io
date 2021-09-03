@@ -2,6 +2,7 @@
 title: "My Garden"
 permalink: "/garden/index.html"
 tags: flowers
+specTag: "<b>Branden <i class='higby'>Higby</i></b>'s Garden"
 setup:
   toc: false
 ---

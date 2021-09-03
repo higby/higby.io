@@ -5,8 +5,13 @@ setup:
   toc: false
 ---
 
-This is where I'll put all my shit and projects I've made.
+```
+TODO:
+  Add things I've made and projects I've been a part of
+```
 
-Like a bibliography or something.
+<!-- https://gaming.stackexchange.com/a/397 -->
 
-Ya yeet
+<div style="text-align:center;">
+<kbd>↑</kbd> <kbd>↑</kbd> <kbd>↓</kbd> <kbd>↓</kbd> <kbd>←</kbd> <kbd>→</kbd> <kbd>←</kbd> <kbd>→</kbd> <kbd>B</kbd> <kbd>A</kbd>
+</div>
