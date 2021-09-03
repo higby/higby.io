@@ -6,8 +6,8 @@
     "eleventy-serve": "npx @11ty/eleventy --serve",
     "eleventy": "npx @11ty/eleventy",
     "clean": "rimraf build",
-    "sass-watch": "sass --no-source-map --style=compressed src/assets/sass:src/config/layouts/includes --watch",
-    "sass": "sass --no-source-map --style=compressed src/assets/sass:src/config/layouts/includes",
+    "sass-watch": "sass --no-source-map --style=compressed src/assets/sass:build/css --watch",
+    "sass": "sass --no-source-map --style=compressed src/assets/sass:build/css",
     "opengraph": "rimraf src/assets/images/opengraph && npx @11ty/eleventy --serve --config=.opengraph.js",
     "start": "run-p clean eleventy-serve sass-watch",
     "build": "run-p clean eleventy sass"
@@ -34,7 +34,7 @@
     "js-beautify": "^1.14.0",
     "jsdom": "^16.6.0",
     "markdown-it": "^12.1.0",
-    "markdown-it-anchor": "^8.1.2",
+    "markdown-it-anchor": "^8.3.0",
     "markdown-it-attrs": "^4.0.0",
     "markdown-it-footnote": "^3.0.3",
     "markdown-it-image-figures": "^1.2.0",
@@ -45,7 +45,7 @@
     "puppeteer": "^10.2.0",
     "qrcode": "^1.4.4",
     "rimraf": "^2.7.1",
-    "sass": "^1.36.0",
+    "sass": "^1.39.0",
     "sharp": "^0.28.3"
   }
 }
