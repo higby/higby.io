@@ -1,6 +1,7 @@
 ---
-title: CSS Bed
+title: "Dev"
 description: Classless CSS snippet gallery. A less ugly way to start a web page.
+date: 2020-04-12 00:05:00
 ---
 
 This is a collection of [classless](https://medium.com/@ubershmekel/the-next-css-frontier-classless-5e66f3f25fddcss) themes to use as starting points in web development.
@@ -11,9 +12,11 @@ This is a collection of [classless](https://medium.com/@ubershmekel/the-next-css
 - Responsive
 - Good browser support
 - Beautiful
-- Small size ==(< a few kb)== - you don't waste bytes on every widget imaginable
+- Small size ==(< a few kb)== - you don't waste bytes on every widget imaginable[^1]
 - No learning curve - use HTML as you would normally instead of going to the docs to learn which class does what and having to fight the framework otherwise.
 - [Original Hacker News Thread](https://news.ycombinator.com/item?id=19593866)
+
+[^1]: I do have a few classed things though, but the main theme is classless
 
 ## Is it responsive?
 
@@ -23,7 +26,9 @@ In fact, try resizing this page. Everything flows super nicely as you'll see.
 
 ## Element demos
 
-This is supposed to be a demo page so we need more elements!
+This is supposed to be a demo page so we need more elements![^2]
+
+[^2]: It works pretty well TBH
 
 ### Code
 
@@ -78,12 +83,6 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque dictum hendreri
 
 Links with `mailto:`, `tel:`, `sms:` addresses might be styled...
 
-<address>
-  [john.doe@example.com](mailto:john.doe@example.com)
-  [778-330-2389](tel:778-330-2389)
-  [666-666-6666](666-666-6666)
-</address>
-
 # Heading 1
 
 A paragraph `<p>` of lorem ipsum after the heading. Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation of a document written in a markup language like HTML. CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript.
@@ -122,8 +121,9 @@ A paragraph `<p>` of lorem ipsum after the heading. Cascading Style Sheets (CSS)
   </fieldset>
   <label for="name">
     Your Name
-    <p><i>Or nickname</i>
-    <input name="Name" id="name" type="text" placeholder="Branden" /></label>
+    <p><i>Or nickname</i></p>
+    <input name="Name" id="name" type="text" placeholder="Branden" />
+  </label>
   <label for="animal">Favorite Animal<input name="Animal" id="animal" type="text" placeholder="Puppy" /></label>
   <label for="color">Favorite Color<input name="Color" id="color" type="text" placeholder="#965ee5" /></label>
   <label for="url">Do you have your own website? Blah blah blah<input name="Site" id="url" type="url" placeholder="https://skeletor.gay" /></label>

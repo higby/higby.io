@@ -1,6 +1,7 @@
 ---
-title: "Garden"
+title: "My Garden"
 permalink: "/garden/index.html"
+tags: flowers
 setup:
   toc: false
 ---
@@ -12,33 +13,23 @@ setup:
 {% assign allTags = allTags | split: "," | uniq %}
 
 <nav>
-  <table>
-  {% for heading in order %}
-  {% for tag in allTags %}
-  {% if tag == heading %}
-
-<tbody>
-  <tr>
-    <th colspan="2">
-      {{ tag | capitalize }}
-    </th>
-  </tr>
+{% for heading in order %}
+{% for tag in allTags %}
+{% if tag == heading %}
+<h2>{{ tag | capitalize }}</h2>
+<ul>
   {% for flower in collections.flowers %}
   {% if flower.data.tags[0] == tag and flower.data.draft != true %}
-  <tr>
-    <td>
-      <time>{{ flower.date | common }}</time>
-    </td>
-    <td>
-      <a href="{{ flower.url }}" {% unless flower.data.stylesheet != "main" %}class="internal"{% endunless %}>{{ flower.data.title }}</a>
-    </td>
-  </tr>
-  {% endif %}
-  {% endfor %}
+  <li>
+    <div><a href="{{ flower.url }}" {% unless flower.data.stylesheet != "main" %}class="internal"{% endunless %}>{{ flower.data.title }}</a></div>
+    <time>{{ flower.date | common }}</time>
+    {% if flower.data.description %}<p>{{ flower.data.description }}</p>{% endif %}
 
-  </tbody>
+  </li>
   {% endif %}
   {% endfor %}
-  {% endfor %}
-  </table>
+</ul>
+{% endif %}
+{% endfor %}
+{% endfor %}
 </nav>
