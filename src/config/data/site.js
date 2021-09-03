@@ -4,5 +4,5 @@ module.exports = {
   description: "A collection of Branden Higby's ramblings",
   email: "branden@higby.io",
   github: "higby",
-  instagram: "higby_"
+  instagram: "iamhigby"
 };
