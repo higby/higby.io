@@ -1,5 +1,5 @@
-@use "imports/primary";
-@use "imports/variables" as *;
+@import "imports/variables";
+
 
 /*
 --------------------------------
@@ -26,6 +26,7 @@ $quote-text:  #727272;
 
 $primary-font: "Bookinsanity";
 $mono-font: "Bookinsanity";
+@import "imports/primary";
 
 @font-face {
   src: url("../fonts/Bookinsanity/Bookinsanity.otf") format("opentype");
@@ -65,7 +66,7 @@ $mono-font: "Bookinsanity";
   font-weight: normal;
 }
 body {
-  background: $background-color url(/assets/images/dnd.jpg);
+  background: $background-color url(/img/dnd.jpg);
   font-family: $primary-font;
 }
 h1, h2, h3, h4, h5, h6 {

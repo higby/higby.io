@@ -4,9 +4,6 @@ Print Styles
 (They're gross, don't look)
 --------------------------------
 */
-
-@use "variables" as *;
-
 @media print {
   * {
     background: #fff !important;
@@ -52,6 +49,9 @@ Print Styles
     }
     h1 a {
       font-size: 1.25rem;
+    }
+    nav {
+      display: none;
     }
   }
   header a, nav a, footer a {

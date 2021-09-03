@@ -1,8 +1,6 @@
-@use "variables" as *;
-
-*:where(:not(iframe, canvas, img, svg, video, input[type="checkbox"], input[type="radio"]):not(svg *)){
-    all: unset;
-    display: revert;
+*:where(:not(iframe, canvas, img, svg, video, input[type="checkbox"], input[type="radio"]):not(svg *)) {
+  all: unset;
+  display: revert;
 }
 *, *::before, *::after {
   box-sizing: inherit;
@@ -11,23 +9,28 @@
   background-color: $highlight;
   color: #000;
 }
+html {
+  box-sizing: border-box;
+//  scroll-behavior: smooth;
+}
 .higby {
   color: $space;
   font-style: normal;
-  font-weight: bold;
-}
-html {
-  box-sizing: border-box;
-  scroll-behavior: smooth;
 }
 body {
   background-color: $background-color;
   color: $primary-text;
   font-family: $primary-font;
   font-size: 1.125rem;
-  line-height: 1.5;
+  line-height: 1.65;
   margin: 1rem auto;
   max-width: 600px;
+  &> header nav {
+    display: grid;
+    font-weight: 600;
+    grid-auto-flow: column;
+    justify-content: space-around;
+  }
 }
 h1, h2, h3, h4, h5, h6, header {
   color: $header-text;
@@ -37,34 +40,17 @@ h1, h2, h3, h4, h5, h6, header {
     font-size: .9em;
   }
 }
-h1 {
-  font-size: 2.25rem;
-}
-h2 {
-  font-size: 1.7858rem;
-}
-h3 {
-  font-size: 1.4174rem;
-}
-h4 {
-  font-size: 1.125rem;
-}
-h5 {
-  font-size: .85rem;
-}
-h6 {
-  font-size: .70rem;
-}
+h1 { font-size: 2rem; }
+h2 { font-size: 1.5rem; }
+h3 { font-size: 1.25rem; }
+h4 { font-size: 1.125rem; }
+h5 { font-size: .85rem; }
+h6 { font-size: .70rem; }
 header {
   text-align: center;
   h1 a:hover {
     text-decoration: none;
   }
-  nav {
-  display: grid;
-  grid-auto-flow: column;
-  justify-content: space-around;
-}
 }
 header, nav, footer {
   a {
@@ -74,61 +60,69 @@ header, nav, footer {
     }
   }
 }
-nav {
+main header nav {
+  font-weight: normal;
+  text-align: left;
   ul, ol {
-    border-left: .25rem $space solid;
-    list-style: none;
-    margin: 0;
-    padding: 0 .5rem 0 .5rem;
-    li {
-      ul, ol {
-        border-left: .25rem solid $mediumGrey;
-        display: none;
-        margin: 0 10px;
-        padding-left: calc(.5rem + 2px);
-      }
-    }
-    li {
-      margin: 0;
-    }
-    a {
-      color: $header-text;
-      &:hover {
-        color: $space;
-      }
-    }
-    svg {
-      fill: $header-text;
-      vertical-align: text-top;
-    }
-  }
-  p {
+   border-left: .25rem $space solid;
+   list-style: none;
+   margin: 0;
+   padding: 0 .5rem 0 .5rem;
+   li {
+     ul, ol {
+       border-left: .25rem solid $mediumGrey;
+       display: none;
+       margin: 0 10px;
+       padding-left: calc(.5rem + 2px);
+     }
+   }
+   li {
+     margin: 0;
+   }
+   a {
+     color: $header-text;
+     &:hover {
+       color: $space;
+     }
+   }
+   svg {
+     fill: $header-text;
+     vertical-align: text-top;
+   }
+ }
+ p {
+   color: $header-text;
+   margin: .5rem 0;
+ }
+}
+article {
+  nav {
     color: $header-text;
-    margin: .5rem 0;
-  }
-  table {
-    th, td {
-      border: none;
-      padding: .25rem 0;
-      text-align: left;
-      vertical-align: text-top;
-    }
-    td:first-of-type {
-      text-align: right;
-      white-space: nowrap;
-    }
-    tr:nth-child(even) {
-      background-color: inherit;
-    }
-    time {
-      color: $quote-text;
-      &:after {
-        content: "//";
-        margin: 0 .45rem;
-      }
-    }
-    a {
-      color: $space;
+    list-style: none;
+    ul {
+     margin: 0;
+     li {
+       grid-gap: .5rem;
+       border-left: .25rem $space solid;
+       display: grid;
+       font-size: 1rem;
+       grid-template-columns: auto auto;
+       margin: 1rem 0;
+       padding: 0 0 0 1rem;
+       a {
+         font-size: 1.25rem;
+         font-weight: 600;
+       }
+       time {
+         color: $quote-text;
+         text-align: right;
+       }
+       p {
+         color: $code-text;
+         grid-column: span 2;
+         margin: 0;
+       }
+     }
     }
   }
 }
@@ -138,20 +132,19 @@ footer {
     background-color: inherit;
     font-size: 1.25rem;
     padding: 0;
-    a {
-      color: $pgp-text;
-    }
   }
 }
 p, ol, ul, pre, blockquote, figure, figcaption, hr, dl, table, form {
   margin: 1rem auto;
+}
+ol {
+  list-style-type: decimal;
 }
 ol, ul {
   margin-left: 1.5rem;
   li {
     ol, ul {
       margin: 0 0 0 1.5rem;
-
     }
   }
 }
@@ -185,6 +178,14 @@ blockquote {
     font-style: italic;
   }
 }
+cite {
+  display: block;
+  margin: 1rem 0 0 0;
+  &:before {
+    content: "— ";
+    font-size: 1rem;
+  }
+}
 figure {
   img {
     background-image: linear-gradient(65deg, $space 25%, $lightGrey 25%, $lightGrey 50%, $space 50%, $space 75%, $lightGrey 75%, $lightGrey 100%);
@@ -192,15 +193,15 @@ figure {
   }
 }
 figcaption {
-  text-align: center;
   font-style: italic;
+  text-align: center;
 }
 hr {
   border: 0;
   text-align: center;
   &:before {
-    color: $primary-text;
-    content: '-----';
+    color: #323232;
+    content: "///////";
     font-size: 1.125rem;
   }
 }
@@ -229,19 +230,14 @@ strong, b {
 em, i {
   font-style: italic;
 }
-cite {
-  display: block;
-  margin: 1rem 0 0 0;
-  &:before {
-    content: "— ";
-    font-size: 1rem;
-  }
-}
 mark {
-  text-decoration: underline dashed $space 3px;
-  text-underline-position: under;
+  background-color: $mark;
   margin: 0 -.1rem;
   padding: 0 .1rem;
+}
+sup {
+  font-size: .95rem;
+  vertical-align: super;
 }
 code {
   background-color: $lightGrey;
@@ -295,7 +291,7 @@ table {
 }
 form {
   grid-gap: 1rem;
-  background-color: $space-300;
+  background-color: $space-100;
   border-radius: .25rem;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -362,8 +358,7 @@ form {
 }
 button,
 input[type="button"],
-input[type="submit"],
-input[type="reset"] {
+input[type="submit"] {
   -webkit-appearance: none;
   background-color: $space;
   border-radius: .25rem;
@@ -393,7 +388,40 @@ input:disabled {
   }
   &:hover {
     background-color: $lightGrey;
-
+  }
+}
+.who, .what {
+  background-color: $space-100;
+  border-radius: .25rem;
+  color: $header-text;
+  font-size: 1.25rem;
+}
+.who {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-bottom: 2.5rem;
+  margin-right: 1rem;
+  padding: .5rem;
+  p {
+    margin: auto 1rem;
+  }
+  figure {
+    margin-bottom: -1.5rem;
+    margin-right: -1.5rem;
+    width: 95%;
+  }
+}
+.what {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 1rem;
+  text-align: center;
+  h1, h2, h3, h4, h5, h6, header, ol {
+    grid-column: span 2;
+  }
+  p {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
   }
 }
 .footnotes {
@@ -401,18 +429,10 @@ input:disabled {
   font-size: 1rem;
   &:before {
     color: $primary-text;
-    content: '----- Footnotes -----';
+    content: '/// Footnotes ///';
     display: block;
     font-size: 1.125rem;
     text-align: center;
-  }
-}
-.footnote {
-  &:before {
-    content: "{";
-  }
-  &:after {
-    content: "}";
   }
 }
 @media screen and (max-width: 700px) {
@@ -424,11 +444,22 @@ input:disabled {
     display: grid;
     grid-template-columns: 2fr 1fr;
     nav {
-      margin: auto 0 auto 1rem;
       display: block;
+      margin: auto 0 auto 1rem;
       text-align: left;
       a {
         display: block;
+        margin: .65rem 0;
+      }
+    }
+  }
+  article {
+    nav ul li {
+      div {
+        grid-column: span 2;
+      }
+      time {
+        text-align: left;
       }
     }
   }
@@ -436,9 +467,9 @@ input:disabled {
     border-radius: 0;
     margin: 1rem -2rem;
     padding: 2rem;
-  }
-  label {
-    grid-column: span 4;
+    label {
+      grid-column: span 4;
+    }
   }
   button,
   input[type="button"],
@@ -446,4 +477,31 @@ input:disabled {
   input[type="reset"] {
     grid-column: span 2;
   }
+  .who, .what {
+    border-radius: 0;
+    margin: 1rem -2rem;
+    padding: 2rem;
+  }
+  .who {
+    display: block;
+    padding: 1rem;
+    figure {
+      margin: 1rem auto;
+      width: 45%;
+    }
+  }
 }
+@media screen and (max-width: 600px) {
+  .what {
+    h1, h2, h3, h4, h5, h6, header, ol {
+      display: grid;
+      grid-template-rows: 1fr 1fr;
+    }
+    p {
+      grid-column: span 2;
+    }
+  }
+}
+@import "syntax";
+@import "specific";
+@import "print";
