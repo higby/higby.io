@@ -3,13 +3,16 @@
 NoScript CSS
 --------------------------------
 */
+
+@import "imports/variables";
+
 header .higby {
-  color: #965ee5;
+  color: $space;
 }
 header a:hover {
-  color: #965ee5;
+  color: $space;
 }
-.toc ol li ol {
+main header nav ol li ol {
   display: block;
 }
 nav svg {
