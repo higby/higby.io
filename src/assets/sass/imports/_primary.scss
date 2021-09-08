@@ -132,6 +132,9 @@ footer {
     background-color: inherit;
     font-size: 1.25rem;
     padding: 0;
+     a {
+       color: $pgp-text;
+     }
   }
 }
 p, ol, ul, pre, blockquote, figure, figcaption, hr, dl, table, form {
@@ -201,7 +204,7 @@ hr {
   border: 0;
   text-align: center;
   &:before {
-    color: #323232;
+    color: $code-text;
     content: "///////";
     font-size: 1.125rem;
   }
@@ -382,10 +385,10 @@ input[readonly] {
 }
 input:disabled {
   background-color: $lightGrey;
-  color: $pgp-text;
+  color: $disabled-text;
   cursor: default;
   &::placeholder {
-    color: $pgp-text;
+    color: $disabled-text;
   }
   &:hover {
     background-color: $lightGrey;
