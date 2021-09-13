@@ -25,7 +25,7 @@ Syntax Styles
 .language-css .token.string,
 .style .token.string,
 .token.keyword {
-  color: #7c47e6;
+  color: $space-code;
 }
 
 .token.selector,
@@ -39,7 +39,7 @@ Syntax Styles
 
 .token.atrule,
 .token.attr-value {
-  color: #7c47e6;
+  color: $space-code;
   font-weight: 600;
 }
 

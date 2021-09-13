@@ -250,6 +250,9 @@ code {
   font-family: $mono-font;
   font-size: 0.889em;
   padding: .2rem .4rem;
+  a {
+    color: $space-code;
+  }
 }
 kbd {
   border: 1px solid $mediumGrey;
