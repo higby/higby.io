@@ -1,5 +1,5 @@
 ---
-title: "humans.txt"
+title: "Colophon"
 description: "The Many Tools That Helped Me Make This"
 setup:
   toc: false

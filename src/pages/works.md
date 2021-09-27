@@ -1,6 +1,6 @@
 ---
-title: "Library"
-permalink: "/library/index.html"
+title: "Works"
+permalink: "/works/index.html"
 setup:
   toc: false
 ---
