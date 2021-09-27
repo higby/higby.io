@@ -12,7 +12,7 @@ https://github.com/naturalcrit/homebrewery/
 $velvet: #9d0a0e;
 $gold: #c9ad6a;
 $tea: #e0e5c1;
-$tealeaf: #43443a;
+$tealeaf: #47483D;
 
 $background-color: #eee5ce;
 $lightGrey: $tea;
@@ -27,77 +27,42 @@ $quote-text:  #727272;
 $primary-font: "Bookinsanity";
 $mono-font: "Bookinsanity";
 @import "imports/primary";
+@import "imports/dnd-fonts";
 
-@font-face {
-  src: url("../fonts/Bookinsanity/Bookinsanity.otf") format("opentype");
-  font-family: "Bookinsanity";
-  font-weight: normal;
-}
 
-@font-face {
-  src: url("../fonts/Bookinsanity/Bookinsanity Bold.otf") format("opentype");
-  font-family: "Bookinsanity Bold";
-  font-style: normal;
-  font-weight: bold;
-}
-
-@font-face {
-  src: url("../fonts/Mr Eaves/Mr Eaves Small Caps.otf") format("opentype");
-  font-family: "Mr Eaves Small Caps";
-  font-weight: normal;
-}
-
-@font-face {
-  src: url("../fonts/Scaly Sans Caps/Scaly Sans Caps.otf") format("opentype");
-  font-family: "Scala Sans Caps";
-  font-weight: normal;
-}
-
-@font-face {
-  src: url("../fonts/Scaly Sans/Scaly Sans.otf") format("opentype");
-  font-family: "Scala Sans";
-  font-weight: normal;
-}
-
-@font-face {
-  src: url("../fonts/Solbera Imitation/Solbera Imitation.otf")
-    format("opentype");
-  font-family: "Solbera Imitation";
-  font-weight: normal;
-}
 body {
   background: $background-color url(/img/dnd.jpg);
   font-family: $primary-font;
+  &> header nav a {
+    color: $primary-text;  
+  }
 }
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Mr Eaves Small Caps";
+  font-family: "Mr Eaves";
 }
 h3 {
   border-bottom: 2px solid $gold;
 }
-body > header h1 a {
-  color: $primary-text;
-}
+
 header time {
   color: $primary-text;
+  font-weight: 400;
   font-family: $primary-font;
 }
-nav {
+main header nav {
   ul, ol {
-    border-left: .25rem $velvet solid;
-    ul, ol {
-      border-left: .25rem solid $mediumGrey;
-    }
-    a {
-      color: $primary-text;
-      &:hover {
-        color: $velvet;
-      }
-    }
-    svg {
-      fill: $primary-text;
-    }
-  }
+   border-left: .25rem $gold solid;
+   a {
+     color: $primary-text;
+     &:hover {
+       color: $space;
+     }
+   }
+   svg {
+     fill: $velvet;
+     vertical-align: text-top;
+   }
+ }
 }
 article > p:first-of-type:first-letter {
   float: left;
@@ -107,6 +72,7 @@ article > p:first-of-type:first-letter {
   overflow: visible;
 }
 blockquote {
+  font-family: "Zatanna Misdirection";
   background-color: $tea;
   border-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAA8CAMAAADG+c2+AAAANlBMVEX///8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABHL6OuAAAAEXRSTlMABAwYJDRIXHSLo7fL2+fz+6go4VUAAAB6SURBVHgB7dg5DsJQAANRZ9+Xuf9lQUKKEHT5LlL4HWB6W5d61m1zrT/dhm5j6/RjPCkJco761ixQFoSl0aXfKQ+y9/qoJnAEYar01q64gqytNBz4ghyDMPMHnyYiIiIiIgIzYeYfj/Z56x3g7ovAf2L4bxb/EWS/ql7LZCDx/Ry3RwAAAABJRU5ErkJggg==)
     11;
@@ -118,16 +84,23 @@ blockquote {
 a {
   color: $velvet;
 }
-strong, b {
-  font-family: "Bookinsanity Bold";
-}
 table {
-  font-family: "Scala Sans";
+  font-family: "Scaly Sans";
   thead {
     border-bottom: 0;
-    font-family: "Scala Sans Caps";
+    text-transform: uppercase;
+  }
+  th {
+    color: $primary-text;
   }
   tr {
     color: $primary-text;
+  }
+}
+footer {
+  font-family: "Scaly Sans";
+  code a {
+    font-family: "Scaly Sans";
+    color: $gold;
   }
 }
