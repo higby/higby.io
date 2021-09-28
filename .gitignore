@@ -1,3 +1,5 @@
 build/
 node_modules/
 .sass-cache/
+src/config/layouts/includes/write/
+.DS_Store

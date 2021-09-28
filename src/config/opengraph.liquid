@@ -4,6 +4,7 @@ pagination:
   size: 1
   alias: "post"
 layout: null
+stylesheet: null
 eleventyExcludeFromCollections: true
 permalink: "/opengraph{{ post.url }}"
 ---
@@ -42,5 +43,5 @@ permalink: "/opengraph{{ post.url }}"
     textFit(document.querySelector("span"));
   </script>
   </body>
-  {% include higby.html %}
+  {% include 'higby.html' %}
 </html>

@@ -1,7 +1,7 @@
 const gulp = require('gulp');
 const uglify = require('gulp-uglify');
 const concat = require('gulp-concat');
-const footer = require('gulp-footer');
+const stripBom = require('gulp-stripbom');
 const sass = require('gulp-sass')(require('sass'));
 
 function css() {
@@ -9,8 +9,8 @@ function css() {
   .src(['src/assets/css/**/*.scss', 'src/assets/css/**/*.css'])
   .pipe(sass({ outputStyle: 'compressed'}))
   .on('error', sass.logError)
-  .pipe(footer('\n/*\n--------------------------------\n(c) 2021 Branden Higby\nReleased under the MIT license\nhttps://github.com/higby/higby.io/\n--------------------------------\n*/'))
-  .pipe(gulp.dest('./build/css'))
+  .pipe(stripBom())
+  .pipe(gulp.dest('./src/config/layouts/includes/write/'))
 }
 
 function watchCSS() {
@@ -22,8 +22,8 @@ function js() {
   .src(['src/assets/js/core.js', 'src/assets/js/main.js'])
   .pipe(concat('main.js'))
   .pipe(uglify({toplevel: true}))
-  .pipe(footer('\n/*\n--------------------------------\n(c) 2021 Branden Higby\nReleased under the MIT license\nhttps://github.com/higby/higby.io/\n--------------------------------\n*/'))
-  .pipe(gulp.dest('./build/js'))
+  .pipe(stripBom())
+  .pipe(gulp.dest('./src/config/layouts/includes/write/'))
 }
 
 function watchJS() {

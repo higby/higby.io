@@ -3,7 +3,7 @@
   font-style: normal;
   font-weight: 400;
   src: local(''),
-       url('../fonts/bookinsanity.otf') format('opentype'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('/fonts/bookinsanity.otf') format('opentype'), /* Chrome 26+, Opera 23+, Firefox 39+ */
 }
 
 @font-face {
@@ -11,7 +11,7 @@
   font-style: normal;
   font-weight: 700;
   src: local(''),
-       url('../fonts/bookinsanity-bold.otf') format('opentype'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('/fonts/bookinsanity-bold.otf') format('opentype'), /* Chrome 26+, Opera 23+, Firefox 39+ */
 }
 
 @font-face {
@@ -19,7 +19,7 @@
   font-style: italic;
   font-weight: 400;
   src: local(''),
-       url('../fonts/bookinsanity-italic.otf') format('opentype'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('/fonts/bookinsanity-italic.otf') format('opentype'), /* Chrome 26+, Opera 23+, Firefox 39+ */
 }
 
 @font-face {
@@ -27,7 +27,7 @@
   font-style: italic;
   font-weight: 700;
   src: local(''),
-       url('../fonts/bookinsanity-bold-italic.otf') format('opentype'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('/fonts/bookinsanity-bold-italic.otf') format('opentype'), /* Chrome 26+, Opera 23+, Firefox 39+ */
 }
 
 @font-face {
@@ -35,7 +35,7 @@
   font-style: normal;
   font-weight: 400;
   src: local(''),
-       url('../fonts/scaly-sans.otf') format('opentype'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('/fonts/scaly-sans.otf') format('opentype'), /* Chrome 26+, Opera 23+, Firefox 39+ */
 }
 
 @font-face {
@@ -43,7 +43,7 @@
   font-style: normal;
   font-weight: 700;
   src: local(''),
-       url('../fonts/scaly-sans-bold.otf') format('opentype'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('/fonts/scaly-sans-bold.otf') format('opentype'), /* Chrome 26+, Opera 23+, Firefox 39+ */
 }
 
 @font-face {
@@ -51,7 +51,7 @@
   font-style: italic;
   font-weight: 400;
   src: local(''),
-       url('../fonts/scaly-sans-italic.otf') format('opentype'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('/fonts/scaly-sans-italic.otf') format('opentype'), /* Chrome 26+, Opera 23+, Firefox 39+ */
 }
 
 @font-face {
@@ -59,7 +59,7 @@
   font-style: italic;
   font-weight: 700;
   src: local(''),
-       url('../fonts/scaly-sans-bold-italic.otf') format('opentype'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('/fonts/scaly-sans-bold-italic.otf') format('opentype'), /* Chrome 26+, Opera 23+, Firefox 39+ */
 }
 
 
@@ -70,7 +70,7 @@
   font-style: normal;
   font-weight: 400;
   src: local(''),
-       url('../fonts/zatanna-misdirection.otf') format('opentype'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('/fonts/zatanna-misdirection.otf') format('opentype'), /* Chrome 26+, Opera 23+, Firefox 39+ */
 }
 
 @font-face {
@@ -78,7 +78,7 @@
   font-style: normal;
   font-weight: 700;
   src: local(''),
-       url('../fonts/zatanna-misdirection-bold.otf') format('opentype'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('/fonts/zatanna-misdirection-bold.otf') format('opentype'), /* Chrome 26+, Opera 23+, Firefox 39+ */
 }
 
 @font-face {
@@ -86,7 +86,7 @@
   font-style: italic;
   font-weight: 400;
   src: local(''),
-       url('../fonts/zatanna-misdirection-italic.otf') format('opentype'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('/fonts/zatanna-misdirection-italic.otf') format('opentype'), /* Chrome 26+, Opera 23+, Firefox 39+ */
 }
 
 @font-face {
@@ -94,7 +94,7 @@
   font-style: italic;
   font-weight: 700;
   src: local(''),
-       url('../fonts/zatanna-misdirection-bold-italic.otf') format('opentype'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('/fonts/zatanna-misdirection-bold-italic.otf') format('opentype'), /* Chrome 26+, Opera 23+, Firefox 39+ */
 }
 
 
@@ -106,7 +106,7 @@
   font-style: normal;
   font-weight: 700;
   src: local(''),
-       url('../fonts/mr-eaves.otf') format('opentype'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('/fonts/mr-eaves.otf') format('opentype'), /* Chrome 26+, Opera 23+, Firefox 39+ */
 }
 
 @font-face {
@@ -114,5 +114,5 @@
   font-style: normal;
   font-weight: 400;
   src: local(''),
-       url('../fonts/solbera-imitation.otf') format('opentype'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('/fonts/solbera-imitation.otf') format('opentype'), /* Chrome 26+, Opera 23+, Firefox 39+ */
 }

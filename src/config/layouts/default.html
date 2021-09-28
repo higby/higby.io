@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    {% include head.html %}
+    {% include 'head.html' %}
   </head>
   <body>
     <header>
-      {% include header.html %}
+      {% include 'header.html' %}
     </header>
     <main>
       {% if title %}
@@ -19,9 +19,10 @@
         {{ content }}
       </article>
       <footer>
-        {% include footer.html %}
+        {% include 'footer.html' %}
       </footer>
     </main>
   </body>
-  {% include higby.html %}
 </html>
+{% include 'higby.html' %}
+
