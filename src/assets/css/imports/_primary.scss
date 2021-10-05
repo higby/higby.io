@@ -25,12 +25,6 @@ body {
   line-height: 1.65;
   margin: 1rem auto;
   max-width: 600px;
-  &> header nav {
-    display: grid;
-    font-weight: 600;
-    grid-auto-flow: column;
-    justify-content: space-around;
-  }
 }
 h1, h2, h3, h4, h5, h6, header {
   color: $header-text;
@@ -96,14 +90,18 @@ main header nav {
  }
 }
 article {
+  margin-bottom: 1rem;
   nav {
     color: $header-text;
     list-style: none;
+    h2 {
+      font-weight: 600;
+    }
     ul {
      margin: 0;
+     border-left: .25rem $space solid;
      li {
        grid-gap: .5rem;
-       border-left: .25rem $space solid;
        display: grid;
        font-size: 1rem;
        grid-template-columns: auto auto;
@@ -111,7 +109,6 @@ article {
        padding: 0 0 0 1rem;
        a {
          font-size: 1.25rem;
-         font-weight: 600;
        }
        time {
          color: $quote-text;
@@ -446,19 +443,6 @@ input:disabled {
   body {
     margin-left: 2rem;
     margin-right: 2rem;
-  }
-  body > header {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    nav {
-      display: block;
-      margin: auto 0 auto 1rem;
-      text-align: left;
-      a {
-        display: block;
-        margin: .65rem 0;
-      }
-    }
   }
   article {
     nav ul li {

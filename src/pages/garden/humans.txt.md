@@ -1,6 +1,7 @@
 ---
 title: "humans.txt"
 description: "The Many Tools That Helped Me Make This"
+tags: programming
 setup:
   toc: false
 ---
