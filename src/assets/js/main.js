@@ -82,7 +82,6 @@ async function fetchContent(where) {
     });
 }
 
-
 function fancyName() {
     var internal = true;
     if (document.querySelector("header h1 a").className == 'internal') {
@@ -117,7 +116,7 @@ function fancyName() {
 }
 
 function tableOfContents() {
-    let toc = this.nextSibling.nextSibling.nextSibling;
+    let toc = this.nextSibling.nextSibling;
     if (window.getComputedStyle(toc).getPropertyValue('display') == "none") {
         toc.style.display = "block";
         anime({
