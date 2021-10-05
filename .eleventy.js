@@ -1,11 +1,10 @@
-const plugins = require('./src/config/plugins/index');
+const eliteFour = require('elite-four');
 
 module.exports = function(eleventyConfig) {
-  eleventyConfig.setQuietMode(true);
   eleventyConfig.addWatchTarget('src/assets/static/');
   eleventyConfig.addPassthroughCopy({ 'src/assets/static': '/' });
   eleventyConfig.setLiquidOptions({ dynamicPartials: true });
-  eleventyConfig.addPlugin(plugins);
+  eleventyConfig.addPlugin(eliteFour);
   return {
     dir: { 
       input: 'src',
