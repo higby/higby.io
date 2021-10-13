@@ -1,38 +1,38 @@
-*:where(:not(iframe, canvas, img, svg, video, input[type="checkbox"], input[type="radio"]):not(svg *)) {
+*:where(:not(ul, ol, iframe, canvas, img, svg, video, input[type="checkbox"], input[type="radio"]):not(svg *)) {
   all: unset;
   display: revert;
 }
 *, *::before, *::after {
   box-sizing: inherit;
 }
-::selection {
-  background-color: $highlight;
-  color: #000;
-}
 html {
   box-sizing: border-box;
-  scroll-behavior: smooth;
+ // scroll-behavior: smooth;
 }
 .higby {
-  color: $space;
   font-style: normal;
 }
 body {
-  background-color: $background-color;
-  color: $primary-text;
+  font-size: 1.125rem;  background-color: $background-color;
   font-family: $primary-font;
-  font-size: 1.125rem;
+    color: $primary-text;
   line-height: 1.65;
   margin: 1rem auto;
-  max-width: 600px;
+  max-width: 650px;
+  &> header {
+    text-align: center;
+    a {
+      color: $header-text;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
 }
 h1, h2, h3, h4, h5, h6, header {
   color: $header-text;
   font-weight: bold;
   margin: 1rem 0;
-  code {
-    font-size: .9em;
-  }
 }
 h1 { font-size: 2rem; }
 h2 { font-size: 1.5rem; }
@@ -40,124 +40,86 @@ h3 { font-size: 1.25rem; }
 h4 { font-size: 1.125rem; }
 h5 { font-size: .85rem; }
 h6 { font-size: .70rem; }
-header {
-  text-align: center;
-  h1 a:hover {
-    text-decoration: none;
-  }
-}
-header, nav, footer {
-  a {
-    color: $header-text;
-    &:hover {
-      color: $space;
-    }
-  }
-}
-main header nav {
+
+header nav {
   font-weight: normal;
-  text-align: left;
-  ul, ol {
-   border-left: .25rem $space solid;
-   list-style: none;
-   margin: 0;
-   padding: 0 .5rem 0 .5rem;
-   li {
-     ul, ol {
-       border-left: .25rem solid $mediumGrey;
-       display: none;
-       margin: 0 10px;
-       padding-left: calc(.5rem + 2px);
-     }
-   }
-   li {
-     margin: 0;
-   }
-   a {
-     color: $header-text;
-     &:hover {
-       color: $space;
-     }
-   }
-   svg {
-     fill: $header-text;
-     vertical-align: text-top;
-   }
- }
- p {
-   color: $header-text;
-   margin: .5rem 0;
- }
+  margin: 1rem 0;
+  li ol {
+    display: none;
+  }
+  svg {
+    fill: $header-text;
+    vertical-align: text-top;
+  }
 }
-article {
-  margin-bottom: 1rem;
-  nav {
-    color: $header-text;
-    list-style: none;
-    h2 {
-      font-weight: 600;
-    }
-    ul {
-     margin: 0;
-     border-left: .25rem $space solid;
-     li {
-       grid-gap: .5rem;
-       display: grid;
-       font-size: 1rem;
-       grid-template-columns: auto auto;
-       margin: 1rem 0;
-       padding: 0 0 0 1rem;
-       a {
-         font-size: 1.25rem;
-       }
-       time {
-         color: $quote-text;
-         text-align: right;
-       }
-       p {
-         color: $code-text;
-         grid-column: span 2;
-         margin: 0;
-       }
-     }
+article nav {
+  table {
+    width: 100%;
+  }
+  th, td {
+    border: none;
+    padding: .25rem 0;
+    text-align: left;
+    vertical-align: text-top;
+  }
+  td:first-of-type {
+    text-align: right;
+    white-space: nowrap;
+  }
+  tr:nth-child(even) {
+    background-color: inherit;
+  }
+  time {
+    color: $quote-text;
+    &:after {
+      content: "//";
+      color: $pgp-text;
+
+      margin: 0 .45rem;
     }
   }
 }
+
 footer {
+  display: grid;
+  grid-auto-flow: rows;
+  color: $header-text;
   font-size: 1.25rem;
   code {
     background-color: inherit;
-    font-size: 1.25rem;
     padding: 0;
-     a {
-       color: $pgp-text;
-     }
-  }
-}
-p, ol, ul, pre, blockquote, figure, figcaption, hr, dl, table, form {
-  margin: 1rem auto;
-}
-ol {
-  list-style-type: decimal;
-}
-ol, ul {
-  margin-left: 1.5rem;
-  li {
-    ol, ul {
-      margin: 0 0 0 1.5rem;
+    border-radius: 0;
+    font-size: 1.25rem;
+    a {
+     color: $pgp-text;
     }
   }
 }
+
+p, ol, ul, pre, blockquote, figure, figcaption, hr, dl, table, form, img {
+  margin: 1rem auto;
+}
+
+ol, ul {
+  padding: 0;
+  margin: 0 0 0 1.65rem;
+  li {
+    ol, ul {
+      margin: 0 0 0 1.65rem;
+    }
+  }
+}
+
 pre {
   background-color: $lightGrey;
   border-radius: .25rem;
   color: $code-text;
   font-family: $mono-font;
-  font-size: 1rem;
   overflow: auto;
   padding: 1rem 1.5rem;
   white-space: pre;
   code {
+    font-size: 1rem;
     border-radius: 0;
     padding: 0;
   }
@@ -166,18 +128,6 @@ blockquote {
   border-left: .25rem solid $darkGrey;
   color: $quote-text;
   padding: 0 0 0 1rem;
-}
-.note {
-  border: none;
-  color: $note-text;
-  display:list-item;
-  font-size: 1rem;
-  list-style-position: outside;
-  list-style-type: ">";
-  margin-left: .65rem;
-  p {
-    font-style: italic;
-  }
 }
 cite {
   display: block;
@@ -189,22 +139,18 @@ cite {
 }
 figure {
   img {
-    background-image: linear-gradient(65deg, $space 25%, $lightGrey 25%, $lightGrey 50%, $space 50%, $space 75%, $lightGrey 75%, $lightGrey 100%);
-    background-size: 35.31px 75.72px;
+    background-color: $lightGrey;
   }
 }
 figcaption {
-  font-style: italic;
   text-align: center;
 }
 hr {
   border: 0;
   text-align: center;
-  &:before {
-    color: $code-text;
-    content: "///////";
-    font-size: 1.125rem;
-  }
+  border-bottom: 1px solid black;
+  width: 65%;
+  margin: 2rem auto;
 }
 dt {
   font-weight: bold;
@@ -217,12 +163,13 @@ dd {
   margin-left: 1.25rem;
 }
 a {
-  color: $space;
+  color: #0000EE;
   cursor: pointer;
-  text-decoration: none;
-  transition: color .5s;
   &:hover {
     text-decoration: underline;
+  }
+  &:active {
+    color: #EE0000;
   }
 }
 strong, b {
@@ -231,21 +178,27 @@ strong, b {
 em, i {
   font-style: italic;
 }
+cite {
+  display: block;
+  margin: 1rem 0 0 0;
+  &:before {
+    content: "— ";
+    font-size: 1rem;
+  }
+}
 mark {
   background-color: $mark;
-  margin: 0 -.1rem;
-  padding: 0 .1rem;
 }
 sup {
   font-size: .95rem;
-  vertical-align: super;
+  vertical-align: top;
 }
 code {
   background-color: $lightGrey;
-  border-radius: .25rem;
   color: $code-text;
+  font-size: .95rem;
   font-family: $mono-font;
-  font-size: 0.889em;
+  border-radius: .25rem;
   padding: .2rem .4rem;
   a {
     color: $space-code;
@@ -261,11 +214,12 @@ kbd {
   padding: .125rem .25rem;
   vertical-align: middle;
 }
-img, video, canvas {
-  border-radius: .25rem;
+img {
   display: block;
+  box-shadow: -8px 8px 0 0 black;
+  border: 1px solid black;  
   height: auto;
-  width: 100%;
+  width: 85%;
 }
 table {
   border-collapse: collapse;
@@ -293,10 +247,24 @@ table {
     text-align: center;
   }
 }
+section {
+  color: $note-text;
+  font-size: 1rem;
+  &:before {
+    color: $primary-text;
+    content: 'Footnotes';
+    display: block;
+    font-size: 1.125rem;
+    text-align: center;
+    border: 0;
+    border-bottom: 1px solid black;
+    width: 65%;
+    margin: 2rem auto;
+  }
+}
 form {
   grid-gap: 1rem;
-  background-color: $space-100;
-  border-radius: .25rem;
+  border: .25rem solid black;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   padding: 1rem;
@@ -364,135 +332,37 @@ button,
 input[type="button"],
 input[type="submit"] {
   -webkit-appearance: none;
-  background-color: $space;
-  border-radius: .25rem;
-  color: #fff;
+  border: 1px solid black;
+  color: black;
   cursor: pointer;
   font-weight: bold;
   height: 2rem;
   min-width: 8rem;
   text-align: center;
-  transition: background-color .3s;
+  transition: all .3s;
   &:hover {
-    background-color: $space-600; // make a variable
+    box-shadow: -4px 4px 0 0 black;
   }
   &:active {
-    background-color: $space-300; // replzce with a proper animation
+    background-color: black; // make a variable
+    color: white;
   }
 }
 input[readonly] {
   color: $header-text;
 }
 input:disabled {
-  background-color: $lightGrey;
   color: $disabled-text;
+  border: 1px solid $disabled-text;
   cursor: default;
   &::placeholder {
     color: $disabled-text;
   }
   &:hover {
-    background-color: $lightGrey;
+      box-shadow: none;
   }
 }
-.who, .what {
-  background-color: $space-100;
-  border-radius: .25rem;
-  color: $header-text;
-  font-size: 1.25rem;
-}
-.who {
-  display: flex;
-  flex-direction: row-reverse;
-  margin-bottom: 2.5rem;
-  margin-right: 1rem;
-  padding: .5rem;
-  p {
-    margin: auto 1rem;
-  }
-  figure {
-    margin-bottom: -1.5rem;
-    margin-right: -1.5rem;
-    width: 95%;
-  }
-}
-.what {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  padding: 1rem;
-  text-align: center;
-  h1, h2, h3, h4, h5, h6, header, ol {
-    grid-column: span 2;
-  }
-  p {
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-  }
-}
-.footnotes {
-  color: $note-text;
-  font-size: 1rem;
-  &:before {
-    color: $primary-text;
-    content: '/// Footnotes ///';
-    display: block;
-    font-size: 1.125rem;
-    text-align: center;
-  }
-}
-@media screen and (max-width: 700px) {
-  body {
-    margin-left: 2rem;
-    margin-right: 2rem;
-  }
-  article {
-    nav ul li {
-      div {
-        grid-column: span 2;
-      }
-      time {
-        text-align: left;
-      }
-    }
-  }
-  form {
-    border-radius: 0;
-    margin: 1rem -2rem;
-    padding: 2rem;
-    label {
-      grid-column: span 4;
-    }
-  }
-  button,
-  input[type="button"],
-  input[type="submit"],
-  input[type="reset"] {
-    grid-column: span 2;
-  }
-  .who, .what {
-    border-radius: 0;
-    margin: 1rem -2rem;
-    padding: 2rem;
-  }
-  .who {
-    display: block;
-    padding: 1rem;
-    figure {
-      margin: 1rem auto;
-      width: 45%;
-    }
-  }
-}
-@media screen and (max-width: 600px) {
-  .what {
-    h1, h2, h3, h4, h5, h6, header, ol {
-      display: grid;
-      grid-template-rows: 1fr 1fr;
-    }
-    p {
-      grid-column: span 2;
-    }
-  }
-}
+
 @import "syntax";
 @import "specific";
 @import "print";
