@@ -86,6 +86,30 @@ header .higby {
   .cardList,.boxList {
     grid-template-columns: repeat(2, 1fr);
   }
+  .who, .what {
+    border-radius: 0;
+    margin: 1rem -2rem;
+    padding: 2rem;
+  }
+  .who {
+    display: block;
+    padding: 1rem;
+    figure {
+      margin: 1rem auto;
+      width: 45%;
+    }
+  }
+}
+@media screen and (max-width: 600px) {
+  .what {
+    h1, h2, h3, h4, h5, h6, header, ol {
+      display: grid;
+      grid-template-rows: 1fr 1fr;
+    }
+    p {
+      grid-column: span 2;
+    }
+  }
 }
 .imgHolder {
   background-color: $lightGrey;

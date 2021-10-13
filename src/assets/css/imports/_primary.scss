@@ -365,6 +365,39 @@ input:disabled {
     background-color: $lightGrey;
   }
 }
+@media screen and (max-width: 700px) {
+  body {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+  img {
+    width: 100%;
+  } 
+  article {
+    nav ul li {
+      div {
+        grid-column: span 2;
+      }
+      time {
+        text-align: left;
+      }
+    }
+  }
+  form {
+    border-radius: 0;
+    margin: 1rem -2rem;
+    padding: 2rem;
+    label {
+      grid-column: span 4;
+    }
+  }
+  button,
+  input[type="button"],
+  input[type="submit"],
+  input[type="reset"] {
+    grid-column: span 2;
+  }
+}
 
 @import "syntax";
 @import "specific";

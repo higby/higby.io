@@ -7,7 +7,7 @@ setup:
 
 <div class="who">
 
-![Me, Awkwardly](/img/squat.jpg)
+![Me, Awkwardly](/img/headshot.webp)
 
 **Branden Higby** is a writer, video producer, computer programmer, procrastinator, dungeon master, and cartoon watcher based in Oregon. 💜
 

@@ -6,4 +6,4 @@ tags: programming
 repo: shera.gay
 ---
 
-![She-Ra is Gay](https://shera.gay/gay.jpg "This Show Is Gay")
+![She-Ra is Gay](https://shera.gay/random "This Show Is Gay")
