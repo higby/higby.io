@@ -1,6 +1,8 @@
 var now;
 var where;
 var link;
+var running = new Set();
+var loop = new Set();
 const parser = new DOMParser();
 
 document.addEventListener("DOMContentLoaded", function(){
@@ -27,6 +29,14 @@ function addClickEvent() {
         el.removeEventListener('click', tableOfContents);
         el.addEventListener('click', tableOfContents);
     });
+    document.querySelectorAll(".poke").forEach(el => {
+        el.removeEventListener('mouseover', pokeHop);
+        el.addEventListener('mouseover', pokeHop);
+        el.removeEventListener('mouseout', pokeHopReset);
+        el.addEventListener('mouseout', pokeHopReset);
+    });
+    running.clear();
+    loop.clear();
 }
 
 function pageUpdate() {
@@ -49,10 +59,12 @@ async function fetchContent(where) {
         where += '/';
     }
     let response = await fetch(where);
+    console.log(response);
     if (response.ok != true) {
         response = await fetch('/404.html');
     } 
     let data = await response.text();
+    console.log(data);
     let dom = parser.parseFromString(data, "text/html");
     dom.body.querySelector("main").style.opacity = '0';
     let main = document.querySelector("main");
@@ -134,4 +146,32 @@ function tableOfContents() {
             easing: 'easeOutQuad'
           }); 
     }
+}
+
+function pokeHop() {
+    var poke = this;
+    if (running.has(poke) != true) {
+        running.add(poke);
+        var hop = anime({
+            targets: this,
+            easing: "easeOutQuad",
+            duration: "250",
+            direction: "alternate",
+            translateY: "-10",
+            complete: function () {
+                if (loop.has(poke) != true) {
+                    hop.play();
+                } else {
+                    running.delete(poke);
+                    loop.delete(poke);
+                }
+            },
+        });
+        hop.play();
+    }
+}
+
+function pokeHopReset() {
+    var poke = this;
+    loop.add(poke);
 }
