@@ -2,6 +2,7 @@ const eliteFour = require('elite-four');
 
 module.exports = function(eleventyConfig) {
   eleventyConfig.addWatchTarget('src/assets/static/');
+  eleventyConfig.setUseGitIgnore(false);
   eleventyConfig.addPassthroughCopy({ 'src/assets/static': '/' });
   eleventyConfig.setLiquidOptions({ dynamicPartials: true });
   eleventyConfig.addPlugin(eliteFour);

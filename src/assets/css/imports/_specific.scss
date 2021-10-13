@@ -8,27 +8,67 @@ Specific Styles
 header .higby {
   color: $header-text; //Only during animation
 }
-.draft {
-  &:after {
-    color: $header-text;
-    content: " [draft]";
-    font-size: .88rem;
-    font-style: normal;
-    font-weight: bold;
-    vertical-align: text-top;
-  }
-}
 .animating:hover {
   color: $header-text;
 }
-.higby, i[class="65"] {
-  color: $space;
-  font-style: normal;
-  font-weight: bold;
+.who, .what {
+  background-color: $space-100;
+  border-radius: .25rem;
+  color: $header-text;
+  font-size: 1.25rem;
+}
+
+.who {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-bottom: 2.5rem;
+  padding: .5rem;
+  margin-right: 1.5rem;
+  p {
+    margin: auto 1rem;
+  }
+  figure {
+    margin-top: 0;
+    margin-bottom: -2.5rem;
+    margin-right: -1.5rem;
+    width: 95%;
+    img {
+      width: 100%;
+    }
+  }
+}
+.what {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 1rem;
+  text-align: center;
+  h1, h2, h3, h4, h5, h6, header, ol {
+    grid-column: span 2;
+  }
+  code {
+    font-size: .899em;
+  }
+  p {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+  }
+}
+.note {
+  border: none;
+  color: $note-text;
+  display:list-item;
+  font-size: 1rem;
+  list-style-position: outside;
+  list-style-type: ">";
+  margin-left: .65rem;
+  p {
+    font-style: italic;
+  }
 }
 .card {
   img {
     border-radius: 4.75% / 3.5%;
+    width: 100%;
   }
 }
 .cardList,.boxList {
@@ -38,6 +78,9 @@ header .higby {
   grid-template-columns: repeat(3, 1fr);
   justify-content: space-between;
   text-align: center;
+}
+.cardList figure {
+  width: 100%;
 }
 @media screen and (max-width: 700px) {
   .cardList,.boxList {

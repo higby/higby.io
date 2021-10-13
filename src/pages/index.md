@@ -7,7 +7,7 @@ setup:
 
 <div class="who">
 
-![Me, Awkwardly](/img/headshot.webp)
+![Me, Awkwardly](/img/squat.jpg)
 
 **Branden Higby** is a writer, video producer, computer programmer, procrastinator, dungeon master, and cartoon watcher based in Oregon. 💜
 
@@ -22,21 +22,32 @@ setup:
 {% assign flowers = collections.flowers | reverse %}
 
 <nav>
+<table>
+
 {% for heading in order %}
 {% for tag in allTags %}
 {% if tag == heading %}
-<h2>{{ tag | capitalize }}</h2>
-<ul>
+<tbody>
+<tr>
+<th colspan="2">
+  {{ tag | capitalize }}
+</th>
+</tr>
   {% for flower in flowers %}
   {% if flower.data.tags[0] == tag and flower.data.draft != true %}
-  <li>
-    <div><a href="{{ flower.url }}" {% unless flower.data.stylesheet != "main" %}class="internal"{% endunless %}>{{ flower.data.title }}</a></div>
+  <tr>
+  <td>
     <time>{{ flower.date | common }}</time>
-  </li>
+  </td>
+  <td>
+    <a href="{{ flower.url }}" {% unless flower.data.stylesheet != "main" %}class="internal"{% endunless %}>{{ flower.data.title }}</a>
+  </td></tr>
+
   {% endif %}
   {% endfor %}
-</ul>
+</tbody>
 {% endif %}
 {% endfor %}
 {% endfor %}
+</table>
 </nav>
