@@ -5,9 +5,13 @@
 *, *::before, *::after {
   box-sizing: inherit;
 }
+::selection {
+  color: black;
+  background-color: $highlight;
+}
 html {
   box-sizing: border-box;
- // scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 .higby {
   font-style: normal;
@@ -15,7 +19,7 @@ html {
 body {
   font-size: 1.125rem;  background-color: $background-color;
   font-family: $primary-font;
-    color: $primary-text;
+  color: $primary-text;
   line-height: 1.65;
   margin: 1rem auto;
   max-width: 650px;
@@ -73,7 +77,7 @@ article nav {
     color: $quote-text;
     &:after {
       content: "//";
-      color: $pgp-text;
+      color: $code-text;
 
       margin: 0 .45rem;
     }
@@ -83,8 +87,10 @@ article nav {
 footer {
   display: grid;
   grid-auto-flow: rows;
-  color: $header-text;
   font-size: 1.25rem;
+  a {
+    color: $header-text;
+  }
   code {
     background-color: inherit;
     padding: 0;
@@ -148,9 +154,11 @@ figcaption {
 hr {
   border: 0;
   text-align: center;
-  border-bottom: 1px solid black;
-  width: 65%;
-  margin: 2rem auto;
+  &:before {
+    color: $code-text;
+    content: "///////";
+    font-size: 1.125rem;
+  }
 }
 dt {
   font-weight: bold;
@@ -163,13 +171,12 @@ dd {
   margin-left: 1.25rem;
 }
 a {
-  color: #0000EE;
+  color: $space;
   cursor: pointer;
+  transition: color .5s;
   &:hover {
+    color: $space;
     text-decoration: underline;
-  }
-  &:active {
-    color: #EE0000;
   }
 }
 strong, b {
@@ -216,8 +223,7 @@ kbd {
 }
 img {
   display: block;
-  box-shadow: -8px 8px 0 0 black;
-  border: 1px solid black;  
+  border-radius: .25rem;
   height: auto;
   width: 85%;
 }
@@ -252,19 +258,16 @@ section {
   font-size: 1rem;
   &:before {
     color: $primary-text;
-    content: 'Footnotes';
+    content: '/// Footnotes ///';
     display: block;
     font-size: 1.125rem;
     text-align: center;
-    border: 0;
-    border-bottom: 1px solid black;
-    width: 65%;
-    margin: 2rem auto;
   }
 }
 form {
   grid-gap: 1rem;
-  border: .25rem solid black;
+  background-color: $space-100;
+  border-radius: .25rem;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   padding: 1rem;
@@ -332,34 +335,34 @@ button,
 input[type="button"],
 input[type="submit"] {
   -webkit-appearance: none;
-  border: 1px solid black;
-  color: black;
+  background-color: $space;
+  border-radius: .25rem;
+  color: #fff;
   cursor: pointer;
   font-weight: bold;
   height: 2rem;
   min-width: 8rem;
   text-align: center;
-  transition: all .3s;
+  transition: background-color .3s;
   &:hover {
-    box-shadow: -4px 4px 0 0 black;
+    background-color: $space-600; // make a variable
   }
   &:active {
-    background-color: black; // make a variable
-    color: white;
+    background-color: $space-300; // replzce with a proper animation
   }
 }
 input[readonly] {
   color: $header-text;
 }
 input:disabled {
+  background-color: $lightGrey;
   color: $disabled-text;
-  border: 1px solid $disabled-text;
   cursor: default;
   &::placeholder {
     color: $disabled-text;
   }
   &:hover {
-      box-shadow: none;
+    background-color: $lightGrey;
   }
 }
 

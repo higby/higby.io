@@ -12,8 +12,8 @@ header .higby {
   color: $header-text;
 }
 .who, .what {
-  box-shadow: -8px 8px 0 0 black;
-  border: 1px solid black;  
+  background-color: $space-100;
+  border-radius: .25rem;
   color: $header-text;
   font-size: 1.25rem;
 }
@@ -70,7 +70,6 @@ header .higby {
     border-radius: 4.75% / 3.5%;
     width: 100%;
   }
-  margin: 0;
 }
 .cardList,.boxList {
   grid-gap: 1.5rem;
@@ -79,10 +78,9 @@ header .higby {
   grid-template-columns: repeat(3, 1fr);
   justify-content: space-between;
   text-align: center;
-  img {
-    box-shadow: none;
-    border: none;
-  }
+}
+.cardList figure {
+  width: 100%;
 }
 @media screen and (max-width: 700px) {
   .cardList,.boxList {
@@ -90,10 +88,9 @@ header .higby {
   }
 }
 .imgHolder {
+  background-color: $lightGrey;
+  border-radius: .25rem;
   padding: .5rem;
-  box-shadow: -8px 8px 0 0 black;
-  border: 1px solid black;  
-  margin-bottom: 1rem;
 }
 .ball {
   display: block;
