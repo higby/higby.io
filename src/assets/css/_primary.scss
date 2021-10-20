@@ -304,6 +304,9 @@ nav table {
     border-bottom: .15rem dashed $header-text;
   }
 }
+.qr {
+  display: none;
+}
 
 @media screen and (max-width: 700px) {
   body {
