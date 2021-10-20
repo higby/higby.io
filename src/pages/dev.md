@@ -2,6 +2,7 @@
 title: "Dev"
 description: Classless CSS snippet gallery. A less ugly way to start a web page.
 date: 2020-04-12 00:05:00
+eleventyExcludeFromCollections: true
 ---
 
 This is a collection of [classless](https://medium.com/@ubershmekel/the-next-css-frontier-classless-5e66f3f25fddcss) themes to use as starting points in web development.

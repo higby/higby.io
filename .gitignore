@@ -1,8 +1,6 @@
 build/
 node_modules/
 .sass-cache/
-src/config/layouts/includes/write/
+src/components/write/
 .DS_Store
-
-# Local Netlify folder
 .netlify

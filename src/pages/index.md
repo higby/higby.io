@@ -5,14 +5,6 @@ setup:
   toc: false
 ---
 
-<div class="who">
-
-![Me, Awkwardly](/img/headshot.webp)
-
-**Branden Higby** is a writer, video producer, computer programmer, procrastinator, dungeon master, and cartoon watcher based in Oregon. 💜
-
-</div>
-
 {% capture order %}essays,poetry,collections,programming,misc{% endcapture %}
 {% assign order = order | split: "," %}
 
@@ -21,33 +13,28 @@ setup:
 
 {% assign flowers = collections.flowers | reverse %}
 
+**Branden Higby** is a writer, video producer, computer programmer, procrastinator, dungeon master, and cartoon watcher based in Oregon. 💜
+
 <nav>
-<table>
 
 {% for heading in order %}
 {% for tag in allTags %}
 {% if tag == heading %}
-<tbody>
-<tr>
-<th colspan="2">
+<b>
   {{ tag | capitalize }}
-</th>
-</tr>
+</b>
+<ul style="list-style:none">
   {% for flower in flowers %}
   {% if flower.data.tags[0] == tag and flower.data.draft != true %}
-  <tr>
-  <td>
+  <li>
     <time>{{ flower.date | common }}</time>
-  </td>
-  <td>
     <a href="{{ flower.url }}" {% unless flower.data.stylesheet != "main" %}class="internal"{% endunless %}>{{ flower.data.title }}</a>
-  </td></tr>
+  </li>
 
   {% endif %}
   {% endfor %}
-</tbody>
+  </ul>
 {% endif %}
 {% endfor %}
 {% endfor %}
-</table>
 </nav>

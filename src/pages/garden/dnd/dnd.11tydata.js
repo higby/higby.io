@@ -1,3 +1,3 @@
 module.exports = {
-  "stylesheet": "dnd",
+  "stylesheet": "main",
 };

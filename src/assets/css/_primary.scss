@@ -1,0 +1,319 @@
+﻿@use "vars" as *;
+
+*:where(:not(ul, ol, iframe, canvas, img, svg, video, input[type="checkbox"], input[type="radio"]):not(svg *)) {
+  all: unset;
+  display: revert;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $primary-font;
+  background-color: $background-color;
+  color: $primary-text;
+  max-width: 600px;
+  margin: 1.5rem auto;
+  line-height: 1.65;
+  &> header {
+    text-align: center;
+    a {
+      color: $header-text;
+      &:hover {
+        text-decoration: none;
+      }
+      i {
+        font-style: normal;
+      }
+    }
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: $header-text;
+  font-weight: 600;
+  margin: 1rem 0;
+}
+h1 { font-size: 2rem; }
+h2 { font-size: 1.7818rem; }
+h3 { font-size: 1.5874rem; }
+h4 { font-size: 1.4142rem; }
+h5 { font-size: 1.2599rem; }
+h6 { font-size: 1.1225rem; }
+
+header {}
+
+nav {
+  ul, ol {
+
+  }
+  li {
+
+  }
+  a {
+    &:hover {
+
+    }
+    &:active {
+
+    }
+  }
+}
+
+main {}
+
+article {}
+
+section {}
+
+aside {}
+
+footer {
+  margin: 1.5rem 0 0;
+  a {
+    color: $header-text;
+  }
+  code { 
+    a {
+      color: $pgp-text;
+      font-size: 1.125rem;
+    }
+  }
+}
+
+address {}
+
+
+p, ol, ul, pre, blockquote, cite, figure, img, hr, dl {
+  display: block;
+  margin: 1rem auto;
+}
+
+p {}
+
+ol, ul {
+  margin: 0 0 0 1.65rem;
+  padding: 0;
+  ol, ul {
+
+  }
+}
+ol {
+  ol {
+    list-style-type: lower-alpha;
+  }
+}
+ul {}
+li {
+  li {
+
+  }
+}
+
+code {
+  color: $code-text;
+  font-family: $mono-font;
+  a {
+    color: $space-code;
+  }
+}
+
+code:not(pre *, footer *) {
+  font-size: .95em;
+  background-color: $lightGrey;
+  border-radius: .25rem;
+  padding:.2rem .4rem;
+}
+
+kbd {
+  border: 1px solid $mediumGrey;
+  border-radius: .25rem;
+  box-shadow: inset 0 -1px 0 $mediumGrey;
+  color: $code-text;
+  font-family: $mono-font;
+  font-size: 1rem;
+  padding: .125rem .25rem;
+  vertical-align: middle;
+}
+
+pre {
+  font-size: .95rem;
+  overflow: auto;
+  padding: 1rem 1.5rem;
+  white-space: pre;
+  background-color: $lightGrey;
+  border-radius: .25rem;
+}
+
+blockquote {
+  border-left: .25rem solid $header-text;
+  padding: 0 1rem;
+  margin: 0 1rem;
+  color: $quote-text;
+}
+.note {
+  color: $note-text;
+  font-style: italic;
+  border: none;
+}
+cite{
+  margin:1rem 0 0 0;
+  font-style: italic;
+  &:before {
+    content:"— ";
+    font-size:.95rem;
+  }
+}
+
+figure {
+}
+figcaption, caption {
+  text-align: center;
+  font-size: .95rem;
+}
+
+img {
+  background-color: $lightGrey;
+
+  width: 85%;
+  height: auto;
+}
+
+hr {
+  border-bottom: .15rem dashed $header-text;
+  width: 65%;
+  margin: 1.5rem auto;
+}
+
+dl {}
+dt {}
+dd {}
+
+a {
+  color: $space;
+  text-decoration: none;
+  transition: color .5s;
+  &:hover {
+    cursor: pointer;
+    color: $space;
+    text-decoration: underline;
+  }
+}
+
+strong, b {
+  font-weight: 600;
+}
+
+em, i {
+  font-style: italic;
+}
+
+mark {
+  border-bottom: .15rem dashed $space;
+  margin: 0 -.15rem;
+  padding: 0 .15rem;
+}
+
+sub, sup {
+  font-size: .85rem;
+}
+sup {
+  vertical-align: super;
+}
+
+kbd {}
+
+time {}
+
+
+svg {}
+video {}
+
+table:not(nav *) {
+  border-collapse: collapse;
+  caption-side: bottom;
+  text-align: center;
+  width: 85%;
+  margin: 1rem auto;
+  thead {
+    border-bottom: 1px solid $header-text;
+  }
+  tfoot {
+    border-top: 1px solid $header-text;
+    color: $header-text;
+  }
+  tr {
+    &:nth-child(even) {
+      background-color: $lightGrey;
+    }
+  }
+  th {
+    color: $header-text;
+    font-weight: 600;
+  }
+  td {
+    padding: .125rem;
+    text-align: center;
+  }
+}
+nav table {
+  th, td {
+    border: none;
+    padding: 0.25rem 0;
+    text-align: left;
+    vertical-align: text-top;
+  }
+  th {
+    font-weight: 600;
+  }
+  td:first-of-type {
+    text-align: right;
+    white-space: nowrap;
+  }
+  tr:nth-child(even) {
+    background-color: inherit;
+  }
+  time {
+    color: $quote-text;
+  }
+  time:after {
+    content: "//";
+    color: $note-text;
+    margin: 0 0.45rem;
+  }
+}
+
+.footnotes {
+  font-size: .95rem;
+  color: $quote-text;
+  &:before {
+    content: 'Footnotes';
+    width: 65%;
+    margin: 1rem auto;
+    padding: 0 0 .5rem 0;
+    display: block;
+    font-size: 1rem;
+    color: $header-text;
+    text-align: center;
+    border-bottom: .15rem dashed $header-text;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  body {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+  img {
+    width: 100%;
+  }
+  blockquote {
+    margin: 0;
+  }
+}

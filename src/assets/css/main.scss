@@ -1,4 +1,4 @@
-@import "imports/variables";
-@import "imports/primary";
-@import "imports/fonts";
- 
+﻿@use 'primary';
+@use 'syntax';
+@use 'fonts';
+@use 'specific';

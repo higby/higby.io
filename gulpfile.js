@@ -1,4 +1,4 @@
-const gulp = require('gulp');
+﻿const gulp = require('gulp');
 const uglify = require('gulp-uglify');
 const concat = require('gulp-concat');
 const stripBom = require('gulp-stripbom');
@@ -10,7 +10,7 @@ function css() {
   .pipe(sass({ outputStyle: 'compressed'}))
   .on('error', sass.logError)
   .pipe(stripBom())
-  .pipe(gulp.dest('./src/config/layouts/includes/write/'))
+  .pipe(gulp.dest('./src/components/write/'))
 }
 
 function watchCSS() {
@@ -19,15 +19,15 @@ function watchCSS() {
 
 function js() {
   return gulp
-  .src(['src/assets/js/core.js', 'src/assets/js/main.js'])
+  .src('src/assets/js/**/*.js')
   .pipe(concat('main.js'))
   .pipe(uglify({toplevel: true}))
   .pipe(stripBom())
-  .pipe(gulp.dest('./src/config/layouts/includes/write/'))
+  .pipe(gulp.dest('./src/components/write/'))
 }
 
 function watchJS() {
-  gulp.watch('src/assets/js/main.js', gulp.parallel(js))
+  gulp.watch('src/assets/js/**/*.js', gulp.parallel(js))
 };
 
 exports.default = gulp.parallel(css, js, watchCSS, watchJS);

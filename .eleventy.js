@@ -1,17 +1,18 @@
-const eliteFour = require('elite-four');
+﻿const utilities = require('./src/utils/index');
 
 module.exports = function(eleventyConfig) {
   eleventyConfig.addWatchTarget('src/assets/static/');
-  eleventyConfig.setUseGitIgnore(false);
   eleventyConfig.addPassthroughCopy({ 'src/assets/static': '/' });
-  eleventyConfig.addPlugin(eliteFour);
+  eleventyConfig.addPlugin(utilities);
+  eleventyConfig.setQuietMode(true);
+  eleventyConfig.setUseGitIgnore(false);
   return {
     dir: { 
       input: 'src',
       output: 'build',
-      layouts: 'config/layouts',
-      includes: 'config/layouts/includes',
-      data: 'config/data'
+      layouts: 'components/templates',
+      includes: 'components',
+      data: 'data'
     }
   };
 };

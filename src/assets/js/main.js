@@ -1,9 +1,10 @@
-var now;
+﻿var now;
 var where;
 var link;
 var running = new Set();
 var loop = new Set();
 const parser = new DOMParser();
+
 
 document.addEventListener("DOMContentLoaded", function(){
     now = window.location.pathname;
@@ -59,12 +60,10 @@ async function fetchContent(where) {
         where += '/';
     }
     let response = await fetch(where);
-    console.log(response);
     if (response.ok != true) {
         response = await fetch('/404.html');
     } 
     let data = await response.text();
-    console.log(data);
     let dom = parser.parseFromString(data, "text/html");
     dom.body.querySelector("main").style.opacity = '0';
     let main = document.querySelector("main");
@@ -113,8 +112,8 @@ function fancyName() {
         easing: "easeInOutQuad",
     });
     purple
-    .add({color: [{value: "#191919",},{value: "#8654E8",},],})
-    .add({targets: ".branden",color: [{value: "#191919",},],
+    .add({color: [{value: "#e8e8e8",},{value: "#8654E8",},],})
+    .add({targets: ".branden",color: [{value: "#e8e8e8",},],
         complete: function () {
             document.querySelector("header h1 i").style.color = '#8654E8';
             header.deletterize();

@@ -1,14 +1,5 @@
-@import "imports/variables";
+﻿@use "vars" as *;
 
-header .higby {
+body > header a i {
   color: $space;
-}
-header a:hover {
-  color: $space;
-}
-main header nav ol li ol {
-  display: block;
-}
-nav svg {
-   transform: rotate(90deg);
 }

@@ -1,0 +1,30 @@
+{% assign name = site.name | split: " " %}
+{% capture headTitle %}{% if title %}{{ title }}{% else %}{{ name[0] }} {{ name[1] }}{% endif %}{% endcapture %}
+{% capture twitterTitle %}{% if title %}{{ title }}{% else %}higby.io{% endif %}{% endcapture %}
+{% capture headDesc %}{% if description %}{{ description }}{% else %}{{ site.description }}{% endif %}{% endcapture %}
+{% capture headUrl %}https://{{ site.url }}{{ page.url }}{% endcapture %}
+{% capture svg %}{% include 'h.svg' %}{% endcapture %}
+
+<meta charset="utf-8">
+<title>{{ headTitle }}</title>
+<meta name="description" content="{% if description %}{{ description }}{% else %}{{ site.description }}{% endif %}"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<link rel='icon' href="data:image/svg+xml,{{ svg | encodeurl }}">
+<meta name="theme-color" content="#8654E8">
+<link rel="author" href="/humans.txt"/>
+<link rel="canonical" href="{{ headUrl }}">
+
+{% if stylesheet %}{% capture location %}write/{{stylesheet}}.css{% endcapture %}<style>{% include location %}</style>{% endif %}
+<script>{% include 'write/main.js' %}</script>
+<noscript><style>{% include 'write/noscript.css' %}</style></noscript>
+{% if eleventyExcludeFromCollections %}<meta name="robots" content="noindex">{% endif %}
+{% comment %}
+<meta property="og:title" content="{{ twitterTitle }}">
+<meta property="og:description" content="{{ headDesc }}">
+<meta property="og:url" content="{{ headUrl }}">
+<meta property="og:type" content="website">
+<meta property="og:image" content="{{ headUrl }}og">
+
+<meta name="twitter:creator" content="@iamhigby">
+<meta name="twitter:card" content="summary_large_image">
+{% endcomment %}
