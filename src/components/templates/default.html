@@ -7,11 +7,11 @@
       {% if title %}
         <header>
           <h1>{{ title }}</h1>
+          {% qrcode headUrl %}
           {% if date and setup.date != false %}<time>{{ page.date | common }}</time>{% endif %}
           {% if setup.toc != false %}{{ content | toc }}{% endif %}
-          {% qrcode headUrl %}
         </header>
-      {% endif %}
+      {% else %}{% qrcode headUrl %}{% endif %}
       <article>
         {{ content }}
       </article>

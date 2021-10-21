@@ -2,7 +2,10 @@
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addShortcode("qrcode", async function(url) {
-    const code = await qrcode.toDataURL(url);
-    return '<figure class="qr"><img width="164px" height="164px" src="' + code + '"></figure>'
+    const code = await qrcode.toDataURL(url, {
+      width: '128',
+      margin: '0',
+    });
+    return '<figure class="qr"><img width="128px" height="128px" src="' + code + '"></figure>'
   });
 }

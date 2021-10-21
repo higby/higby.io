@@ -54,7 +54,27 @@
     }
   }
   main > header {
-    margin-top: 2cm;
+    display: grid;
+    grid-template-columns: auto 128px;
+    .qr {
+      grid-row: span 2;
+      justify-self: end;
+      margin: 0;
+    }
+  }
+  .qr {
+    margin: 0 auto;
+    width: 128px;
+    display: block;
+    img {
+      margin: 0;
+      width: 100%;
+    }
+  }
+  .qr:not(header *) {
+    position: absolute;
+    top: 0;
+    right: 0
   }
   pre {
     border: 1px solid #000;
@@ -85,16 +105,7 @@
   .footnotes:before {
       border-bottom: .15rem dashed #000;
   }
-  .qr {
-    position: absolute;
-    top: 0;
-    right: 0;
-    margin: 0;
-    display: block;
-    img {
-      margin: 0;
-    }
-  }
+
   //https://github.com/BafS/Gutenberg/
   a {
     color: $space !important;
