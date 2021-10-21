@@ -12,7 +12,7 @@ const htmlMin = require('./htmlMin');
 const images = require('./images');
 const safeLinks = require('./safeLinks');
 const Toc = require('./toc');
-const qr = require('./qr');
+//const qr = require('./qr');
 
 module.exports = function (eleventyConfig) {
   // Serve 404 during development
@@ -35,7 +35,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(htmlMin);
   eleventyConfig.addPlugin(images);
   eleventyConfig.addPlugin(safeLinks);
-  eleventyConfig.addPlugin(qr);
+  //eleventyConfig.addPlugin(qr);
   
   // Transforms
   eleventyConfig.addFilter('toc', (content) => {

@@ -1,6 +1,6 @@
 ﻿@use "vars" as *;
 
-*:where(:not(ul, ol, iframe, canvas, img, svg, video, input[type="checkbox"], input[type="radio"]):not(svg *)) {
+*:where(:not(ul, ol, details, summary, iframe, canvas, img, svg, video, input[type="checkbox"], input[type="radio"]):not(svg *)) {
   all: unset;
   display: revert;
 }
@@ -40,39 +40,28 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
   margin: 1rem 0;
 }
-h1 { font-size: 2rem; }
-h2 { font-size: 1.7818rem; }
-h3 { font-size: 1.5874rem; }
-h4 { font-size: 1.4142rem; }
-h5 { font-size: 1.2599rem; }
-h6 { font-size: 1.1225rem; }
 
-header {}
+h1 { font-size: 1.75rem; }
+h2 { font-size: 1.5942rem; }
+h3 { font-size: 1.4522rem; }
+h4 { font-size: 1.3229rem; }
+h5 { font-size: 1.2051rem; }
+h6 { font-size: 1.0978rem; }
 
 nav {
+  margin: 0 auto;
   ul, ol {
-
+    list-style: none;
+    margin: .5rem 0 .5rem 0;
   }
   li {
-
-  }
-  a {
-    &:hover {
-
-    }
-    &:active {
-
+    display: flex;
+    justify-content: space-between;
+    time {
+      white-space: nowrap;
     }
   }
 }
-
-main {}
-
-article {}
-
-section {}
-
-aside {}
 
 footer {
   margin: 1.5rem 0 0;
@@ -82,37 +71,23 @@ footer {
   code { 
     a {
       color: $pgp-text;
-      font-size: 1.125rem;
     }
   }
 }
 
-address {}
-
-
-p, ol, ul, pre, blockquote, cite, figure, img, hr, dl {
+p, ol, ul, details, pre, blockquote, cite, figure, img, hr, dl {
   display: block;
   margin: 1rem auto;
 }
 
-p {}
-
 ol, ul {
   margin: 0 0 0 1.65rem;
   padding: 0;
-  ol, ul {
-
-  }
 }
+
 ol {
   ol {
     list-style-type: lower-alpha;
-  }
-}
-ul {}
-li {
-  li {
-
   }
 }
 
@@ -157,12 +132,14 @@ blockquote {
   margin: 0 1rem;
   color: $quote-text;
 }
+
 .note {
   color: $note-text;
   font-style: italic;
   border: none;
 }
-cite{
+
+cite {
   margin:1rem 0 0 0;
   font-style: italic;
   &:before {
@@ -171,18 +148,15 @@ cite{
   }
 }
 
-figure {
+img {
+  background-color: $lightGrey;
+  width: 85%;
+  height: auto;
 }
+
 figcaption, caption {
   text-align: center;
   font-size: .95rem;
-}
-
-img {
-  background-color: $lightGrey;
-
-  width: 85%;
-  height: auto;
 }
 
 hr {
@@ -190,10 +164,6 @@ hr {
   width: 65%;
   margin: 1.5rem auto;
 }
-
-dl {}
-dt {}
-dd {}
 
 a {
   color: $space;
@@ -227,14 +197,6 @@ sup {
   vertical-align: super;
 }
 
-kbd {}
-
-time {}
-
-
-svg {}
-video {}
-
 table:not(nav *) {
   border-collapse: collapse;
   caption-side: bottom;
@@ -262,32 +224,6 @@ table:not(nav *) {
     text-align: center;
   }
 }
-nav table {
-  th, td {
-    border: none;
-    padding: 0.25rem 0;
-    text-align: left;
-    vertical-align: text-top;
-  }
-  th {
-    font-weight: 600;
-  }
-  td:first-of-type {
-    text-align: right;
-    white-space: nowrap;
-  }
-  tr:nth-child(even) {
-    background-color: inherit;
-  }
-  time {
-    color: $quote-text;
-  }
-  time:after {
-    content: "//";
-    color: $note-text;
-    margin: 0 0.45rem;
-  }
-}
 
 .footnotes {
   font-size: .95rem;
@@ -304,18 +240,17 @@ nav table {
     border-bottom: .15rem dashed $header-text;
   }
 }
-.qr {
-  display: none;
-}
 
 @media screen and (max-width: 700px) {
   body {
     margin-left: 2rem;
     margin-right: 2rem;
   }
+
   img {
     width: 100%;
   }
+
   blockquote {
     margin: 0;
   }

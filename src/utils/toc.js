@@ -6,10 +6,10 @@ const ignoreAttribute = 'data-toc-exclude';
 const defaults = {
     tags: ['h2', 'h3'],
     ignoredElements: [],
-    wrapper: 'nav',
+    wrapper: 'details',
     wrapperClass: 'toc',
     headingText: 'Table of Contents',
-    headingTag: 'p'
+    headingTag: 'summary'
 };
 
 function getParent(prev, current) {

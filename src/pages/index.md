@@ -13,7 +13,7 @@ setup:
 
 {% assign flowers = collections.flowers | reverse %}
 
-**Branden Higby** is a writer, video producer, computer programmer, procrastinator, dungeon master, and cartoon watcher based in Oregon. 💜
+**Hello!** Welcome to my website. I am a writer, video producer, computer programmer, procrastinator, dungeon master, and cartoon watcher based in Oregon. 💜
 
 <nav>
 
@@ -23,12 +23,12 @@ setup:
 <b>
   {{ tag | capitalize }}
 </b>
-<ul style="list-style:none">
+<ul>
   {% for flower in flowers %}
   {% if flower.data.tags[0] == tag and flower.data.draft != true %}
   <li>
-    <time>{{ flower.date | common }}</time>
     <a href="{{ flower.url }}" {% unless flower.data.stylesheet != "main" %}class="internal"{% endunless %}>{{ flower.data.title }}</a>
+    <time>{{ flower.date | common }}</time>
   </li>
 
   {% endif %}
