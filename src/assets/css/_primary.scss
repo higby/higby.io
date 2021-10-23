@@ -1,4 +1,4 @@
-﻿@use "vars" as *;
+@use "vars" as *;
 
 *:where(:not(ul, ol, details, summary, iframe, canvas, img, svg, video, input[type="checkbox"], input[type="radio"]):not(svg *)) {
   all: unset;
@@ -91,6 +91,10 @@ ol {
   }
 }
 
+details {
+  color: $header-text;
+}
+
 code {
   color: $code-text;
   font-family: $mono-font;
@@ -162,6 +166,7 @@ figcaption, caption {
 hr {
   border-bottom: .15rem dashed $header-text;
   width: 65%;
+  overflow: visible;
   margin: 1.5rem auto;
 }
 

@@ -1,4 +1,4 @@
-﻿const { JSDOM } = require("jsdom");
+const { JSDOM } = require("jsdom");
 const sharp = require('sharp');
 const fetch = require('node-fetch');
 

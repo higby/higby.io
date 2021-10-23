@@ -1,13 +1,14 @@
 ---
-title: "Dev"
-description: Classless CSS snippet gallery. A less ugly way to start a web page.
-date: 2020-04-12 00:05:00
-eleventyExcludeFromCollections: true
+title: "Styleguide"
+description: Styleguide for my personal site.
+date: 2021-10-23 14:27:00
+tags: programming
 ---
 
-This is a collection of [classless](https://medium.com/@ubershmekel/the-next-css-frontier-classless-5e66f3f25fddcss) themes to use as starting points in web development.
+> **Note:** This is an adaption of [CSS Bed](https://github.com/ubershmekel/cssbed)
+{.note}
 
-[Source behind this one.](https://github.com/ubershmekel/cssbed)
+This is a collection of [classless](https://medium.com/@ubershmekel/the-next-css-frontier-classless-5e66f3f25fddcss) themes to use as starting points in web development.
 
 ## Why use classless themes?
 - Responsive
@@ -72,7 +73,7 @@ And here's a nicely marked up table!
 
 ### Typography
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque dictum hendrerit velit, quis ullamcorper sem congue ac. Quisque id magna rhoncus, sodales massa vel, vestibulum elit. Duis ornare accumsan egestas. Proin maximus lacus interdum leo molestie convallis. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Ut iaculis risus eu felis feugiat, eu mollis neque elementum. Donec interdum, nisl id dignissim iaculis, felis dui aliquet dui, non fermentum velit lectus ac quam. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. **This is strong,** this is normal, **this is just bold,** *and this is emphasized!* And heck, [here](#)
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque dictum hendrerit velit, quis ullamcorper sem congue ac. Quisque id magna rhoncus, sodales massa vel, vestibulum elit. Duis ornare accumsan egestas. Proin maximus lacus interdum leo molestie convallis. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Ut iaculis risus eu felis feugiat, eu mollis neque elementum. Donec interdum, nisl id dignissim iaculis, felis dui aliquet dui, non fermentum velit lectus ac quam. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. **This is strong,** this is normal, **this is just bold,** *and this is emphasized!* And heck, [here](#) is a link!
 
 - Unordered list item 1
 - Unordered list item 2
@@ -81,8 +82,6 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque dictum hendreri
 1. Ordered list item 1
 2. Ordered list item 2
 3. Ordered list item 3
-
-Links with `mailto:`, `tel:`, `sms:` addresses might be styled...
 
 # Heading 1
 

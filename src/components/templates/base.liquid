@@ -1,0 +1,26 @@
+{% include 'setup.liquid' %}
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>{% include 'head.liquid' %}</head>
+  <body>
+    <header><h1><a href="/">Branden <i>Higby</i></a></h1></header>
+    <main>
+      {% unless title == null or time or toc %}
+        <header>
+          {% if title %}<h1>{{ title }}</h1>{% endif %}
+          {% unless time == false %}<time datetime='{{ page.date | datetime }}'>{{ page.date | common }}</time>{% endunless %}
+          {% unless toc == false %}{{ content | toc }}{% endunless %}
+        </header>
+      {% endunless %}
+      <article>
+        {{ content }}
+      </article>
+      <footer>
+        <a href="https://twitter.com/{{ site.twitter }}" target="_blank" rel="noopener noreferrer">twitter</a></br>
+        <a href="https://github.com/{{ site.github }}" target="_blank" rel="noopener noreferrer">github</a></br>
+        <code><a href="https://github.com/{{ site.github }}/pgp" target="_blank" rel="noopener noreferrer">9668 ECE1 5152 8A07</a></code>
+      </footer>
+    </main>
+  </body>
+</html>
+{% include 'higby.liquid' %}

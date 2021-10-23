@@ -1,4 +1,4 @@
-﻿var now;
+var now;
 var where;
 var link;
 var running = new Set();
@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function(){
 });
 
 function addClickEvent() {
-    document.querySelectorAll(".internal").forEach(el => {
+    document.querySelectorAll("a[href^='/']").forEach(el => {
         el.removeEventListener('click', pageUpdate);
         el.addEventListener('click', pageUpdate);
     });

@@ -1,4 +1,4 @@
-﻿const qrcode = require("qrcode");
+const qrcode = require("qrcode");
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addShortcode("qrcode", async function(url) {

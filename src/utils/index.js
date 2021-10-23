@@ -1,4 +1,4 @@
-﻿const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
+const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const fs = require("fs");
 const moment = require("moment-timezone");
 const markdownIt = require('markdown-it');
@@ -49,6 +49,10 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("technical", (date) => {
     const utc = Date.now();
     return moment.utc(utc).tz('America/Los_Angeles').format("YYYY-MM-DD, HH:mm:ss z");
+  })
+  eleventyConfig.addFilter("datetime", (date) => {
+    const utc = Date.now();
+    return moment.utc(utc).tz('America/Los_Angeles').format();
   })
   eleventyConfig.addFilter("encodeurl", (url) => {
     return encodeURIComponent(url);

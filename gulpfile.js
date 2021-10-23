@@ -1,4 +1,4 @@
-﻿const gulp = require('gulp');
+const gulp = require('gulp');
 const uglify = require('gulp-uglify');
 const concat = require('gulp-concat');
 const stripBom = require('gulp-stripbom');
@@ -10,7 +10,7 @@ function css() {
   .pipe(sass({ outputStyle: 'compressed'}))
   .on('error', sass.logError)
   .pipe(stripBom())
-  .pipe(gulp.dest('./src/components/write/'))
+  .pipe(gulp.dest('./src/components/includes/write/'))
 }
 
 function watchCSS() {
@@ -23,7 +23,7 @@ function js() {
   .pipe(concat('main.js'))
   .pipe(uglify({toplevel: true}))
   .pipe(stripBom())
-  .pipe(gulp.dest('./src/components/write/'))
+  .pipe(gulp.dest('./src/components/includes/write/'))
 }
 
 function watchJS() {

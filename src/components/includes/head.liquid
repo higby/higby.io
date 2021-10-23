@@ -1,0 +1,25 @@
+<meta charset="utf-8">
+
+<title>{% if title %}{{ title }}{% else %}Branden Higby{% endif %}</title>
+{% if eleventyExcludeFromCollections %}<meta name="robots" content="noindex">{% endif %}
+<meta name="description" content="{{ headDesc }}">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name='generator' content='eleventy'>
+<meta name="theme-color" content="#965ee5">
+
+<link rel="canonical" href="{{ headUrl }}">
+<link rel="author" href="/humans.txt"/>
+<link rel='icon' href="data:image/svg+xml,{{ svg | encodeurl }}"> 
+
+<meta property="og:title" content="{{ headTitle }}">
+<meta property="og:description" content="{{ headDesc }}">
+<meta property="og:type" content="website">
+<meta property="og:url" content="{{ headUrl }}">
+<meta name="twitter:creator" content="@iamhigby">
+{% comment %}<meta property="og:image" content="">-->
+<meta name="twitter:card" content="summary_large_image">{% endcomment %}
+
+<style>{% include 'write/main.css' %}</style>
+<noscript><style>{% include 'write/noscript.css' %}</style></noscript>
+<script>{% include 'write/main.js' %}</script>
+

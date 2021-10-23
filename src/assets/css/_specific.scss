@@ -1,4 +1,8 @@
-﻿@use "vars" as *;
+@use "vars" as *;
+
+.animating:hover {
+  color: $header-text;
+}
 
 .card {
   img {

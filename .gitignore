@@ -1,6 +1,6 @@
 build/
 node_modules/
 .sass-cache/
-src/components/write/
+src/components/includes/write/
 .DS_Store
 .netlify

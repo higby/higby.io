@@ -1,4 +1,4 @@
-﻿const { JSDOM } = require("jsdom");
+const { JSDOM } = require("jsdom");
 
 async function safeLinks(content, outputPath) {
   if( outputPath && outputPath.endsWith(".html") ) {

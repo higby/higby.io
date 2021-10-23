@@ -1,4 +1,4 @@
-﻿const utilities = require('./src/utils/index');
+const utilities = require('./src/utils/index');
 
 module.exports = function(eleventyConfig) {
   eleventyConfig.addWatchTarget('src/assets/static/');
@@ -11,7 +11,7 @@ module.exports = function(eleventyConfig) {
       input: 'src',
       output: 'build',
       layouts: 'components/templates',
-      includes: 'components',
+      includes: 'components/includes',
       data: 'data'
     }
   };

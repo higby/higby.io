@@ -1,8 +1,8 @@
 ---
 permalink: "/index.html"
 tags: flowers
-setup:
-  toc: false
+time: false
+toc: false
 ---
 
 {% capture order %}essays,poetry,collections,programming,misc{% endcapture %}
@@ -27,8 +27,8 @@ setup:
   {% for flower in flowers %}
   {% if flower.data.tags[0] == tag and flower.data.draft != true %}
   <li>
-    <a href="{{ flower.url }}" {% unless flower.data.stylesheet != "main" %}class="internal"{% endunless %}>{{ flower.data.title }}</a>
-    <time>{{ flower.date | common }}</time>
+    <a href="{{ flower.url }}">{{ flower.data.title }}</a>
+    <time datetime='{{ page.date | datetime }}'>{{ flower.date | common }}</time>
   </li>
 
   {% endif %}

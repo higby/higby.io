@@ -1,4 +1,4 @@
-﻿const cheerio = require('cheerio');
+const cheerio = require('cheerio');
 
 /** Attribute which if found on a heading means the heading is excluded */
 const ignoreAttribute = 'data-toc-exclude';
