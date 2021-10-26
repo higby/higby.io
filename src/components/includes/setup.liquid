@@ -1,4 +1,5 @@
 {% capture headTitle %}{% if title %}{{ title }}{% else %}higby.io{% endif %}{% endcapture %}
 {% capture headDesc %}{% if description %}{{ description }}{% else %}{{ site.description }}{% endif %}{% endcapture %}
 {% capture headUrl %}https://{{ site.url }}{{ page.url }}{% endcapture %}
+{% capture siteUrl %}https://{{ site.url }}{% endcapture %}
 {% capture svg %}{% include 'h.svg' %}{% endcapture %}
