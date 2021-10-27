@@ -6,12 +6,12 @@ const anchor = require('markdown-it-anchor');
 const attrs = require('markdown-it-attrs');
 const figures = require('markdown-it-image-figures');
 const mark = require('markdown-it-mark');
+const toc = require('@higby/eleventy-plugin-nesting-toc');
 const cite = require('./cite');
 const footnote = require('./footnote');
 const htmlMin = require('./htmlMin');
 const images = require('./images');
 const safeLinks = require('./safeLinks');
-const Toc = require('./toc');
 //const qr = require('./qr');
 
 module.exports = function (eleventyConfig) {
@@ -38,10 +38,13 @@ module.exports = function (eleventyConfig) {
   //eleventyConfig.addPlugin(qr);
   
   // Transforms
-  eleventyConfig.addFilter('toc', (content) => {
-    const toc = new Toc(content);
-    return toc.html();
-  })
+  eleventyConfig.addPlugin(toc, {
+    wrapper: 'details',
+    wrapperClass: '',
+    headingText: 'Table of Contents', 
+    headingTag: 'summary',     
+    headingPlacement: 'inside'
+  });
   eleventyConfig.addFilter("common", (date) => {
     const utc = date.toUTCString();
     return moment.utc(utc).format("MMM DD, YYYY");
