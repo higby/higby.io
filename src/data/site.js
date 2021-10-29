@@ -3,7 +3,7 @@ module.exports = {
   description: "A collection of Branden Higby's ramblings",
   email: "branden@higby.io",
   github: "higby",
-  twitter: "iamhigby",
+  twitter: "higby_",
   url: "higby.io",
-  vanityUrls: ["skeletor.gay", "brandenhigby.com"]
+  vanityUrls: ["higby.netlify.app", "skeletor.gay", "brandenhigby.com"]
 };
