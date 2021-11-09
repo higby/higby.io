@@ -1,49 +1,51 @@
 {
   "name": "higby.io",
-  "version": "1.0.0",
+  "version": "3.5.0",
+  "description": "A collection of Branden Higby's ramblings.",
   "main": ".eleventy.js",
+  "scripts": {
+    "eleventy:dev": "npx @11ty/eleventy --serve",
+    "eleventy:prod": "npx @11ty/eleventy",
+    "gulp:dev": "gulp",
+    "gulp:prod": "gulp production",
+    "clean": "rimraf build src/components/includes/write",
+    "start": "run-p clean gulp:dev eleventy:dev",
+    "build": "run-s gulp:prod eleventy:prod",
+    "dev": "netlify dev"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/higby/higby.io.git"
   },
+  "keywords": [
+    "11ty",
+    "eleventy",
+    "jamstack",
+    "blog",
+    "markdown"
+  ],
   "author": "Branden Higby",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/higby/higby.io/issues"
   },
   "homepage": "https://github.com/higby/higby.io#readme",
-  "description": "",
-  "scripts": {
-    "eleventy": "npx @11ty/eleventy --serve",
-    "eleventy-build": "npx @11ty/eleventy",
-    "clean": "rimraf build src/components/write",
-    "gulp": "gulp",
-    "gulp-build": "gulp production",
-    "start": "run-p clean gulp eleventy",
-    "build": "run-s gulp-build eleventy-build"
-  },
   "dependencies": {
     "@11ty/eleventy": "^1.0.0-beta.2",
     "@11ty/eleventy-plugin-syntaxhighlight": "^3.1.3",
+    "@higby/eleventy-images": "^1.0.2",
+    "@higby/eleventy-links": "^1.0.0",
+    "@higby/eleventy-markdown": "^1.0.0",
     "@higby/eleventy-plugin-nesting-toc": "^1.3.1",
     "cheerio": "^1.0.0-rc.10",
     "fs": "^0.0.1-security",
     "gulp": "^4.0.2",
-    "gulp-concat": "^2.6.1",
     "gulp-sass": "^5.0.0",
     "gulp-stripbom": "^1.0.5",
     "gulp-uglify": "^3.0.2",
     "html-minifier": "^4.0.0",
-    "jsdom": "^18.0.0",
-    "markdown-it": "^12.2.0",
-    "markdown-it-anchor": "^8.4.1",
-    "markdown-it-attrs": "^4.1.0",
-    "markdown-it-image-figures": "^2.0.0",
-    "markdown-it-mark": "^3.0.1",
     "moment-timezone": "^0.5.33",
-    "node-fetch": "^2.6.1",
     "npm-run-all": "^4.1.5",
-    "qrcode": "^1.4.4",
     "rimraf": "^3.0.2",
     "sass": "^1.43.2",
     "sharp": "^0.29.1"

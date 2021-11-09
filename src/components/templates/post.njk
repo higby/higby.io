@@ -1,0 +1,11 @@
+---
+layout: base
+---
+<header>
+  {% if title %}<h1>{{ title }}</h1>{% endif %}
+  <time datetime='{{ page.date | datetime }}'>{{ page.date | common }}</time>
+  {{ content | toc | safe }}
+</header>
+<article>
+{{ content | safe }}
+</article>

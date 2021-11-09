@@ -1,0 +1,472 @@
+@use "vars" as *;
+
+*:where(:not(ul, ol, details, summary, iframe, canvas, img, svg, video, input[type="checkbox"], input[type="radio"]):not(svg *)) {
+  all: unset;
+  display: revert;
+}
+
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+
+:root {}
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+body {
+  max-width: 600px;
+  margin: 2rem auto;
+  font-family: $primary-font;
+  font-size: 1rem;
+  background-color: $background-color;
+  color: $primary-text;
+  line-height: 1.65;
+}
+
+body > header {
+  display: flex;
+  justify-content: space-between;
+
+  nav {
+    display: flex;
+    column-gap: 2rem;
+    align-self: center;
+  }
+  h1 a {
+    transition: color .5s;
+    &:hover {
+      background-color: inherit;
+      color: $space;
+    }
+  }
+  a {
+    color: $header-text;
+    i {
+      font-style: normal;
+    }
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: $header-text;
+  font-weight: 600;
+  margin: 1rem 0;
+}
+h1 { font-size: 1.75rem; }
+h2 { font-size: 1.5942rem; }
+h3 { font-size: 1.4522rem; }
+h4 { font-size: 1.3229rem; }
+h5 { font-size: 1.2051rem; }
+h6 { font-size: 1.0978rem; }
+
+header {}
+
+main > nav {
+  font-size: .85rem;
+  margin: 2rem 0;
+  h2 {
+    font-size: 1.125rem;
+  }
+  p {
+    margin: 0;
+    color: $code-text;
+  }
+  ul { 
+    list-style: none;
+    margin: 0;
+    li {
+      display: grid;
+      row-gap: 1rem;
+      grid-template-columns: 12rem auto;
+      margin: 3rem 0;
+    }
+  }
+  time {
+    display: grid;
+    grid-auto-flow: column;
+    grid-row: span 2;
+    color: $pgp-text;
+    &:after {
+      justify-self: baseline;
+      content: '//';
+      color: $darkGrey;
+    }
+  }
+  div {
+    display: flex;
+    justify-content: space-between;
+  }
+  span:first-of-type a {
+    font-size: 1rem;
+  }
+  span + span a {
+    color: $pgp-text;
+    font-style: italic;
+    &:hover {
+      background-color: $pgp-text;
+    }
+  }
+}
+
+main {}
+
+article {}
+
+section {}
+
+aside {}
+
+footer {
+  margin: 1.5rem 0 0;
+  a {
+    color: $header-text;
+  }
+  code { 
+    a {
+      color: $pgp-text;
+    }
+  }
+}
+
+p, ol, ul, details, pre, blockquote, cite, figure, img, hr, dl {
+  display: block;
+  margin: 1rem auto;
+}
+
+p {}
+
+ol, ul {
+  margin: 0 0 0 1.65rem;
+  padding: 0;
+}
+
+ol {
+  ol {
+    list-style-type: lower-alpha;
+  }
+}
+
+details {
+  color: $header-text;
+}
+
+code {
+  color: $code-text;
+  font-family: $mono-font;
+  a {
+    color: $space-code;
+  }
+}
+
+code:not(pre *, footer *) {
+  font-size: .95em;
+  background-color: $lightGrey;
+  border-radius: .25rem;
+  padding:.2rem .4rem;
+}
+
+kbd {
+  border: 1px solid $mediumGrey;
+  border-radius: .25rem;
+  box-shadow: inset 0 -1px 0 $mediumGrey;
+  color: $code-text;
+  font-family: $mono-font;
+  font-size: 1rem;
+  padding: .125rem .25rem;
+  vertical-align: middle;
+}
+
+pre {
+  font-size: .95rem;
+  overflow: auto;
+  padding: 1rem 1.5rem;
+  white-space: pre;
+  background-color: $lightGrey;
+  border-radius: .25rem;
+}
+
+
+blockquote {
+  color: $quote-text;
+  font-style: italic;
+  border: none;
+  padding: 0 1rem;
+  margin: 0 1rem;
+}
+
+cite {
+  margin:1rem 0 0 0;
+  font-style: italic;
+  &:before {
+    content:"— ";
+    font-size:.95rem;
+  }
+}
+
+figure {}
+figcaption, caption {
+  text-align: center;
+  font-size: .95rem;
+}
+
+hr {
+  border-bottom: .15rem dashed $header-text;
+  width: 65%;
+  overflow: visible;
+  margin: 1.5rem auto;
+}
+
+dl {}
+dt {}
+dd {}
+
+
+a {
+  color: $space;
+  &:hover {
+    cursor: pointer;
+    background-color: $space;
+    color: #000;
+  }
+}
+
+strong, b {
+  font-weight: 600;
+}
+
+em, i {
+  font-style: italic;
+}
+
+mark {}
+
+img {
+  background-color: $lightGrey;
+  width: 85%;
+  height: auto;
+}
+
+sub, sup {
+  font-size: .85rem;
+}
+sup {
+  vertical-align: super;
+}
+
+table {
+  border-collapse: collapse;
+  caption-side: bottom;
+  text-align: center;
+  width: 85%;
+  margin: 1rem auto;
+}
+thead {
+  border-bottom: 1px solid $header-text;
+}
+tfoot {
+  border-top: 1px solid $header-text;
+  color: $header-text;
+}
+tr {
+  &:nth-child(even) {
+    background-color: $lightGrey;
+  }
+}
+th {
+  color: $header-text;
+  font-weight: 600;
+}
+td {
+  padding: .125rem;
+  text-align: center;
+}
+
+.footnotes {
+  font-size: .95rem;
+  color: $quote-text;
+  &:before {
+    content: 'Footnotes';
+    width: 65%;
+    margin: 1rem auto;
+    padding: 0 0 .5rem 0;
+    display: block;
+    font-size: 1rem;
+    color: $header-text;
+    text-align: center;
+    border-bottom: .15rem dashed $header-text;
+  }
+}
+form {
+  grid-gap: 1rem;
+  border-radius: .25rem;
+  border: .125rem solid $space;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 1rem;
+  legend {
+    color: $header-text;
+    font-size: 1.7858rem;
+    font-weight: bold;
+    grid-column: span 4;
+    margin: 1rem 0;
+    &+ p {
+      margin-top: 0;
+    }
+  }
+  &> legend {
+    margin: 0;
+  }
+  p {
+    color: $header-text;
+    grid-column: span 4;
+  }
+  fieldset {
+    grid-column: span 4;
+    legend {
+      font-size: 1.4174rem;
+    }
+  }
+  label {
+    color: $header-text;
+    display: grid;
+    font-weight: bold;
+    grid-column: span 2;
+    grid-template-columns: 1fr;
+    input, textarea {
+      align-self: end;
+      margin: 1rem 0 0 0;
+    }
+    p {
+      font-weight: normal;
+      grid-column: span 1;
+      margin: 0;
+    }
+  }
+  div label {
+    display: inline;
+  }
+  textarea {
+    min-height: 6rem;
+    resize: vertical;
+  }
+}
+[type=color], [type=date], [type=datetime], [type=datetime-local], [type=email], [type=month], [type=number], [type=password], [type=search], [type=tel], [type=text], [type=url], [type=week], [type=time], select, textarea {
+  background-color: $background-color;
+  border: 1px solid $darkGrey;
+  border-radius: .25rem;
+  color: $primary-text;
+  font-family: $mono-font;
+  font-size: 1rem;
+  font-weight: normal;
+  height: 2rem;
+  padding: 0.5rem;
+  &:focus {
+    box-shadow: 0px 0px 0px 2px $space inset;
+  }
+}
+button,
+input[type="button"],
+input[type="submit"] {
+  -webkit-appearance: none;
+  background-color: $space;
+  border-radius: .25rem;
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+  height: 2rem;
+  min-width: 8rem;
+  text-align: center;
+  transition: background-color .3s;
+  &:hover {
+    background-color: $spaceDark; // make a variable
+  }
+  &:active {
+    background-color: $spaceLight; // replzce with a proper animation
+  }
+}
+input[readonly] {
+  color: $header-text;
+}
+input:disabled {
+  background-color: $lightGrey;
+  color: $comment-text;
+  cursor: default;
+  &::placeholder {
+    color: $comment-text;
+  }
+  &:hover {
+    background-color: $lightGrey;
+  }
+}
+
+
+@media screen and (max-width: 700px) {
+  body {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+  body > header {
+    display: block;
+    text-align: center;
+    nav {
+      justify-content: space-around;
+    }
+  }
+  main > nav {
+    ul { 
+      list-style: none;
+      margin: 0;
+      li {
+        display: flex;
+        flex-flow: column;
+      }
+    }
+    time {
+      order: 2;
+      display: flex;
+      justify-content: space-between;
+    }
+    div {
+      order: 1;
+    }
+    p {
+      order: 3;
+    }
+    span:first-of-type {
+      display: block;
+    }
+  }
+  blockquote {
+    margin: 0;
+  }
+  img {
+    width: 100%;
+  }
+  figure {
+    margin-left: -2rem;
+    margin-right: -2rem;
+  }
+  form {
+    border-radius: 0;
+    margin: 1rem -2rem;
+    padding: 2rem;
+    label {
+      grid-column: span 4;
+    }
+  }
+  button,
+  input[type="button"],
+  input[type="submit"],
+  input[type="reset"] {
+    grid-column: span 2;
+  }
+}
+
+
+/*
+This file evolved from Natural Selection:
+https://github.com/frontaid/natural-selection
+*/

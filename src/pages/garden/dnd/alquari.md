@@ -1,8 +1,7 @@
 ---
 title: "The Siege of Alquari"
 date: 2021-05-26 00:05:00
-description: "DnD Adventure In an Underwater Amusement Park"
-tags: misc
+description: "A DnD adventure in an underwater amusement park."
 ---
 
 ## Background
