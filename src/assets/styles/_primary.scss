@@ -8,50 +8,75 @@
 
 *, *::before, *::after {
   box-sizing: inherit;
+  transition: background-color .5s, color .5s, border .5s;
 }
 
 
-:root {}
+:root {
+  --space: #8654E8;;
+  --spaceCode: #7c47e6;
+  --grey0: #fafafa;
+  --grey1: #eeeeee;
+  --grey2: #E0E0E0;
+  --grey3: #D4D4D4;
+  --grey4: #737373;
+  --grey5: #6B6B6B;
+  --grey6: #575757;
+  --grey7: #595959;
+  --grey8: #292929;
+  @media (prefers-color-scheme: dark) {
+    --space: #965ee5;;
+    --spaceCode: #A16FE7;
+    --grey0: #111111;
+    --grey1: #212121;
+    --grey2: #424242;
+    --grey3: #616161;
+    --grey4: #8c8c8c;
+    --grey5: #949494;
+    --grey6: #a8a8a8;
+    --grey7: #a6a6a6;
+    --grey8: #d6d6d6;
+  }
+}
 html {
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
 body {
-  max-width: 600px;
+  max-width: 650px;
   margin: 2rem auto;
   font-family: $primary-font;
   font-size: 1rem;
-  background-color: $background-color;
-  color: $primary-text;
+  background-color: $backgroundColor;
+  color: $primaryText;
   line-height: 1.65;
+
 }
 
 body > header {
   display: flex;
   justify-content: space-between;
-
+  h1 a {
+    color: $headerText;
+    &:hover {
+      text-decoration: none;
+    }
+    i {
+      font-style: normal;
+    }
+  }
   nav {
     display: flex;
     column-gap: 2rem;
     align-self: center;
-  }
-  h1 a {
-    transition: color .5s;
-    &:hover {
-      background-color: inherit;
-      color: $space;
-    }
-  }
-  a {
-    color: $header-text;
-    i {
-      font-style: normal;
+    a {
+      color: $headerText;
     }
   }
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: $header-text;
+  color: $headerText;
   font-weight: 600;
   margin: 1rem 0;
 }
@@ -65,49 +90,87 @@ h6 { font-size: 1.0978rem; }
 header {}
 
 main > nav {
-  font-size: .85rem;
-  margin: 2rem 0;
-  h2 {
-    font-size: 1.125rem;
-  }
-  p {
-    margin: 0;
-    color: $code-text;
-  }
-  ul { 
+  ul {
     list-style: none;
     margin: 0;
-    li {
-      display: grid;
-      row-gap: 1rem;
-      grid-template-columns: 12rem auto;
-      margin: 3rem 0;
+  }
+  li {
+    border-radius: .25rem;
+    border: .25rem solid $mediumGrey;
+    padding: 1rem;
+    margin: 2rem 0;
+    display: grid;
+    font-size: .95rem;
+    row-gap: 1rem;
+  }
+  a {
+    color: $headerText;
+    &:hover {
+      text-decoration: none;
+      color: $headerText;
+      li {
+        border: .25rem solid $space;
+      }
+      h3 {
+        color: $space;
+      }
     }
+  }
+  h3 {
+      font-size: 1rem;
+      font-weight: bold;
+      margin: -2.15rem 0;
+      span {
+        padding: 0 1rem;
+        background-color: $backgroundColor;
+      }
+  }
+  p {
+    margin: 0 1rem;
+    color: $darkText;
   }
   time {
-    display: grid;
-    grid-auto-flow: column;
-    grid-row: span 2;
-    color: $pgp-text;
-    &:after {
-      justify-self: baseline;
-      content: '//';
-      color: $darkGrey;
+    white-space: nowrap;
+    margin: -.5rem 1rem;
+    color: $lightText;
+  }
+  div span {
+    color: $lightText;
+    font-style: italic;
+  }
+}
+
+section > ul {
+  list-style: none;
+  margin: 0;
+  a {
+    color: $headerText;
+    display: block;
+    border-bottom: .125rem solid $lightGrey;
+    &:hover {
+      text-decoration: none;
+      color: $space;
+      border-bottom: .125rem solid $space;
     }
   }
-  div {
+  li {
     display: flex;
     justify-content: space-between;
+    padding: 1rem 0;
   }
-  span:first-of-type a {
-    font-size: 1rem;
+  span p:first-of-type {
+    font-weight: bold;
   }
-  span + span a {
-    color: $pgp-text;
+  span p:last-of-type {
+    color: $darkText;
+  }
+  p:not(span *) {
+    font-size: .85rem;
+    color: $lightText;
     font-style: italic;
-    &:hover {
-      background-color: $pgp-text;
-    }
+  }
+  p {
+    margin: .5rem 0;
   }
 }
 
@@ -122,11 +185,11 @@ aside {}
 footer {
   margin: 1.5rem 0 0;
   a {
-    color: $header-text;
+    color: $headerText;
   }
   code { 
     a {
-      color: $pgp-text;
+      color: $lightText;
     }
   }
 }
@@ -136,7 +199,9 @@ p, ol, ul, details, pre, blockquote, cite, figure, img, hr, dl {
   margin: 1rem auto;
 }
 
-p {}
+p {
+  margin: 1.5rem auto;
+}
 
 ol, ul {
   margin: 0 0 0 1.65rem;
@@ -150,19 +215,19 @@ ol {
 }
 
 details {
-  color: $header-text;
+  color: $headerText;
 }
 
 code {
-  color: $code-text;
+  color: $darkText;
   font-family: $mono-font;
   a {
-    color: $space-code;
+    color: $spaceCode;
   }
 }
 
 code:not(pre *, footer *) {
-  font-size: .95em;
+  font-size: .85em;
   background-color: $lightGrey;
   border-radius: .25rem;
   padding:.2rem .4rem;
@@ -172,7 +237,7 @@ kbd {
   border: 1px solid $mediumGrey;
   border-radius: .25rem;
   box-shadow: inset 0 -1px 0 $mediumGrey;
-  color: $code-text;
+  color: $darkText;
   font-family: $mono-font;
   font-size: 1rem;
   padding: .125rem .25rem;
@@ -180,7 +245,7 @@ kbd {
 }
 
 pre {
-  font-size: .95rem;
+  font-size: .85rem;
   overflow: auto;
   padding: 1rem 1.5rem;
   white-space: pre;
@@ -190,7 +255,7 @@ pre {
 
 
 blockquote {
-  color: $quote-text;
+  color: $mediumText;
   font-style: italic;
   border: none;
   padding: 0 1rem;
@@ -213,7 +278,7 @@ figcaption, caption {
 }
 
 hr {
-  border-bottom: .15rem dashed $header-text;
+  border-bottom: .15rem dashed $headerText;
   width: 65%;
   overflow: visible;
   margin: 1.5rem auto;
@@ -226,10 +291,11 @@ dd {}
 
 a {
   color: $space;
+  text-decoration: none;
   &:hover {
     cursor: pointer;
-    background-color: $space;
-    color: #000;
+    color: $space;
+    text-decoration: underline;
   }
 }
 
@@ -247,6 +313,7 @@ img {
   background-color: $lightGrey;
   width: 85%;
   height: auto;
+  border-radius: .25rem;
 }
 
 sub, sup {
@@ -264,11 +331,11 @@ table {
   margin: 1rem auto;
 }
 thead {
-  border-bottom: 1px solid $header-text;
+  border-bottom: 1px solid $headerText;
 }
 tfoot {
-  border-top: 1px solid $header-text;
-  color: $header-text;
+  border-top: 1px solid $headerText;
+  color: $headerText;
 }
 tr {
   &:nth-child(even) {
@@ -276,7 +343,7 @@ tr {
   }
 }
 th {
-  color: $header-text;
+  color: $headerText;
   font-weight: 600;
 }
 td {
@@ -286,7 +353,7 @@ td {
 
 .footnotes {
   font-size: .95rem;
-  color: $quote-text;
+  color: $mediumText;
   &:before {
     content: 'Footnotes';
     width: 65%;
@@ -294,20 +361,20 @@ td {
     padding: 0 0 .5rem 0;
     display: block;
     font-size: 1rem;
-    color: $header-text;
+    color: $headerText;
     text-align: center;
-    border-bottom: .15rem dashed $header-text;
+    border-bottom: .15rem dashed $headerText;
   }
 }
 form {
   grid-gap: 1rem;
   border-radius: .25rem;
-  border: .125rem solid $space;
+  border: .25rem solid $space;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   padding: 1rem;
   legend {
-    color: $header-text;
+    color: $headerText;
     font-size: 1.7858rem;
     font-weight: bold;
     grid-column: span 4;
@@ -320,7 +387,7 @@ form {
     margin: 0;
   }
   p {
-    color: $header-text;
+    color: $headerText;
     grid-column: span 4;
   }
   fieldset {
@@ -330,7 +397,7 @@ form {
     }
   }
   label {
-    color: $header-text;
+    color: $headerText;
     display: grid;
     font-weight: bold;
     grid-column: span 2;
@@ -354,10 +421,9 @@ form {
   }
 }
 [type=color], [type=date], [type=datetime], [type=datetime-local], [type=email], [type=month], [type=number], [type=password], [type=search], [type=tel], [type=text], [type=url], [type=week], [type=time], select, textarea {
-  background-color: $background-color;
-  border: 1px solid $darkGrey;
-  border-radius: .25rem;
-  color: $primary-text;
+  background-color: $backgroundColor;
+  border-bottom: .25rem solid $darkGrey;
+  color: $primaryText;
   font-family: $mono-font;
   font-size: 1rem;
   font-weight: normal;
@@ -379,29 +445,50 @@ input[type="submit"] {
   height: 2rem;
   min-width: 8rem;
   text-align: center;
-  transition: background-color .3s;
   &:hover {
-    background-color: $spaceDark; // make a variable
+    //background-color: $spaceDark; // make a variable
   }
   &:active {
-    background-color: $spaceLight; // replzce with a proper animation
+    //background-color: $spaceLight; // replzce with a proper animation
   }
 }
 input[readonly] {
-  color: $header-text;
+  color: $headerText;
 }
 input:disabled {
   background-color: $lightGrey;
-  color: $comment-text;
+  color: $lightText;
   cursor: default;
   &::placeholder {
-    color: $comment-text;
+    color: $lightText;
   }
   &:hover {
     background-color: $lightGrey;
   }
 }
 
+.what {
+  border-radius: .25rem;
+  color: $headerText;
+  border: .25rem solid $space;
+  display: grid;
+  margin-top: 2.5rem;
+  grid-template-columns: 1fr 1fr;
+  text-align: center;
+  h2 {
+    grid-column: span 2;
+    margin-top: -1.75rem;
+  }
+  span {
+    background-color: $backgroundColor;
+    padding: 0 1rem;
+  }
+  p {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    margin-top: 0;
+  }
+}
 
 @media screen and (max-width: 700px) {
   body {
@@ -415,30 +502,7 @@ input:disabled {
       justify-content: space-around;
     }
   }
-  main > nav {
-    ul { 
-      list-style: none;
-      margin: 0;
-      li {
-        display: flex;
-        flex-flow: column;
-      }
-    }
-    time {
-      order: 2;
-      display: flex;
-      justify-content: space-between;
-    }
-    div {
-      order: 1;
-    }
-    p {
-      order: 3;
-    }
-    span:first-of-type {
-      display: block;
-    }
-  }
+  
   blockquote {
     margin: 0;
   }

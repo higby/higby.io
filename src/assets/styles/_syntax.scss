@@ -6,7 +6,7 @@
 .token.doctype-tag,
 .token.cdata,
 .token.punctuation {
-  color: $comment-text;
+  color: $lightText;
 }
 
 .token.property,
@@ -22,7 +22,7 @@
 .language-css .token.string,
 .style .token.string,
 .token.keyword {
-  color: $space-code;
+  color: $spaceCode;
 }
 
 .token.selector,
@@ -31,12 +31,12 @@
 .token.char,
 .token.builtin,
 .token.inserted {
-  color: $primary-text;
+  color: $primaryText;
 }
 
 .token.atrule,
 .token.attr-value {
-  color: $space-code;
+  color: $spaceCode;
   font-weight: 600;
 }
 

@@ -1,23 +1,14 @@
-
-
-$space: #965ee5;
-$spaceLight: #B585EF;
-$spaceDark: #7444C4;
-$space-code: #A16FE7;
-$highlight: #965ee540;
-
-$background-color: #111111;
-$lightGrey: #212121;
-$mediumGrey: #616161;
-$darkGrey: #424242;
-
-$comment-text: #656565;
-$pgp-text: #9E9E9E;
-$note-text: #acacac;
-$quote-text: #b8b8b8;
-$code-text: #bdbdbd;
-$primary-text: #cfcfcf;
-$header-text: #e8e8e8;
-
-$primary-font: 'IBM Plex Mono', monospace;
+$primary-font: 'Open Sans', sans-serif;
 $mono-font: 'IBM Plex Mono', monospace;
+
+$space: var(--space);
+$spaceCode: var(--spaceCode);
+$backgroundColor: var(--grey0);
+$lightGrey: var(--grey1);
+$mediumGrey: var(--grey2);
+$darkGrey: var(--grey3);
+$lightText: var(--grey4);
+$mediumText: var(--grey5);
+$darkText: var(--grey6);
+$primaryText: var(--grey7);
+$headerText: var(--grey8);
