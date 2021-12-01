@@ -4,17 +4,20 @@ permalink: '/garden/'
 eleventyExcludeFromCollections: true
 layout: 'page'
 ---
-<nav>
+<section>
 <ul>
   {% for post in collections.garden %}
+
+  <a href="{{ post.url }}">
   <li>
-    <time datetime='{{ post.date | datetime }}'>{{ post.date | common }}</time>
-    <div>
-      <span><a href="{{ post.url }}">{{ post.data.title }}</a></span>
-      <span><a href='/garden/{{post.data.tags}}'>#{{ post.data.tags }}</a></span>
-    </div>
-    <p>{{ post.data.description }}</p>
+    <span>
+      <p>{{ post.data.title }}</p>
+      <p>{{ post.data.description }}</p>
+    </span>
+    <p>#{{ post.data.tags }}</p>
   </li>
+  </a>
+
   {% endfor %}
 </ul>
-</nav>
+</section>

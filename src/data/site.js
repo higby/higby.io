@@ -1,5 +1,5 @@
 module.exports = {
-  name: "Branden Higby",
+  name: "branden higby",
   description: "A collection of Branden Higby's ramblings",
   email: "branden@higby.io",
   github: "higby",

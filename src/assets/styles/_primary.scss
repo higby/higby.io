@@ -8,36 +8,11 @@
 
 *, *::before, *::after {
   box-sizing: inherit;
-  transition: background-color .5s, color .5s, border .5s;
 }
 
 
-:root {
-  --space: #8654E8;;
-  --spaceCode: #7c47e6;
-  --grey0: #fafafa;
-  --grey1: #eeeeee;
-  --grey2: #E0E0E0;
-  --grey3: #D4D4D4;
-  --grey4: #737373;
-  --grey5: #6B6B6B;
-  --grey6: #575757;
-  --grey7: #595959;
-  --grey8: #292929;
-  @media (prefers-color-scheme: dark) {
-    --space: #965ee5;;
-    --spaceCode: #A16FE7;
-    --grey0: #111111;
-    --grey1: #212121;
-    --grey2: #424242;
-    --grey3: #616161;
-    --grey4: #8c8c8c;
-    --grey5: #949494;
-    --grey6: #a8a8a8;
-    --grey7: #a6a6a6;
-    --grey8: #d6d6d6;
-  }
-}
+:root {}
+  
 html {
   box-sizing: border-box;
   scroll-behavior: smooth;
@@ -45,7 +20,7 @@ html {
 body {
   max-width: 650px;
   margin: 2rem auto;
-  font-family: $primary-font;
+  font-family: $primaryFont;
   font-size: 1rem;
   background-color: $backgroundColor;
   color: $primaryText;
@@ -90,53 +65,49 @@ h6 { font-size: 1.0978rem; }
 header {}
 
 main > nav {
-  ul {
-    list-style: none;
-    margin: 0;
-  }
-  li {
-    border-radius: .25rem;
-    border: .25rem solid $mediumGrey;
-    padding: 1rem;
-    margin: 2rem 0;
-    display: grid;
-    font-size: .95rem;
-    row-gap: 1rem;
-  }
-  a {
-    color: $headerText;
-    &:hover {
-      text-decoration: none;
-      color: $headerText;
-      li {
-        border: .25rem solid $space;
-      }
-      h3 {
-        color: $space;
-      }
-    }
-  }
-  h3 {
-      font-size: 1rem;
-      font-weight: bold;
-      margin: -2.15rem 0;
-      span {
-        padding: 0 1rem;
-        background-color: $backgroundColor;
-      }
+  font-size: .95rem;
+  margin: 2rem 0;
+  h2 {
+    font-size: 1.125rem;
   }
   p {
-    margin: 0 1rem;
-    color: $darkText;
+    margin: 0;
+    color: $codeText;
+  }
+  ul { 
+    list-style: none;
+    margin: 0;
+    li {
+      display: grid;
+      row-gap: 1rem;
+      grid-template-columns: 12rem auto;
+      margin: 3rem 0;
+    }
   }
   time {
-    white-space: nowrap;
-    margin: -.5rem 1rem;
-    color: $lightText;
+    display: grid;
+    grid-auto-flow: column;
+    grid-row: span 2;
+    color: $pgpText;
+    &:after {
+      justify-self: baseline;
+      content: '//';
+      color: $darkGrey;
+    }
   }
-  div span {
-    color: $lightText;
+  div {
+    display: flex;
+    justify-content: space-between;
+  }
+  span:first-of-type a {
+    font-size: 1rem;
+  }
+  span + span a {
+    color: $pgpText;
     font-style: italic;
+    &:hover {
+      background-color: $pgpText;
+    }
   }
 }
 
@@ -147,6 +118,7 @@ section > ul {
     color: $headerText;
     display: block;
     border-bottom: .125rem solid $lightGrey;
+    transition: color .5s, border .5s;
     &:hover {
       text-decoration: none;
       color: $space;
@@ -162,11 +134,11 @@ section > ul {
     font-weight: bold;
   }
   span p:last-of-type {
-    color: $darkText;
+    color: $codeText;
   }
   p:not(span *) {
     font-size: .85rem;
-    color: $lightText;
+    color: $pgpText;
     font-style: italic;
   }
   p {
@@ -189,7 +161,7 @@ footer {
   }
   code { 
     a {
-      color: $lightText;
+      color: $pgpText;
     }
   }
 }
@@ -219,8 +191,8 @@ details {
 }
 
 code {
-  color: $darkText;
-  font-family: $mono-font;
+  color: $codeText;
+  font-family: $monoFont;
   a {
     color: $spaceCode;
   }
@@ -237,8 +209,8 @@ kbd {
   border: 1px solid $mediumGrey;
   border-radius: .25rem;
   box-shadow: inset 0 -1px 0 $mediumGrey;
-  color: $darkText;
-  font-family: $mono-font;
+  color: $codeText;
+  font-family: $monoFont;
   font-size: 1rem;
   padding: .125rem .25rem;
   vertical-align: middle;
@@ -255,7 +227,7 @@ pre {
 
 
 blockquote {
-  color: $mediumText;
+  color: $quoteText;
   font-style: italic;
   border: none;
   padding: 0 1rem;
@@ -278,10 +250,10 @@ figcaption, caption {
 }
 
 hr {
-  border-bottom: .15rem dashed $headerText;
+  border-bottom: 1px solid $headerText;
   width: 65%;
   overflow: visible;
-  margin: 1.5rem auto;
+  margin: 3rem auto;
 }
 
 dl {}
@@ -292,6 +264,7 @@ dd {}
 a {
   color: $space;
   text-decoration: none;
+  transition: color .5s;
   &:hover {
     cursor: pointer;
     color: $space;
@@ -353,17 +326,17 @@ td {
 
 .footnotes {
   font-size: .95rem;
-  color: $mediumText;
+  color: $quoteText;
   &:before {
     content: 'Footnotes';
     width: 65%;
     margin: 1rem auto;
-    padding: 0 0 .5rem 0;
+    padding: .5rem 0 .5rem 0;
     display: block;
     font-size: 1rem;
     color: $headerText;
     text-align: center;
-    border-bottom: .15rem dashed $headerText;
+    border-bottom: 1px solid $headerText;
   }
 }
 form {
@@ -424,7 +397,7 @@ form {
   background-color: $backgroundColor;
   border-bottom: .25rem solid $darkGrey;
   color: $primaryText;
-  font-family: $mono-font;
+  font-family: $monoFont;
   font-size: 1rem;
   font-weight: normal;
   height: 2rem;
@@ -457,10 +430,10 @@ input[readonly] {
 }
 input:disabled {
   background-color: $lightGrey;
-  color: $lightText;
+  color: $commentText;
   cursor: default;
   &::placeholder {
-    color: $lightText;
+    color: $commentText;
   }
   &:hover {
     background-color: $lightGrey;

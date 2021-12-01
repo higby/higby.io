@@ -95,6 +95,7 @@ async function fetchContent(where) {
 
 function fancyName() {
     var internal = true;
+
     if (document.querySelector("header h1 a").className == 'internal') {
         document.querySelector("header h1 a").setAttribute('class', 'animating internal');
     } else {

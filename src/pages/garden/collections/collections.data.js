@@ -1,3 +1,4 @@
 module.exports = {
-  'tags': 'collections'
+  'tags': 'collections',
+  'layout': 'page'
 };
