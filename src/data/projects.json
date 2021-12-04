@@ -1,0 +1,20 @@
+[
+  {
+    "year": "Ongoing",
+    "name": "higby.io",
+    "description": "My personal portfolio website.",
+    "url": "https://github.com/higby/higby.io/"
+  },
+  {
+    "year": "2021",
+    "name": "Strawberry Starter",
+    "description": "A highly versatile starter kit to create your own Jamstack site with Eleventy.",
+    "url": "https://github.com/higby/strawberry"
+  },
+  {
+    "year": "2021",
+    "name": "She-Ra Image Placeholders",
+    "description": "A site providing quick placeholder images from Dreamwork's She-Ra and The Princesses of Power. The homepage updates hourly.",
+    "url": "https://shera.gay/"
+  }
+]

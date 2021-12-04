@@ -1,4 +1,4 @@
 module.exports = {
-  "layout": "post",
-  "permalink": "{{ page.fileSlug }}/",
+  layout: "post",
+  permalink: "{{ page.fileSlug }}/",
 };

@@ -1,0 +1,275 @@
+*:where(:not(ul, ol, details, summary, iframe, canvas, img, svg, video, input[type="checkbox"], input[type="radio"]):not(svg *)) {
+  all: unset;
+  display: revert;
+}
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+:root {}
+::selection {
+  background: $highlight;
+  color: $backgroundColor;
+}
+html {
+  box-sizing: border-box;
+ // scroll-behavior: smooth;
+}
+
+body {
+  background-color: $backgroundColor;
+  color: $primaryText;
+  margin: 2rem auto;
+  font-family: $primaryFont;
+  max-width: 650px;
+  font-size: 1rem;
+  line-height: 1.65;
+  &> header {
+    display: flex;
+    justify-content: space-between;
+    h1 a {
+      color: $headerText; 
+      &:hover i {
+        color: $backgroundColor !important;
+      }
+      i {
+        font-style: normal;
+      }
+    }
+    nav {
+      display: flex;
+      column-gap: 2rem;
+      align-self: center;
+      a {
+        color: $headerText;
+      }
+    } 
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: $headerText;
+  font-weight: 700;
+  margin: 1rem 0;
+}
+h1 { font-size: 1.75rem; }
+h2 { font-size: 1.5942rem; }
+h3 { font-size: 1.4522rem; }
+h4 { font-size: 1.3229rem; }
+h5 { font-size: 1.2051rem; }
+h6 { font-size: 1.0978rem; }
+
+nav {
+  ul, ol {}
+  li { }
+  a {
+    &:visited {}
+    &:hover {}
+    &:active {}
+  }
+}
+
+footer {
+  margin: 2.5rem 0 0;
+  display: grid;
+  font-size: .8941rem;
+  grid-template-columns: auto auto auto;
+  a {
+    color: $pgpText;
+  }
+  code a {
+    color: $pgpText;
+  }
+  &:before {
+    content: '';
+    width: 25%;
+    margin: 0;
+    border-top: .125rem solid $lightGrey;
+    display: block;
+    grid-column: span 3;
+    padding-top: 1.5rem;
+
+  }
+}
+
+p, ol, ul, details, pre, blockquote, cite, figure, img, hr, dl {
+  display: block;
+  margin: 1rem auto;
+}
+
+p {
+  margin: 1.5rem auto;
+}
+
+ol, ul {
+  margin: 0 0 0 1.65rem;
+  padding: 0;
+}
+
+ol {
+  ol {
+    list-style-type: lower-alpha;
+  }
+}
+
+details {
+  color: $headerText;
+}
+
+a {
+  color: $space;
+  cursor: pointer;
+  &:hover {
+    background-color: $space;
+    color: $backgroundColor;
+  }
+}
+
+strong, b {
+  font-weight: 600;
+}
+
+em, i {
+  font-style: italic;
+}
+
+code {
+  color: $codeText;
+  font-family: $monoFont;
+  //font-weight: 300;
+  a {
+    color: $spaceCode;
+  }
+}
+
+code:not(pre *, footer *) {
+  font-size: .85em;
+  background-color: $lightGrey;
+  border-radius: .25rem;
+  padding:.2rem .4rem;
+}
+
+kbd {
+  border: 1px solid $mediumGrey;
+  border-radius: .25rem;
+  box-shadow: inset 0 -1px 0 $mediumGrey;
+  color: $codeText;
+  font-family: $monoFont;
+  font-size: 1rem;
+  padding: .125rem .25rem;
+  vertical-align: middle;
+}
+
+pre {
+  font-size: .85rem;
+  overflow: auto;
+  padding: 1rem 1.5rem;
+  white-space: pre;
+  background-color: $lightGrey;
+  border-radius: .25rem;
+}
+
+blockquote {
+  color: $quoteText;
+  font-style: italic;
+  border: none;
+  padding: 0 1rem;
+  margin: 0 1rem;
+}
+
+cite {
+  margin:1rem 0 0 0;
+  font-style: italic;
+  &:before {
+    content:"— ";
+    font-size:.95rem;
+  }
+}
+
+figcaption, caption {
+  text-align: center;
+  font-size: .95rem;
+}
+
+hr {
+  border-bottom: 1px solid $headerText;
+  width: 65%;
+  overflow: visible;
+  margin: 3rem auto;
+}
+
+img {
+  background-color: $lightGrey;
+  width: 85%;
+  height: auto;
+  border-radius: .25rem;
+}
+
+sub, sup {
+  font-size: .85rem;
+}
+sup {
+  vertical-align: super;
+}
+
+table {
+  border-collapse: collapse;
+  caption-side: bottom;
+  text-align: center;
+  width: 85%;
+  margin: 1rem auto;
+}
+thead {
+  border-bottom: 1px solid $headerText;
+}
+tfoot {
+  border-top: 1px solid $headerText;
+  color: $headerText;
+}
+tr {
+  &:nth-child(even) {
+    background-color: $lightGrey;
+  }
+}
+th {
+  color: $headerText;
+  font-weight: 600;
+}
+td {
+  padding: .125rem;
+  text-align: center;
+}
+
+@media screen and (max-width: 700px) {
+  body {
+    margin-left: 2rem;
+    margin-right: 2rem;
+    &> header {
+      display: block;
+      nav {
+        justify-content: space-around;
+      }
+    }
+  }
+  img {
+    width: 100vw;
+    margin: auto -2rem;
+    border-radius: 0;
+  }
+  blockquote {
+    margin: 0;
+  }
+  table {
+    width: 100%;
+  }
+  footer {
+    display: block;
+    div:not(last-of-type) {
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+/*
+This file evolved from Natural Selection:
+https://github.com/frontaid/natural-selection
+*/

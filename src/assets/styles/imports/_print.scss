@@ -1,0 +1,161 @@
+@media print {
+  * {
+    background: #fff !important;
+    box-shadow: none !important;
+    color: #000 !important;
+    text-shadow: none !important;
+    &:before, &:after {
+      background: #fff !important;
+      box-shadow: none !important;
+      color: #000 !important;
+      font-family: $primaryFont;
+      text-shadow: none !important;
+    }
+  }
+
+  body {
+    line-height: 1.5;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1 { font-size: 1.5rem; }
+  h2 { font-size: 1.402rem; }
+  h3 { font-size: 1.3104rem; }
+  h4 { font-size: 1.2247rem; }
+  h5 { font-size: 1.1447rem; }
+  h6 { font-size: 1.0699rem; }
+
+  header {
+    &> h1 {
+      a {
+        color: #000 !important;
+        text-decoration: none !important;
+        i {
+          color: $space !important;
+        }
+      }
+    }
+    &> nav {
+      display: none;
+    }
+  }
+
+  footer {
+    &:before {
+      content: '';
+      width: 65%;
+      margin: 1rem auto;
+      padding: 0 0 .5rem 0;
+      display: block;
+      border-bottom: .15rem dashed #000;
+    }
+    code { 
+      a {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  pre {
+    border: 1px solid #000;
+  }
+
+  blockquote {
+    border-left: .25rem solid #000;
+  }
+
+  hr {
+    border-bottom: .15rem dashed #000;
+  }
+
+  table {
+    thead {
+      border-bottom: 1px solid #000;
+    }
+    tfoot {
+      border-top: 1px solid #000;
+    }
+    tr {
+      &:nth-child(even) {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+    }
+  }
+  
+  form {
+    display: none;
+  }
+  .footnotes:before {
+      border-bottom: .15rem dashed #000;
+  }
+
+  //https://github.com/BafS/Gutenberg/
+  a {
+    color: $space !important;
+    text-decoration: underline !important;
+    &[href^='http'],
+    &[href^='ftp'] {
+      &:after {
+        content: ' (' attr(href) ')';
+        font-size: 80%;
+      }
+    }
+  
+    &[href$='.jpg'],
+    &[href$='.jpeg'],
+    &[href$='.gif'],
+    &[href$='.png'] {
+      &:after {
+        display: none;
+      }
+    }
+  }
+  table,
+  blockquote,
+  pre,
+  code,
+  figure,
+  li,
+  hr,
+  ul,
+  ol,
+  a,
+  tr {
+    page-break-inside: avoid;
+  }
+  h2,
+  h3,
+  h4,
+  p,
+  a {
+    orphans: 3;
+    widows: 3;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    page-break-after: avoid;
+    page-break-inside: avoid;
+  }
+  h1 + p,
+  h2 + p,
+  h3 + p {
+    page-break-before: avoid;
+  }
+  img {
+    page-break-after: auto;
+    page-break-before: auto;
+    page-break-inside: avoid;
+  }
+
+  pre {
+    white-space: pre-wrap !important;
+    word-wrap: break-word;
+  }
+}
+
+

@@ -1,109 +1,109 @@
-[
-  {
-    "name": "Metroid",
-    "species": "Araquanid",
-    "caught_as": "Araquanid",
-    "ot": "Branden",
-    "id_umber": 575059,
-    "level": 55,
-    "ball": "net",
-    "gender": "male",
-    "original_game": "Moon",
-    "type_1": "Water",
-    "type_2": "Bug",
-    "ability": "Water Bubble",
-    "nature": "Calm",
-    "catch_date": "12-10-2016",
-    "shiny": true
-  },
-  {
-    "name": "Ooze",
-    "species": "Crustle",
-    "caught_as": "Crustle",
-    "ot": "Higby",
-    "id_umber": 780101,
-    "level": 41,
-    "ball": "regular",
-    "gender": "female",
-    "original_game": "Sword",
-    "type_1": "Bug",
-    "type_2": "Rock",
-    "ability": "Sturdy",
-    "nature": "Gentle",
-    "catch_date": "11-26-2019",
-    "shiny": true
-  },
-  {
-    "name": "Lucky",
-    "species": "Malamar",
-    "caught_as": "Malamar",
-    "ot": "Higby",
-    "id_umber": 780101,
-    "level": [
-      "FILL IN"
-    ],
-    "ball": "regular",
-    "gender": "female",
-    "original_game": "Sword",
-    "type_1": "Dark",
-    "type_2": "Psychic",
-    "ability": "suction cups",
-    "nature": [
-      "FILL IN"
-    ],
-    "catch_date": [
-      "FILL IN"
-    ],
-    "shiny": true
-  },
-  {
-    "name": "Petrikov",
-    "species": "Zubat",
-    "caught_as": "Zubat",
-    "ot": [
-      "FILL IN"
-    ],
-    "id_umber": [
-      "FILL IN"
-    ],
-    "level": 11,
-    "ball": "regular",
-    "gender": "male",
-    "original_game": "Emerald",
-    "type_1": "Flying",
-    "type_2": "Poison",
-    "ability": [
-      "FILL IN"
-    ],
-    "nature": [
-      "FILL IN"
-    ],
-    "catch_date": "01-22-2021",
-    "shiny": true
-  },
-  {
-    "name": "Lemon Boy",
-    "species": "Bayleef",
-    "caught_as": "Chikorita",
-    "ot": [
-      "FILL IN"
-    ],
-    "id_umber": [
-      "FILL IN"
-    ],
-    "level": 11,
-    "ball": "regular",
-    "gender": "male",
-    "original_game": "Crystal",
-    "type_1": "Grass",
-    "type_2": "na",
-    "ability": [
-      "FILL IN"
-    ],
-    "nature": [
-      "FILL IN"
-    ],
-    "catch_date": "11-25-2020",
-    "shiny": true
-  }
-]
+{
+  "caught": [
+    {
+      "name": "Metroid",
+      "species": "Araquanid",
+      "catch_date": "12-10-2016",
+      "stats": {
+        "caught_as": "Araquanid",
+        "ball": "net",
+        "gender": "male",
+        "ability": "Water Bubble",
+        "nature": "Calm",
+        "original_game": "Moon",
+        "ot": "Branden",
+        "id_number": 575059,
+        "level": 55,
+        "typing": ["Water", "Bug"]
+      }
+    },
+    {
+      "name": "Ooze",
+      "species": "Crustle",
+      "catch_date": "11-26-2019",
+      "stats": {
+        "caught_as": "Crustle",
+        "ball": "regular",
+        "gender": "female",
+        "ability": "Sturdy",
+        "nature": "Gentle",
+        "original_game": "Sword",
+        "ot": "Higby",
+        "id_number": 780101,
+        "level": 41,
+        "typing": ["Bug", "Rock"]
+      }
+    },
+    {
+      "name": "Lucky",
+      "species": "Malamar",
+      "catch_date": "11-29-2020",
+      "stats": {
+        "caught_as": "Inkay",
+        "ball": "regular",
+        "gender": "female",
+        "ability": "Suction Cups",
+        "nature": "Modest",
+        "original_game": "Sword",
+        "ot": "Higby",
+        "id_number": 780101,
+        "level": 62,
+        "typing": ["Dark", "Psychic"]
+      }
+    },
+    {
+      "name": "Petrikov",
+      "species": "Zubat",
+      "catch_date": "01-22-2021",
+      "stats": {
+        "caught_as": "Zubat",
+        "ball": "regular",
+        "gender": "male",
+        "ability": "",
+        "nature": "",
+        "original_game": "Emerald",
+        "ot": "Higby",
+        "id_number": "",
+        "level": 11,
+        "typing": ["Flying", "Poison"]
+      }
+    },
+    {
+      "name": "Lemon Boy",
+      "species": "Bayleef",
+      "catch_date": "11-25-2020",
+      "stats": {
+        "caught_as": "Chikorita",
+        "ball": "regular",
+        "gender": "male",
+        "ability": "",
+        "nature": "",
+        "original_game": "Crystal",
+        "ot": "Higby",
+        "id_number": "",
+        "level": 1,
+        "typing": ["Grass"]
+      }
+    }
+  ],
+  "hunting": [
+    {
+      "name": "Prismo",
+      "species": "Sneasel",
+      "stats": {
+        "caught_as": "Sneasel",
+        "original_game": "Colosseum",
+        "typing": ["Dark", "Ice"]
+      }
+    },
+    {
+      "name": "Apricot",
+      "species": "Cacturne",
+      "stats": {
+        "caught_as": "Cacnea",
+        "original_game": "Emerald",
+        "typing": ["Grass", "Dark"]
+      }
+    }
+  ]
+}

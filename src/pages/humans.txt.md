@@ -1,10 +1,10 @@
 ---
 title: "humans.txt"
 description: "The many tools, sites, and people that helped me make this site."
-layout: 'page'
+layout: "page"
 ---
 
-<div class="what">
+<div class="revisions">
   <h2><span>higby.io <code> Major Revision 3</code></span></h2>
   <p>v1 Inital Commit: <code>2017-10-12, 17:56:00 PDT</code></p>
   <p>v3 Last Updated: <code>{{ "now" | technical }}</code></p>
@@ -30,6 +30,7 @@ Built with [Eleventy](https://github.com/11ty/eleventy/) and hosted on [Netlify]
 - A [modified](https://github.com/higby/higby.io/blob/main/src/config/plugins/src/src/cite.js) version of [markdown-it-attribution](https://github.com/dweidner/markdown-it-attribution/)
 
 ### NPM Packages
+
 - [js-beautify](https://github.com/beautify-web/js-beautify/) (for HTML cleaning)
 - [jsdom](https://github.com/jsdom/jsdom/)
 - [rimraf](https://github.com/isaacs/rimraf/)
@@ -49,16 +50,16 @@ Built with [Eleventy](https://github.com/11ty/eleventy/) and hosted on [Netlify]
 ## Design
 
 ### Typography
+
 [Open Sans](https://fonts.google.com/specimen/Open+Sans) for general use
 <code>[Source Code Pro](https://fonts.google.com/specimen/Source+Code+Pro) for code</code>
 [Solbera's DND5e fonts](https://github.com/jonathonf/solbera-dnd-fonts) for DnD-styled pages
-
 
 ### CSS
 
 CSS rendered with [SASS](https://sass-lang.com/).
 
-The site theme is built from [Natural Selection](https://github.com/frontaid/natural-selection/), *which is perfection and everyone should use*. Adheres to [The 8 Point Grid System](https://tanzu.vmware.com/content/built-to-adapt/intro-to-the-8-point-grid-system-2/), uses [The New CSS Reset](https://github.com/elad2412/the-new-css-reset/), and heading sizes were calculated using [Typographic Scale Tool](https://spencermortensen.com/articles/typographic-scale/).
+The site theme is built from [Natural Selection](https://github.com/frontaid/natural-selection/), _which is perfection and everyone should use_. Adheres to [The 8 Point Grid System](https://tanzu.vmware.com/content/built-to-adapt/intro-to-the-8-point-grid-system-2/), uses [The New CSS Reset](https://github.com/elad2412/the-new-css-reset/), and heading sizes were calculated using [Typographic Scale Tool](https://spencermortensen.com/articles/typographic-scale/).
 
 The DnD styles come from [The Homebrewery](https://github.com/naturalcrit/homebrewery/).
 

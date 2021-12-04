@@ -4,13 +4,14 @@ module.exports = {
   email: "branden@higby.io",
   github: "higby",
   twitter: "higby_",
+  instagram: "higby_",
   url: "www.higby.io",
   urlAlias: [
-    "higby.netlify.app", 
+    "higby.netlify.app",
     //"higby.io" Handled by Netlify DNS
-    "www.skeletor.gay", 
-    "skeletor.gay", 
+    "www.skeletor.gay",
+    "skeletor.gay",
     "www.brandenhigby.com",
-    "brandenhigby.com"
-  ]
+    "brandenhigby.com",
+  ],
 };

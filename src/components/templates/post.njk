@@ -3,7 +3,10 @@ layout: base
 ---
 <header>
   {% if title %}<h1>{{ title }}</h1>{% endif %}
-  <time datetime='{{ page.date | datetime }}'>{{ page.date | common }}</time>
+  <time datetime='{{ page.date | datetime }}'>Planted {{ page.date | relative }}</time><br>
+  {% if tended %}
+  <time datetime='{{ tended | datetime }}'>Tended to {{ tended | relative }}</time>
+  {% endif %}
   {{ content | toc | safe }}
 </header>
 <article>

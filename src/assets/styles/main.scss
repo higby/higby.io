@@ -1,5 +1,8 @@
-@use 'primary';
-@use 'print';
-@use 'syntax';
-@use 'fonts';
-@use 'specific';
+@import "imports/vars";
+
+@import 'imports/classless';
+@import 'imports/forms';
+@import 'imports/print';
+@import 'imports/syntax';
+@import 'imports/fonts';
+@import 'imports/specific'; 
