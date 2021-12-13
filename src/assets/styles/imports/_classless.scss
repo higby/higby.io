@@ -58,13 +58,9 @@ h4 { font-size: 1.3229rem; }
 h5 { font-size: 1.2051rem; }
 h6 { font-size: 1.0978rem; }
 
-nav {
-  ul, ol {}
-  li { }
-  a {
-    &:visited {}
-    &:hover {}
-    &:active {}
+main > header {
+  p {
+    margin: .5rem 0;
   }
 }
 

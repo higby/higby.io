@@ -3,9 +3,9 @@ layout: base
 ---
 <header>
   {% if title %}<h1>{{ title }}</h1>{% endif %}
-  <time datetime='{{ page.date | datetime }}'>Planted {{ page.date | relative }}</time><br>
+  <p>Planted <time datetime='{{ page.date | datetime }}' title='{{ page.date | common }}'>{{ page.date | relative }}</time></p>
   {% if tended %}
-  <time datetime='{{ tended | datetime }}'>Tended to {{ tended | relative }}</time>
+  <p>Tended to <time datetime='{{ tended | datetime }}' title='{{ tended | common }}'>{{ tended | relative }}</time></p>
   {% endif %}
   {{ content | toc | safe }}
 </header>
