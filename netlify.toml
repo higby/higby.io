@@ -18,4 +18,4 @@
   status = 200
 
 [functions]
-  included_files = ["build/functions/cache/"]
+  included_files = ["build/functions/cache/**"]
