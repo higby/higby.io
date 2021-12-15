@@ -1,6 +1,5 @@
 ---
 title:  "The Definition of OCD"
-permalink: '/ocd/'
 date: 2020-04-22 00:05:00
 description: "A poem written regarding the struggles of OCD."
 tags: "poetry"

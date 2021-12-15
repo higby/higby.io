@@ -1,6 +1,5 @@
 ---
 title:  "Paleontology, Jobs, and Other Rambling Thoughts"
-permalink: '/paleontology/'
 date: 2020-04-12 00:05:00
 description: "A piece written for my senior year humorous speech and debate tournaments."
 tags: "essays"

@@ -1,3 +1,3 @@
 module.exports = {
-  permalink: "garden/{{ page.fileSlug }}/",
+  permalink: "functions/cache/garden/{{ page.fileSlug }}/",
 };

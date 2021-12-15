@@ -7,6 +7,15 @@
   command = 'npm run start'
 
 [[redirects]]
-  from = '/api/*'
-  to = '/.netlify/functions/:splat'
+  from = 'functions/cache/garden/*'
+  to = '/garden/:splat'
+  status = 301
+  force = true
+
+[[redirects]]
+  from = '/garden/*'
+  to = '/.netlify/functions/garden'
   status = 200
+
+[functions]
+  included_files = ["build/functions/cache/"]
