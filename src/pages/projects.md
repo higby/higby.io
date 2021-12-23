@@ -1,11 +1,8 @@
 ---
 title: 'projects'
-permalink: '/projects/'
-layout: 'page'
-eleventyExcludeFromCollections: true
 ---
 
-<nav class="list">
+<nav class="resume">
 <ul>
   {% for project in projects %}
   <li>
@@ -16,3 +13,5 @@ eleventyExcludeFromCollections: true
   {% endfor %}
 </ul>
 </nav>
+
+<style>{% renderFile "./src/components/styles/modules/resume.scss" %}</style>

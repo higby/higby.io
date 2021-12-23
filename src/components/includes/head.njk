@@ -5,19 +5,11 @@
 <meta name="description" content="{% if description %}{{ description }}{% else %}{{ site.description }}{% endif %}">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name='generator' content='eleventy'>
-<meta name="theme-color" content="#965ee5">
+<meta name="theme-color" content="#ef476f">
 
 <link rel="canonical" href="https://{{ site.url }}{{ page.url }}">
 <link rel="author" href="/humans.txt"/>
-<link rel='icon' href="data:image/svg+xml,{% encode %}{% include 'favicon.svg' %}{% endencode %}">
+<link rel='icon' href="data:image/svg+xml,{% encode %}{% include 'includes/favicon.svg' %}{% endencode %}">
 
-<meta property="og:title" content="{% if title %}{{ title }}{% else %}{{ site.name }}{% endif %}">
-<meta property="og:description" content="{% if description %}{{ description }}{% else %}{{ site.description }}{% endif %}">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://{{ site.url }}{{ page.url }}">
-<meta property="og:image" content="https://{{ site.url }}/img/*.jpeg">
-<meta name="twitter:creator" content="@{{ site.twitter }}">
+<style>{% renderFile "./src/components/styles/main.scss" %}</style>
 
-<style>{% include 'write/main.css' %}</style>
-<noscript><style>{% include 'write/noscript.css' %}</style></noscript>
-<script>{% include 'write/core.js' %}{% include 'write/main.js' %}</script>

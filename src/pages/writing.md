@@ -1,11 +1,8 @@
 ---
 title: 'writing'
-permalink: '/writing/'
-layout: 'page'
-eleventyExcludeFromCollections: true
 ---
 
-<nav class="list">
+<nav class="resume">
 <ul>
   {% for piece in writing %}
   <li>
@@ -16,3 +13,5 @@ eleventyExcludeFromCollections: true
   {% endfor %}
 </ul>
 </nav>
+
+<style>{% renderFile "./src/components/styles/modules/resume.scss" %}</style>

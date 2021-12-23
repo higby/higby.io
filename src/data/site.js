@@ -11,6 +11,8 @@ module.exports = {
     //"higby.io" Handled by Netlify DNS
     "www.skeletor.gay",
     "skeletor.gay",
+    "www.skeletor.me",
+    "skeletor.me",
     "www.brandenhigby.com",
     "brandenhigby.com",
   ],

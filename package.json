@@ -1,16 +1,13 @@
 {
   "name": "higby.io",
-  "version": "3.5.0",
+  "version": "3.6.5",
   "description": "A collection of Branden Higby's ramblings.",
   "main": ".eleventy.js",
   "scripts": {
     "eleventy:dev": "npx @11ty/eleventy --serve",
-    "eleventy:prod": "npx @11ty/eleventy",
-    "gulp:dev": "gulp",
-    "gulp:prod": "gulp production",
-    "clean": "rimraf build src/components/includes/write",
-    "start": "run-p clean gulp:dev eleventy:dev",
-    "build": "run-s gulp:prod eleventy:prod",
+    "clean": "rimraf build",
+    "start": "run-p clean eleventy:dev",
+    "build": "npx @11ty/eleventy",
     "dev": "netlify dev"
   },
   "repository": {
@@ -31,14 +28,13 @@
   },
   "homepage": "https://github.com/higby/higby.io#readme",
   "dependencies": {
-    "@11ty/eleventy": "^1.0.0-beta.8",
+    "@11ty/eleventy": "^1.0.0-canary.48",
     "@11ty/eleventy-plugin-syntaxhighlight": "^3.1.3",
-    "@higby/eleventy-images": "^1.0.2",
+    "@higby/eleventy-images": "^1.0.4",
     "@higby/eleventy-links": "^1.0.0",
     "@higby/eleventy-markdown": "^1.1.0",
     "@higby/eleventy-plugin-nesting-toc": "^1.3.1",
     "cheerio": "^1.0.0-rc.10",
-    "cross-spawn": "^7.0.3",
     "fs": "^0.0.1-security",
     "gulp": "^4.0.2",
     "gulp-sass": "^5.0.0",

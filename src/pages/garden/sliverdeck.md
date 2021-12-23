@@ -38,3 +38,5 @@ templateEngineOverride: liquid
 {% endif %}
 {% endfor %}
 {% endfor %}
+
+<style>{% renderFile "./src/components/styles/modules/magic.scss" %}</style>

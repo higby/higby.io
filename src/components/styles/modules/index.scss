@@ -1,0 +1,30 @@
+@import "./src/components/styles/imports/vars";
+
+.who {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  margin: 2rem 0;
+  column-gap: 3rem;
+  font-size: 0.95rem;
+  font-family: $monoFont;
+  //font-weight: 300;
+  figure {
+    margin: 0;
+  }
+  img {
+    margin: 0;
+    width: 100%;
+  }
+  p {
+    margin: auto 0;
+  }
+}
+@media screen and (max-width: 700px) {
+  .who {
+    grid-template-columns: 1fr;
+    row-gap: 1rem;
+    img {
+      border-radius: 0.25rem;
+    }
+  }
+}

@@ -1,18 +1,22 @@
-*:where(:not(ul, ol, details, summary, iframe, canvas, img, svg, video, input[type="checkbox"], input[type="radio"]):not(svg *)) {
+*:where(:not(ul, ol, details, summary, iframe, canvas, img, svg, video, input[type="checkbox"], input[type="radio"]):not(svg
+      *)) {
   all: unset;
   display: revert;
 }
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: inherit;
 }
-:root {}
+:root {
+}
 ::selection {
   background: $highlight;
   color: $backgroundColor;
 }
 html {
   box-sizing: border-box;
- // scroll-behavior: smooth;
+  // scroll-behavior: smooth;
 }
 
 body {
@@ -23,16 +27,17 @@ body {
   max-width: 650px;
   font-size: 1rem;
   line-height: 1.65;
-  &> header {
+  & > header {
     display: flex;
     justify-content: space-between;
     h1 a {
-      color: $headerText; 
+      color: $headerText;
       &:hover i {
         color: $backgroundColor !important;
       }
       i {
         font-style: normal;
+        color: $space;
       }
     }
     nav {
@@ -42,32 +47,49 @@ body {
       a {
         color: $headerText;
       }
-    } 
+    }
   }
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   color: $headerText;
   font-weight: 700;
   margin: 1rem 0;
 }
-h1 { font-size: 1.75rem; }
-h2 { font-size: 1.5942rem; }
-h3 { font-size: 1.4522rem; }
-h4 { font-size: 1.3229rem; }
-h5 { font-size: 1.2051rem; }
-h6 { font-size: 1.0978rem; }
+h1 {
+  font-size: 1.75rem;
+}
+h2 {
+  font-size: 1.5942rem;
+}
+h3 {
+  font-size: 1.4522rem;
+}
+h4 {
+  font-size: 1.3229rem;
+}
+h5 {
+  font-size: 1.2051rem;
+}
+h6 {
+  font-size: 1.0978rem;
+}
 
 main > header {
   p {
-    margin: .5rem 0;
+    margin: 0.5rem 0;
   }
 }
 
 footer {
   margin: 2.5rem 0 0;
   display: grid;
-  font-size: .8941rem;
+  font-size: 0.8941rem;
   grid-template-columns: auto auto auto;
   a {
     color: $pgpText;
@@ -76,18 +98,27 @@ footer {
     color: $pgpText;
   }
   &:before {
-    content: '';
+    content: "";
     width: 25%;
     margin: 0;
-    border-top: .125rem solid $lightGrey;
+    border-top: 0.125rem solid $lightGrey;
     display: block;
     grid-column: span 3;
     padding-top: 1.5rem;
-
   }
 }
 
-p, ol, ul, details, pre, blockquote, cite, figure, img, hr, dl {
+p,
+ol,
+ul,
+details,
+pre,
+blockquote,
+cite,
+figure,
+img,
+hr,
+dl {
   display: block;
   margin: 1rem auto;
 }
@@ -96,7 +127,8 @@ p {
   margin: 1.5rem auto;
 }
 
-ol, ul {
+ol,
+ul {
   margin: 0 0 0 1.65rem;
   padding: 0;
 }
@@ -120,11 +152,13 @@ a {
   }
 }
 
-strong, b {
+strong,
+b {
   font-weight: 600;
 }
 
-em, i {
+em,
+i {
   font-style: italic;
 }
 
@@ -138,30 +172,30 @@ code {
 }
 
 code:not(pre *, footer *) {
-  font-size: .85em;
+  font-size: 0.85em;
   background-color: $lightGrey;
-  border-radius: .25rem;
-  padding:.2rem .4rem;
+  border-radius: 0.25rem;
+  padding: 0.2rem 0.4rem;
 }
 
 kbd {
   border: 1px solid $mediumGrey;
-  border-radius: .25rem;
+  border-radius: 0.25rem;
   box-shadow: inset 0 -1px 0 $mediumGrey;
   color: $codeText;
   font-family: $monoFont;
   font-size: 1rem;
-  padding: .125rem .25rem;
+  padding: 0.125rem 0.25rem;
   vertical-align: middle;
 }
 
 pre {
-  font-size: .85rem;
+  font-size: 0.85rem;
   overflow: auto;
   padding: 1rem 1.5rem;
   white-space: pre;
   background-color: $lightGrey;
-  border-radius: .25rem;
+  border-radius: 0.25rem;
 }
 
 blockquote {
@@ -173,17 +207,18 @@ blockquote {
 }
 
 cite {
-  margin:1rem 0 0 0;
+  margin: 1rem 0 0 0;
   font-style: italic;
   &:before {
-    content:"— ";
-    font-size:.95rem;
+    content: "— ";
+    font-size: 0.95rem;
   }
 }
 
-figcaption, caption {
+figcaption,
+caption {
   text-align: center;
-  font-size: .95rem;
+  font-size: 0.95rem;
 }
 
 hr {
@@ -197,11 +232,12 @@ img {
   background-color: $lightGrey;
   width: 85%;
   height: auto;
-  border-radius: .25rem;
+  border-radius: 0.25rem;
 }
 
-sub, sup {
-  font-size: .85rem;
+sub,
+sup {
+  font-size: 0.85rem;
 }
 sup {
   vertical-align: super;
@@ -231,15 +267,29 @@ th {
   font-weight: 600;
 }
 td {
-  padding: .125rem;
+  padding: 0.125rem;
   text-align: center;
 }
-
+.footnotes {
+  font-size: 0.95rem;
+  color: $quoteText;
+  &:before {
+    content: "Footnotes";
+    width: 65%;
+    margin: 1rem auto;
+    padding: 0.5rem 0 0.5rem 0;
+    display: block;
+    font-size: 1rem;
+    color: $headerText;
+    text-align: center;
+    border-bottom: 1px solid $headerText;
+  }
+}
 @media screen and (max-width: 700px) {
   body {
     margin-left: 2rem;
     margin-right: 2rem;
-    &> header {
+    & > header {
       display: block;
       nav {
         justify-content: space-around;

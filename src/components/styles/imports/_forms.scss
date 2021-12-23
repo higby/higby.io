@@ -1,7 +1,7 @@
 form {
   grid-gap: 1rem;
-  border-radius: .25rem;
-  border: .25rem solid $space;
+  border-radius: 0.25rem;
+  border: 0.25rem solid $space;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   padding: 1rem;
@@ -11,11 +11,11 @@ form {
     font-weight: bold;
     grid-column: span 4;
     margin: 1rem 0;
-    &+ p {
+    & + p {
       margin-top: 0;
     }
   }
-  &> legend {
+  & > legend {
     margin: 0;
   }
   p {
@@ -34,7 +34,8 @@ form {
     font-weight: bold;
     grid-column: span 2;
     grid-template-columns: 1fr;
-    input, textarea {
+    input,
+    textarea {
       align-self: end;
       margin: 1rem 0 0 0;
     }
@@ -52,9 +53,24 @@ form {
     resize: vertical;
   }
 }
-[type=color], [type=date], [type=datetime], [type=datetime-local], [type=email], [type=month], [type=number], [type=password], [type=search], [type=tel], [type=text], [type=url], [type=week], [type=time], select, textarea {
+[type="color"],
+[type="date"],
+[type="datetime"],
+[type="datetime-local"],
+[type="email"],
+[type="month"],
+[type="number"],
+[type="password"],
+[type="search"],
+[type="tel"],
+[type="text"],
+[type="url"],
+[type="week"],
+[type="time"],
+select,
+textarea {
   background-color: $backgroundColor;
-  border-bottom: .25rem solid $darkGrey;
+  border-bottom: 0.25rem solid $darkGrey;
   color: $primaryText;
   font-family: $monoFont;
   font-size: 1rem;
@@ -70,14 +86,14 @@ input[type="button"],
 input[type="submit"] {
   -webkit-appearance: none;
   background-color: $space;
-  border-radius: .25rem;
+  border-radius: 0.25rem;
   color: #fff;
   cursor: pointer;
   font-weight: bold;
   height: 2rem;
   min-width: 8rem;
   text-align: center;
-  transition: background-color .25s;
+  transition: background-color 0.25s;
   &:hover {
     background-color: $spaceDark;
   }

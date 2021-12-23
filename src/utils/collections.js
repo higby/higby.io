@@ -29,12 +29,6 @@ function masonrySplit(count, arr) {
 }
 
 module.exports = function (eleventyConfig) {
-  eleventyConfig.addCollection("writing", function (collectionApi) {
-    return collectionApi.getFilteredByGlob("./src/pages/writing/**/*.md");
-  });
-  eleventyConfig.addCollection("projects", function (collectionApi) {
-    return collectionApi.getFilteredByGlob("./src/pages/projects/**/*.md");
-  });
   eleventyConfig.addCollection("garden", function (collectionApi) {
     return collectionApi
       .getFilteredByGlob("./src/pages/garden/**/*.md")

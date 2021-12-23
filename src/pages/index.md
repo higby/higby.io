@@ -1,12 +1,11 @@
 ---
 permalink: "/index.html"
 layout: "base"
-eleventyExcludeFromCollections: true
 ---
 
 <div class="who">
 
-![Me, Awkwardly](/img/glitch2.png)
+![Me, Awkwardly](/img/polaroid/professional.jpg)
 
 <p>
 // writer<br>
@@ -16,3 +15,5 @@ eleventyExcludeFromCollections: true
 </p>
 
 </div>
+
+<style>{% renderFile "./src/components/styles/modules/index.scss" %}</style>

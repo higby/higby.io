@@ -4,7 +4,8 @@
     box-shadow: none !important;
     color: #000 !important;
     text-shadow: none !important;
-    &:before, &:after {
+    &:before,
+    &:after {
       background: #fff !important;
       box-shadow: none !important;
       color: #000 !important;
@@ -18,15 +19,27 @@
     text-rendering: optimizeLegibility;
   }
 
-  h1 { font-size: 1.5rem; }
-  h2 { font-size: 1.402rem; }
-  h3 { font-size: 1.3104rem; }
-  h4 { font-size: 1.2247rem; }
-  h5 { font-size: 1.1447rem; }
-  h6 { font-size: 1.0699rem; }
+  h1 {
+    font-size: 1.5rem;
+  }
+  h2 {
+    font-size: 1.402rem;
+  }
+  h3 {
+    font-size: 1.3104rem;
+  }
+  h4 {
+    font-size: 1.2247rem;
+  }
+  h5 {
+    font-size: 1.1447rem;
+  }
+  h6 {
+    font-size: 1.0699rem;
+  }
 
   header {
-    &> h1 {
+    & > h1 {
       a {
         color: #000 !important;
         text-decoration: none !important;
@@ -35,21 +48,21 @@
         }
       }
     }
-    &> nav {
+    & > nav {
       display: none;
     }
   }
 
   footer {
     &:before {
-      content: '';
+      content: "";
       width: 65%;
       margin: 1rem auto;
-      padding: 0 0 .5rem 0;
+      padding: 0 0 0.5rem 0;
       display: block;
-      border-bottom: .15rem dashed #000;
+      border-bottom: 0.15rem dashed #000;
     }
-    code { 
+    code {
       a {
         font-size: 1rem;
       }
@@ -61,11 +74,11 @@
   }
 
   blockquote {
-    border-left: .25rem solid #000;
+    border-left: 0.25rem solid #000;
   }
 
   hr {
-    border-bottom: .15rem dashed #000;
+    border-bottom: 0.15rem dashed #000;
   }
 
   table {
@@ -82,30 +95,30 @@
       }
     }
   }
-  
+
   form {
     display: none;
   }
   .footnotes:before {
-      border-bottom: .15rem dashed #000;
+    border-bottom: 0.15rem dashed #000;
   }
 
   //https://github.com/BafS/Gutenberg/
   a {
     color: $space !important;
     text-decoration: underline !important;
-    &[href^='http'],
-    &[href^='ftp'] {
+    &[href^="http"],
+    &[href^="ftp"] {
       &:after {
-        content: ' (' attr(href) ')';
+        content: " (" attr(href) ")";
         font-size: 80%;
       }
     }
-  
-    &[href$='.jpg'],
-    &[href$='.jpeg'],
-    &[href$='.gif'],
-    &[href$='.png'] {
+
+    &[href$=".jpg"],
+    &[href$=".jpeg"],
+    &[href$=".gif"],
+    &[href$=".png"] {
       &:after {
         display: none;
       }
@@ -157,5 +170,3 @@
     word-wrap: break-word;
   }
 }
-
-

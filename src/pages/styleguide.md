@@ -1,7 +1,6 @@
 ---
-title: "Styleguide"
+title: 'styleguide'
 description: "The styles that you're seeing right now."
-date: 2021-10-23 14:27:00
 ---
 
 > **Note:** This is an adaption of [CSS Bed](https://github.com/ubershmekel/cssbed)

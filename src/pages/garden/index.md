@@ -1,6 +1,6 @@
 ---
 title: "garden 🪴"
-permalink: "/functions/cache/garden/"
+permalink: "/functions/cache/garden/" 
 eleventyExcludeFromCollections: true
 layout: "page"
 ---
@@ -57,3 +57,5 @@ layout: "page"
   </ul>
 </div>
 </nav>
+
+<style>{% renderFile "./src/components/styles/modules/garden.scss" %}</style>

@@ -37,3 +37,5 @@ templateEngineOverride: liquid
   </div>
 {% endfor %}
 </div>
+
+<style>{% renderFile "./src/components/styles/modules/poke.scss" %}</style>

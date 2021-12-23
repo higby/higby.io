@@ -1,7 +1,6 @@
 ---
 title: "humans.txt"
 description: "The many tools, sites, and people that helped me make this site."
-layout: "page"
 ---
 
 <div class="revisions">
@@ -78,3 +77,5 @@ Pokemon renders were ripped by [TehPerson](https://bulbapedia.bulbagarden.net/wi
 - [Design Systems](https://leerob.io/blog/style-guides-component-libraries-design-systems/) - source of many good design references
 - [Print Styles](https://www.matuzo.at/blog/i-totally-forgot-about-print-style-sheets/) - perfect reference for CSS print styles
 - [Spotify](https://open.spotify.com/playlist/1u6D5NJ3MOzLeXZU3B6MU1?si=8ef03bee2c48407b) - ~99,342 minutes listened (updated 12/1/2020)
+
+<style>{% renderFile "./src/components/styles/modules/revisions.scss" %}</style>

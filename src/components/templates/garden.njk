@@ -1,0 +1,14 @@
+---
+layout: base
+---
+<header>
+  {% if title %}<h1>{{ title }}</h1>{% endif %}
+  <p>Planted <time datetime='{{ page.date | datetime }}' title='{{ page.date | common }}'>{{ page.date | relative }}</time></p>
+  {% if tended %}
+  <p>Tended to <time datetime='{{ tended | datetime }}' title='{{ tended | common }}'>{{ tended | relative }}</time></p>
+  {% endif %}
+  {{ content | toc | safe }}
+</header>
+<article>
+{{ content | safe }}
+</article>
