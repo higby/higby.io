@@ -1,0 +1,15 @@
+<meta charset="utf-8">
+
+<title>{% if title %}{{ title }}{% else %}{{ site.name }}{% endif %}</title>
+{% if eleventyExcludeFromCollections %}<meta name="robots" content="noindex">{% endif %}
+<meta name="description" content="{% if description %}{{ description }}{% else %}{{ site.description }}{% endif %}">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name='generator' content='eleventy'>
+<meta name="theme-color" content="#ef476f">
+
+<link rel="canonical" href="https://{{ site.url }}{{ page.url }}">
+<link rel="author" href="/humans.txt"/>
+<link rel='icon' href="/favicon.ico">
+
+<style>{% renderFile "./src/styles/classless.scss" %}{% renderFile "./src/styles/fonts.scss" %}{% renderFile "./src/styles/syntax.scss" %}{% if style %}{% renderFile 'src/styles/modules/' + style + '.scss' %}{% endif %}</style>
+

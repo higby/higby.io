@@ -1,32 +1,35 @@
+const directoryOutputPlugin = require("@11ty/eleventy-plugin-directory-output");
 const fs = require('fs');
-const collections = require("./src/utils/collections");
-const extensions = require("./src/utils/extensions");
-const filters = require("./src/utils/filters");
-const markdown = require("@higby/eleventy-markdown");
-const shortcodes = require("./src/utils/shortcodes");
+const collections = require("./src/plugins/collections");
+const extensions = require("./src/plugins/extensions");
+const filters = require("./src/plugins/filters");
+const markdown = require("./src/plugins/markdown/index");
+const shortcodes = require("./src/plugins/shortcodes");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
-const transforms = require("./src/utils/transforms");
+const transforms = require("./src/plugins/transforms");
 
-module.exports = function (eleventyConfig) {
-  eleventyConfig.setQuietMode(true);
-  eleventyConfig.setUseGitIgnore(false);
+module.exports = function (config) {
 
-  eleventyConfig.addWatchTarget("src/assets/");
-  eleventyConfig.addPassthroughCopy({ "src/assets": "/" });
-  
-  eleventyConfig.addLayoutAlias("base", "base.njk");
-  eleventyConfig.addLayoutAlias("garden", "garden.njk");
-  eleventyConfig.addLayoutAlias("page", "page.njk");
+  config.setQuietMode(true);
+  config.setUseGitIgnore(false);
 
-  eleventyConfig.addPlugin(collections);
-  eleventyConfig.addPlugin(extensions);
-  eleventyConfig.addPlugin(filters);
-  eleventyConfig.addPlugin(markdown);
-  eleventyConfig.addPlugin(shortcodes);
-  eleventyConfig.addPlugin(syntaxHighlight);
-  eleventyConfig.addPlugin(transforms);
+  config.addWatchTarget("src/assets/");
+  config.addPassthroughCopy({ "src/assets": "/" });
 
-  eleventyConfig.setBrowserSyncConfig({
+  config.addLayoutAlias("base", "base.njk");
+  config.addLayoutAlias("garden", "garden.njk");
+  config.addLayoutAlias("page", "page.njk");
+
+  config.addPlugin(collections);
+  config.addPlugin(extensions);
+  config.addPlugin(filters);
+  config.addPlugin(markdown);
+  config.addPlugin(shortcodes);
+  config.addPlugin(syntaxHighlight);
+  config.addPlugin(transforms);
+  //config.addPlugin(directoryOutputPlugin);
+
+  config.setBrowserSyncConfig({
     callbacks: {
       ready: function (err, bs) {
         bs.addMiddleware('*', (req, res) => {
@@ -45,7 +48,7 @@ module.exports = function (eleventyConfig) {
     dir: {
       input: 'src',
       output: 'build',
-      layouts: 'components/templates',
+      layouts: 'templates',
       includes: 'components',
       data: 'data'
     }

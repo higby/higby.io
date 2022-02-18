@@ -1,19 +1,14 @@
 ---
 permalink: "/index.html"
-layout: "base"
+eleventyExcludeFromCollections: true
+layout: base
+style: index
 ---
 
-<div class="who">
+<header>
 
-![Me, Awkwardly](/img/polaroid/professional.jpg)
+{% include 'header.njk' %}
 
-<p>
-// writer<br>
-// programmer<br>
-// dungeon master<br>
-// procrastinator
-</p>
+{% include 'footer.svg' %}
 
-</div>
-
-<style>{% renderFile "./src/components/styles/modules/index.scss" %}</style>
+</header>

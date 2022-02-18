@@ -1,0 +1,32 @@
+@import "../vars";
+
+div.colors {
+  display: grid;
+  justify-content: space-around;
+  grid-auto-flow: column;
+  margin: 2rem 0;
+  span {
+    background-color: $dark-grey;
+    width: 65px;
+    height: 65px;
+    border-radius: 100%;
+    &:first-of-type {
+      background-color: $space;
+    }
+  }
+}
+
+code.wide {
+  padding: $gap 1.5rem;
+  display: block;
+}
+
+.headings {
+  width: 100%;
+  thead, tfoot {
+    border: none;
+  }
+  tr:nth-child(even) {
+    background-color: inherit;
+  }
+}

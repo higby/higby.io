@@ -1,0 +1,20 @@
+@import "../vars";
+
+article {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  margin: 2rem 0 0 0;
+}
+
+img {
+  width: 100%;
+  margin: 0;
+}
+
+figure {
+  margin: 0;
+}
+
+article div {
+  align-self: center;
+}

@@ -1,5 +1,4 @@
 module.exports = {
   layout: "page",
-  permalink: "/{{ page.fileSlug }}/",
-  eleventyExcludeFromCollections: true,
+  permalink: "/{{ page.fileSlug }}/"
 };
