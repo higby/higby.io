@@ -1,7 +1,8 @@
 <meta charset="utf-8">
 
 <title>{% if title %}{{ title }}{% else %}{{ site.name }}{% endif %}</title>
-{% if eleventyExcludeFromCollections %}<meta name="robots" content="noindex">{% endif %}
+{% if eleventyExcludeFromCollections and permalink != '/index.html' %}<meta name="robots" content="noindex">{% endif %}
+
 <meta name="description" content="{% if description %}{{ description }}{% else %}{{ site.description }}{% endif %}">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name='generator' content='eleventy'>
