@@ -6,20 +6,38 @@ tags: "programming"
 
 <!-- https://www.tablesgenerator.com/markdown_tables# -->
 
-| File                	| Original Size 	| PurgeCSS Size 	| Reduction 	|
-|---------------------	|---------------	|---------------	|-----------	|
-| /garden/alquari/    	| 21.60kB       	| 18.90kB       	|    13.33% 	|
-| /garden/favorites/  	| 10.20kB       	| 7.10kB        	|    35.84% 	|
-| /garden/oscana/     	| 18.20kB       	| 15.80kB       	|    14.12% 	|
-| /garden/pokemon/    	| 12.10kB       	| 9.10kB        	|    28.30% 	|
-| /garden/short-url/  	| 18.30kB       	| 15.70kB       	|    15.29% 	|
-| /garden/sliverdeck/ 	| 26.90kB       	| 23.90kB       	|    11.81% 	|
-| /ocd/               	| 10.80kB       	| 7.70kB        	|    33.51% 	|
-| /paleontology/      	| 15.90kB       	| 13.20kB       	|    18.56% 	|
-| /garden/            	| 13.90kB       	| 10.90kB       	|    24.19% 	|
-| /humans.txt/        	| 16.40kB       	| 13.40kB       	|    20.13% 	|
-| /resume/            	| 11.50kB       	| 8.40kB        	|    31.16% 	|
-| /styleguide/        	| 19.00kB       	| 18.50kB       	|     2.67% 	|
-| /404.html           	| 10.00kB       	| 7.10kB        	|    33.92% 	|
-| /index.html         	| 9.10kB        	| 5.50kB        	|    49.32% 	|
+| File               	| Original Size 	| PurgeCSS + cssnano Size 	| Reduction 	|
+|-------------------:	|---------------	|-------------------------	|:----------	|
+| garden/alquari/    	| 23.70kB       	| 20.50kB                 	| 14.48%    	|
+| garden/favorites/  	| 12.40kB       	| 9.00kB                  	| 31.78%    	|
+| garden/oscana/     	| 20.30kB       	| 17.50kB                 	| 14.81%    	|
+| garden/pokemon/    	| 14.60kB       	| 11.30kB                 	| 25.48%    	|
+| garden/short-url/  	| 20.50kB       	| 18.90kB                 	| 8.12%     	|
+| garden/sliverdeck/ 	| 29.40kB       	| 26.20kB                 	| 11.51%    	|
+| garden/small-css/  	| 14.60kB       	| 11.50kB                 	| 23.75%    	|
+| ocd/               	| 13.00kB       	| 9.60kB                  	| 30.09%    	|
+| paleontology/      	| 18.00kB       	| 14.80kB                 	| 19.51%    	|
+| garden/            	| 16.40kB       	| 13.10kB                 	| 22.37%    	|
+| humans.txt/        	| 19.10kB       	| 17.10kB                 	| 11.05%    	|
+| resume/            	| 13.70kB       	| 10.30kB                 	| 28.33%    	|
+| styleguide/        	| 17.00kB       	| 16.10kB                 	| 5.44%     	|
+| 404.html           	| 12.40kB       	| 9.30kB                  	| 28.57%    	|
+| index.html         	| 11.60kB       	| 7.80kB                  	| 39.18%    	|
 
+
+| File               	| Raw   	| Removed via PurgeCSS  	| Removed via cssnano  	| Result  	|
+|--------------------	|-------	|-----------------------	|---------------------	|---------	|
+| garden/short-url/  	| 6169C 	| 1418C                 	| 125C                 	| 4626C   	|
+| ocd/               	| 6169C 	| 2199C                 	| 1154C                	| 2816C   	|
+| paleontology/      	| 6169C 	| 2069C                 	| 1154C                	| 2946C   	|
+| garden/favorites/  	| 6169C 	| 2165C                 	| 1154C                	| 2850C   	|
+| garden/alquari/    	| 6169C 	| 2035C                 	| 1151C                	| 2983C   	|
+| garden/oscana/     	| 6169C 	| 1654C                 	| 1151C                	| 3364C   	|
+| index.html         	| 6351C 	| 2635C                 	| 1151C                	| 2565C   	|
+| resume/            	| 6934C 	| 2178C                 	| 1152C                	| 3604C   	|
+| garden/pokemon/    	| 6608C 	| 2080C                 	| 1159C                	| 3369C   	|
+| garden/sliverdeck/ 	| 6535C 	| 2073C                 	| 1185C                	| 3277C   	|
+| humans.txt/        	| 6706C 	| 1867C                 	| 121C                 	| 4718C   	|
+| garden/            	| 6845C 	| 2147C                 	| 1155C                	| 3543C   	|
+| 404.html           	| 6396C 	| 1870C                 	| 1183C                	| 3343C   	|
+| styleguide/        	| 6559C 	| 695C                  	| 186C                 	| 5678C   	|

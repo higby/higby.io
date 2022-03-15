@@ -3,6 +3,8 @@ const htmlmin = require("html-minifier");
 const { JSDOM } = require("jsdom");
 const sharp = require('sharp');
 const { PurgeCSS } = require('purgecss');
+const cssnano = require('cssnano');
+const advanced = require('cssnano-preset-advanced');
 
 module.exports = function (config) {
 
@@ -68,7 +70,6 @@ module.exports = function (config) {
 
   config.addTransform("purgeCSS", async function(content, outputPath) {
     if( outputPath && outputPath.endsWith(".html") ) {
-
       const dom = new JSDOM(content);
       const raw = dom.window.document.querySelector("style").innerHTML;
       dom.window.document.querySelector("style").innerHTML = '';
@@ -79,9 +80,16 @@ module.exports = function (config) {
         css: [{ raw: raw }]
       });
 
-      dom.window.document.querySelector("style").innerHTML = purgeCSSResults[0].css;
-      content = dom.serialize();
-
+      await cssnano({
+        from: undefined,
+        preset: advanced
+      })
+      .process(purgeCSSResults[0].css, {from: undefined})
+      .then(result => {
+        testVar = result.css;
+        dom.window.document.querySelector("style").innerHTML = result.css;
+        content = dom.serialize();
+      });
     }
     return content;
   });
