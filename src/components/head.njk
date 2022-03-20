@@ -14,6 +14,11 @@
 
 {% if eleventyExcludeFromCollections != true %}
 <meta property="og:image" content="https://og.higby.io/{% OG page.url %}/opengraph"/>
+<meta name="twitter:image" content="https://og.higby.io/{% OG page.url %}/opengraph"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:description" content="{% if description %}{{ description }}{% else %}{{ site.description }}{% endif %}"/>
+<meta name="twitter:title" content='{% if title %}{{ title }}{% else %}{{ site.name }}{% endif %}'/>
+<meta name="twitter:creator" content="@higby_"/>
 {% endif %}
 
 <link rel="canonical" href="https://{{ site.url }}{{ page.url }}">
