@@ -1,0 +1,25 @@
+---
+pagination:
+  data: "collections.all"
+  size: 1
+  alias: "post"
+permalink: "/og{{ post.url }}"
+layout: base
+style: og
+---
+
+<main>
+  <div>
+    {% if post.data.title %}<h1>{{ post.data.title }}</h1>{% endif %}
+
+    {% if post.data.layout == 'garden' %}
+
+    {% if post.data.tended %}<time transform datetime='{{ post.data.tended | datetime }}' title='{{ post.data.tended | common }}'>{{ post.data.tended | common }}</time>{% else %}<time transform datetime='{{ post.date | datetime }}' title='{{ post.date | common }}'>{{ post.date | common }}</time>{% endif %}
+
+    {% endif %}
+  </div>
+
+  <p>{% if post.data.layout == 'garden' %}From the garden of {% endif %}<b>Branden <i class='higby'>Higby</i></b></p>
+
+  {% include 'footer.svg' %}
+</main>

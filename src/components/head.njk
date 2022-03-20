@@ -12,6 +12,10 @@
 <meta name='generator' content='eleventy'>
 <meta name="theme-color" content="#141619">
 
+{% if eleventyExcludeFromCollections != true %}
+<meta property="og:image" content="https://og.higby.io/{% OG page.url %}/opengraph"/>
+{% endif %}
+
 <link rel="canonical" href="https://{{ site.url }}{{ page.url }}">
 <link rel="author" href="/humans.txt"/>
 <link rel='icon' href="/favicon.ico">
