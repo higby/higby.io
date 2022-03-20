@@ -1,10 +1,12 @@
+const advanced = require('cssnano-preset-advanced');
+const cssnano = require('cssnano');
 const fetch = require('node-fetch');
 const htmlmin = require("html-minifier");
 const { JSDOM } = require("jsdom");
-const sharp = require('sharp');
+const moment = require("moment-timezone");
 const { PurgeCSS } = require('purgecss');
-const cssnano = require('cssnano');
-const advanced = require('cssnano-preset-advanced');
+const sharp = require('sharp');
+
 
 module.exports = function (config) {
 
@@ -62,6 +64,21 @@ module.exports = function (config) {
       const links = [...dom.window.document.querySelectorAll("a[href^='http://']:not([rel]),a[href^='https://']:not([rel])")];
       for (var i = 0; i < links.length; i++) {
         links[i].setAttribute('rel', 'noopener noreferrer');
+      }
+      content = dom.serialize();
+    }
+    return content;
+  });
+
+  config.addTransform("timeAgo", async function(content, outputPath) {
+    if( outputPath && outputPath.endsWith(".html") ) {
+      const dom = new JSDOM(content);
+      const timeTags = [...dom.window.document.querySelectorAll("time[transform]")];
+
+      for (var i = 0; i < timeTags.length; i++) {
+        const date = new Date(timeTags[i].innerHTML);
+        timeTags[i].innerHTML = moment(date).fromNow();
+        timeTags[i].removeAttribute("transform");
       }
       content = dom.serialize();
     }

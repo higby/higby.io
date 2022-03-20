@@ -29,19 +29,6 @@ module.exports = function (config) {
   config.addPlugin(transforms);
   //config.addPlugin(directoryOutputPlugin);
 
-  config.setBrowserSyncConfig({
-    callbacks: {
-      ready: function (err, bs) {
-        bs.addMiddleware('*', (req, res) => {
-          const content_404 = fs.readFileSync('build/404.html');
-          res.writeHead(404, { 'Content-Type': 'text/html; charset=UTF-8' });
-          res.write(content_404);
-          res.end();
-        });
-      }
-    }
-  });
-
   return {
     markdownTemplateEngine: "njk",
     jsDataFileSuffix: '.data',

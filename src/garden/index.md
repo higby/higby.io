@@ -13,7 +13,7 @@ style: garden
   <a href="{{ post.url }}">
   <li>
     <h2>{{ post.data.title }}</h2>
-    {% if post.data.tended %}<time datetime='{{ post.data.tended | datetime }}' title='{{ post.data.tended | common }}'>{{ post.data.tended | common }}</time>{% else %}<time datetime='{{ post.data.date | datetime }}' title='{{ post.data.date | common }}'>{{ post.data.date | common }}</time>{% endif %}
+    {% if post.data.tended %}<time transform datetime='{{ post.data.tended | datetime }}' title='{{ post.data.tended | common }}'>{{ post.data.tended | common }}</time>{% else %}<time transform datetime='{{ post.data.date | datetime }}' title='{{ post.data.date | common }}'>{{ post.data.date | common }}</time>{% endif %}
      <p>{{ post.data.description }}</p>
   </li>
   </a>
@@ -24,7 +24,7 @@ style: garden
   <a href="{{ post.url }}">
   <li>
     <h2>{{ post.data.title }}</h2>
-    {% if post.data.tended %}<time datetime='{{ post.data.tended | datetime }}' title='{{ post.data.tended | common }}'>{{ post.data.tended | common }}</time>{% else %}<time datetime='{{ post.data.date | datetime }}' title='{{ post.data.date | common }}'>{{ post.data.date | common }}</time>{% endif %}
+    {% if post.data.tended %}<time transform datetime='{{ post.data.tended | datetime }}' title='{{ post.data.tended | common }}'>{{ post.data.tended | common }}</time>{% else %}<time transform datetime='{{ post.data.date | datetime }}' title='{{ post.data.date | common }}'>{{ post.data.date | common }}</time>{% endif %}
      <p>{{ post.data.description }}</p>
   </li>
   </a>
@@ -35,7 +35,7 @@ style: garden
   <a href="{{ post.url }}">
   <li>
     <h2>{{ post.data.title }}</h2>
-    {% if post.data.tended %}<time datetime='{{ post.data.tended | datetime }}' title='{{ post.data.tended | common }}'>{{ post.data.tended | common }}</time>{% else %}<time datetime='{{ post.data.date | datetime }}' title='{{ post.data.date | common }}'>{{ post.data.date | common }}</time>{% endif %}
+    {% if post.data.tended %}<time transform datetime='{{ post.data.tended | datetime }}' title='{{ post.data.tended | common }}'>{{ post.data.tended | common }}</time>{% else %}<time transform datetime='{{ post.data.date | datetime }}' title='{{ post.data.date | common }}'>{{ post.data.date | common }}</time>{% endif %}
      <p>{{ post.data.description }}</p>
   </li>
   </a>
@@ -46,7 +46,7 @@ style: garden
   <a href="{{ post.url }}">
   <li>
     <h2>{{ post.data.title }}</h2>
-    {% if post.data.tended %}<time datetime='{{ post.data.tended | datetime }}' title='{{ post.data.tended | common }}'>{{ post.data.tended | common }}</time>{% else %}<time datetime='{{ post.data.date | datetime }}' title='{{ post.data.date | common }}'>{{ post.data.date | common }}</time>{% endif %}
+    {% if post.data.tended %}<time transform datetime='{{ post.data.tended | datetime }}' title='{{ post.data.tended | common }}'>{{ post.data.tended | common }}</time>{% else %}<time transform datetime='{{ post.data.date | datetime }}' title='{{ post.data.date | common }}'>{{ post.data.date | common }}</time>{% endif %}
      <p>{{ post.data.description }}</p>
   </li>
   </a>
