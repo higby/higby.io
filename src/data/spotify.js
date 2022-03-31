@@ -1,4 +1,5 @@
-const axios = require('axios');
+const { AssetCache } = require("@11ty/eleventy-fetch");
+const fetch = require('node-fetch');
 const qs = require('qs');
 
 require('dotenv').config();
@@ -9,61 +10,49 @@ const refresh_token = process.env.SPOTIFY_REFRESH_TOKEN;
 const auth = Buffer.from(`${client_id}:${client_secret}`).toString('base64');
 
 const getAccessToken = async () => {
-  const response = await axios
-  .post(
-    "https://accounts.spotify.com/api/token",
-    qs.stringify({
+  const response = await fetch('https://accounts.spotify.com/api/token', { 
+    method: 'POST', 
+    body: qs.stringify({
       grant_type: 'refresh_token',
-      refresh_token: refresh_token
+      refresh_token
     }),
-    {
-      headers: {
+    headers: {
       Authorization: `Basic ${auth}`,
       'Content-Type': 'application/x-www-form-urlencoded'
-      }
     }
-  )
-  .then(function (response) {
-    return response.data.access_token;
-  })
-  .catch(function (error) {
-   console.log(error);
   });
-  
-  return response;
+
+  return response.json();
 };
 
-const getTopTracks = async () => {
+const getTracks = async () => {
   const access_token = await getAccessToken();
-  const response = await axios
-  .get(
-    "https://api.spotify.com/v1/me/top/tracks",
-    {
-      headers: {
-      Authorization: `Bearer ${access_token}`
-      }
+
+  const response = await fetch('https://api.spotify.com/v1/me/top/tracks?time_range=short_term', { 
+    headers: {
+      Authorization: `Bearer ${access_token.access_token}`
     }
-  )
-  .then(function (response) {
-    var tracks = [];
-    for (var i = 0; i < response.data.items.length; i++) {
-      let track = {
-        name: response.data.items[i].name,
-        artist: response.data.items[i].artists,
-        url: response.data.items[i].external_urls.spotify
-      };
-      tracks.push(track);
-    }
-    return tracks;
-  })
-  .catch(function (error) {
-   console.log(error);
   });
 
-  return response;
-  
+  let tracks = await response.json();
+  return tracks.items;
 };
 
 module.exports = async function() {
-  return await getTopTracks();
+
+  let asset = new AssetCache("spotify_tracks");
+
+  if(asset.isCacheValid("1d")) {
+    return asset.getCachedValue();
+  } else {
+
+    console.log('Fetched new data for Spotify Tracks');
+
+    let tracks = await getTracks();
+
+    await asset.save(tracks, "json");
+
+    return tracks;
+
+  }
 };
