@@ -22,7 +22,7 @@ const getAccessToken = async () => {
         'Content-Type': 'application/x-www-form-urlencoded'
       }
     });
-
+    
     return response.json();
   } catch (err) {
     console.log(err);
