@@ -40,29 +40,18 @@ Built with [Eleventy](https://github.com/11ty/eleventy/) and hosted on [Netlify]
 - [Node Fetch](https://github.com/node-fetch/node-fetch/)
 - [Moment Timezone](https://github.com/moment/moment-timezone/)
 
-### JS Libraries
-
-- [jQuery](https://github.com/jquery/jquery/)
-- [anime.js](https://github.com/juliangarnier/anime/)
-- [Letterize.js](https://github.com/WojciechKrakowiak/letterize/)
-- [particles.js](https://github.com/VincentGarreau/particles.js/)
-- [tinykeys](https://github.com/jamiebuilds/tinykeys/)
-
 ## Design
 
 ### Typography
 
 [Open Sans](https://fonts.google.com/specimen/Open+Sans) for general use
 <code>[Source Code Pro](https://fonts.google.com/specimen/Source+Code+Pro) for code</code>
-[Solbera's DND5e fonts](https://github.com/jonathonf/solbera-dnd-fonts) for DnD-styled pages
 
 ### CSS
 
 CSS rendered with [SASS](https://sass-lang.com/).
 
 The site theme is built from [Natural Selection](https://github.com/frontaid/natural-selection/), _which is perfection and everyone should use_. Adheres to [The 8 Point Grid System](https://tanzu.vmware.com/content/built-to-adapt/intro-to-the-8-point-grid-system-2/), uses [The New CSS Reset](https://github.com/elad2412/the-new-css-reset/), and heading sizes were calculated using [Typographic Scale Tool](https://spencermortensen.com/articles/typographic-scale/).
-
-The DnD styles come from [The Homebrewery](https://github.com/naturalcrit/homebrewery/).
 
 ### Images
 
@@ -78,4 +67,3 @@ Pokemon renders were ripped by [TehPerson](https://bulbapedia.bulbagarden.net/wi
 - File directory structure inspired by [11ty-blog-starter](https://github.com/kohrongying/11ty-blog-starter/) by [Rong Ying](https://github.com/kohrongying/)
 - [Design Systems](https://leerob.io/blog/style-guides-component-libraries-design-systems/) - source of many good design references
 - [Print Styles](https://www.matuzo.at/blog/i-totally-forgot-about-print-style-sheets/) - perfect reference for CSS print styles
-- [Spotify](https://open.spotify.com/playlist/1u6D5NJ3MOzLeXZU3B6MU1?si=8ef03bee2c48407b) - ~99,342 minutes listened (updated 12/1/2020)

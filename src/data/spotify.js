@@ -10,25 +10,29 @@ const refresh_token = process.env.SPOTIFY_REFRESH_TOKEN;
 const auth = Buffer.from(`${client_id}:${client_secret}`).toString('base64');
 
 const getAccessToken = async () => {
-  const response = await fetch('https://accounts.spotify.com/api/token', { 
-    method: 'POST', 
-    body: qs.stringify({
-      grant_type: 'refresh_token',
-      refresh_token
-    }),
-    headers: {
-      Authorization: `Basic ${auth}`,
-      'Content-Type': 'application/x-www-form-urlencoded'
-    }
-  });
+  try {
+    const response = await fetch('https://accounts.spotify.com/api/token', { 
+      method: 'POST', 
+      body: qs.stringify({
+        grant_type: 'refresh_token',
+        refresh_token
+      }),
+      headers: {
+        Authorization: `Basic ${auth}`,
+        'Content-Type': 'application/x-www-form-urlencoded'
+      }
+    });
 
-  return response.json();
+    return response.json();
+  } catch (err) {
+    console.log(err);
+  }
 };
 
 const getTracks = async () => {
   const access_token = await getAccessToken();
 
-  const response = await fetch('https://api.spotify.com/v1/me/top/tracks?time_range=short_term', { 
+  const response = await fetch('https://api.spotify.com/v1/me/top/tracks?time_range=short_term&limit=10', { 
     headers: {
       Authorization: `Bearer ${access_token.access_token}`
     }
@@ -46,11 +50,13 @@ module.exports = async function() {
     return asset.getCachedValue();
   } else {
 
-    console.log('Fetched new data for Spotify Tracks');
+    console.log('Fetching new data for Spotify Tracks...');
 
     let tracks = await getTracks();
 
     await asset.save(tracks, "json");
+
+    console.log('Fetched new data for Spotify Tracks');
 
     return tracks;
 

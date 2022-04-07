@@ -1,11 +1,11 @@
 ---
-title: 'resume'
-permalink: "/resume/"
+title: 'projects'
+permalink: "/projects/"
 style: resume
 ---
 
 <nav class="resume">
-  <h3>Projects</h3>
+  <h3>Coding</h3>
   <ul>{% for project in resume.projects %}
     <li>
       <time>{{ project.year }}</time>
