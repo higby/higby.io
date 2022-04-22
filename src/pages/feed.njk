@@ -1,0 +1,28 @@
+---
+permalink: "feed.xml"
+eleventyExcludeFromCollections: true
+layout: null
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>{{ site.title }}</title>
+  <subtitle>{{ site.description }}</subtitle>
+  <link href="{{ site.url }}/garden/feed.xml" rel="self"/>
+  <link href="{{ site.url }}/garden/"/>
+  <updated>{{ collections.garden | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
+  <id>{{ site.url }}/garden/</id>
+  <author>
+    <name>{{ site.name }}</name>
+    <email>{{ site.email }}</email>
+  </author>
+  {%- for plant in collections.garden %}
+  {% set absolutePostUrl %}{{ plant.url | url | absoluteUrl(site.url) }}{% endset %}
+  <entry>
+    <title>{{ plant.data.title }}</title>
+    <link href="{{ absolutePostUrl }}"/>
+    <updated>{{ plant.date | dateToRfc3339 }}</updated>
+    <id>{{ absolutePostUrl }}</id>
+    <content type="html">{{ plant.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}</content>
+  </entry>
+  {%- endfor %}
+</feed>

@@ -1,14 +1,8 @@
 ---
-permalink: "/index.html"
-eleventyExcludeFromCollections: true
-layout: base
-style: index
+layout: base.njk
+stylesheet: index.scss
 ---
-
-<header>
 
 {% include 'header.njk' %}
 
-{% include 'footer.svg' %}
-
-</header>
+{% include 'higby.svg' %}

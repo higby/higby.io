@@ -1,38 +1,19 @@
 ---
-date: 2022-03-22 14:42:00
-style: spotify
+title: about
+stylesheet: about.scss
 ---
 
 Branden Higby is a writer, video producer, computer programmer, procrastinator, dungeon master, and cartoon watcher based in Oregon.
 
-## Favorites
+## Tracks
 
-A few of my favorite things
+These are the top tracks I've been listening to recently
+{.subheading}
 
-Pokemon: <a class="internal" href="/garden/pokemon">Metroid</a>, my shiny Araquanid
-
-Number: **65**
-
-Book: Dune by Frank Herbert
-
-Movie: Back To The Future
-
-TV Shows:
-
-- Avatar: TLA
-- Arrested Development
-- She-Ra And The Princesses Of Power
-- Gravity Falls
-- Adventure Time
-
-## Music
-
-The music I've been listening to
-
-<table class='tracks'>
+<table>
   <thead>
     <tr>
-      <th style="text-align:center">#</th>
+      <th>#</th>
       <th>Title</th>
       <th>Artist</th>
     </tr>

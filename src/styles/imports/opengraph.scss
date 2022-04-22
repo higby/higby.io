@@ -1,0 +1,51 @@
+@import "vars";
+
+body {
+  //outline: 1px solid red;
+  max-width: 100vw;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 5rem;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+ // overflow: hidden;
+  display: grid;
+  grid-template-rows: 3fr 1fr;
+  animation: none;
+}
+
+div {
+  align-self: start;
+}
+
+h1 {
+  font-size: 72px;
+}
+
+time {
+  font-size: 30px;
+  color: $code-color;
+
+}
+
+p {
+  font-size: 40px;
+  align-self: end;
+
+}
+
+b {
+  color: $header-color;
+}
+
+svg {
+  position: fixed;
+  bottom: 3.5rem;
+  right: 6.5rem;
+  width: 35%;
+  z-index: -1;
+}

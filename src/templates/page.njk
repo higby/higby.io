@@ -1,16 +1,11 @@
 ---
-layout: base
+layout: base.njk
 ---
-{% if permalink != "/index.html" %}
-<header>{% include 'header.njk' %}</header>
-{% endif %}
+{% include 'header.njk' %}
 <main>
   <header>
-    {% if title %}<h1>{{ title }}</h1>{% endif %}
+    <h1>{{ title }}</h1>
   </header>
   <article>{{ content | safe }}</article>
 </main>
-{% if permalink != "/index.html" %}
-<footer>{% include 'footer.njk' %}</footer>
-{% endif %}
-
+{% include 'footer.njk' %}

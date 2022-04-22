@@ -1,18 +1,17 @@
 ---
-title: 'styleguide'
+title: "styleguide"
 description: "The styles that you're seeing right now."
-style: styleguide
 ---
 
 ## Typography
 
-| Heading     	| Font Size 	|
-|:------------	|----------:	|
-| <h1>h1</h1> 	| 1.75em    	|
-| <h2>h2</h2> 	| 1.5647em  	|
-| <h3>h3</h3> 	| 1.399em   	|
-| <h4>h4</h4> 	| 1.209em   	|
-| <h5>h5</h5> 	| 1.1184em  	|
+| Heading     | Font Size |
+| :---------- | --------: |
+| <h1>h1</h1> |    1.75em |
+| <h2>h2</h2> |  1.5647em |
+| <h3>h3</h3> |   1.399em |
+| <h4>h4</h4> |   1.209em |
+| <h5>h5</h5> |  1.1184em |
 
 {.headings}
 
@@ -44,7 +43,7 @@ You can press <kbd>↑</kbd> <kbd>↑</kbd> <kbd>↓</kbd> <kbd>↓</kbd> <kbd>�
 <!-- This is a pre with HTML syntax highlighting -->
 
 <body>
-  <p>My favorite number is <code class='higby'>65</code>!</p>
+  <p>My favorite number is <code class="higby">65</code>!</p>
 </body>
 ```
 
@@ -83,10 +82,10 @@ And one without:
 
 ### Tables
 
-| Name          	| Responsible                                 	|
-|:--------------	|:--------------------------------------------	|
-| Count Chocula 	| Acts responsible, is not                    	|
-| Franken Berry   | Is capable, but isn't                       	|
-| Boo Berry     	| Only when alone                              	|
-| Fruit Brute   	| Physically incapable                         	|
-| Yummy Mummy    	| Insists they're the most responsible, isn't 	|
+| Name          | Responsible                                 |
+| :------------ | :------------------------------------------ |
+| Count Chocula | Acts responsible, is not                    |
+| Franken Berry | Is capable, but isn't                       |
+| Boo Berry     | Only when alone                             |
+| Fruit Brute   | Physically incapable                        |
+| Yummy Mummy   | Insists they're the most responsible, isn't |

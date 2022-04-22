@@ -1,12 +1,11 @@
 ---
-title: 'projects'
-permalink: "/projects/"
-style: resume
+title: projects
+stylesheet: projects.scss
 ---
 
-<nav class="resume">
-  <h3>Coding</h3>
-  <ul>{% for project in resume.projects %}
+<nav>
+  <h2>Coding</h2>
+  <ul>{% for project in projects.coding %}
     <li>
       <time>{{ project.year }}</time>
       <span><a href="{{ project.url }}">{{ project.name }}</a></span>
@@ -14,8 +13,8 @@ style: resume
     </li>{% endfor %}
   </ul>
 
-  <h3>Writing</h3>
-  <ul>{% for piece in resume.writing %}
+  <h2>Writing</h2>
+  <ul>{% for piece in projects.writing %}
     <li>
       <time>{{ piece.year }}</time>
       <span><a href="{{ piece.url }}">{{ piece.name }}</a></span>

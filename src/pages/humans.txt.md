@@ -1,8 +1,8 @@
 ---
 title: "humans.txt"
-permalink: "/humans.txt/" 
+permalink: "/humans.txt/"
 description: "The many tools, sites, and people that helped me make this site."
-style: revisions
+stylesheet: revisions.scss
 ---
 
 <div class="revisions">
@@ -44,7 +44,7 @@ Built with [Eleventy](https://github.com/11ty/eleventy/) and hosted on [Netlify]
 
 ### Typography
 
-[Open Sans](https://fonts.google.com/specimen/Open+Sans) for general use
+[Inter](https://github.com/rsms/inter/) for general use
 <code>[Source Code Pro](https://fonts.google.com/specimen/Source+Code+Pro) for code</code>
 
 ### CSS
