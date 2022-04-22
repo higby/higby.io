@@ -1,0 +1,9 @@
+---
+permalink: '/_redirects'
+eleventyExcludeFromCollections: true
+layout: null
+---
+{% for URL in site.urlAlias %}https://{{ URL }}/*    https://{{ site.url }}/:splat 301!
+{% endfor %}
+/ocd    /garden/ocd
+/paleontology   /garden/paleontology
