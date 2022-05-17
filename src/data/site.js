@@ -6,10 +6,10 @@ module.exports = {
   github: "higby",
   twitter: "higby_",
   instagram: "higby_",
-  url: "www.higby.io",
+  url: "higby.io",
   urlAlias: [
     "higby.netlify.app",
-    //"higby.io" Handled by Netlify DNS
+    //"www.higby.io" Handled by Netlify DNS
     "www.skeletor.gay",
     "skeletor.gay",
     "www.skeletor.me",
