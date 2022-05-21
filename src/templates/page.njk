@@ -3,9 +3,11 @@ layout: base.njk
 ---
 {% include 'header.njk' %}
 <main>
-  <header>
-    <h1>{{ title }}</h1>
-  </header>
-  <article>{{ content | safe }}</article>
+  <article>
+    <header>
+      <h1>{{ title }}</h1>
+    </header>
+      {{ content | safe }}
+    </article>
 </main>
 {% include 'footer.njk' %}

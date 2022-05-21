@@ -1,0 +1,38 @@
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  color: $header-color;
+  &:not(header *) {
+    margin: 1rem 0;
+  }
+}
+h1 { 
+  font-size: 2em;
+  &:not(article *) {
+    font-size: 1.65rem;
+  }
+}
+h2 { font-size: 1.5874em; }
+h3 { font-size: 1.2599em; }
+
+strong, b {
+  font-weight: $bold-weight;
+}
+
+em, i {
+  font-style: italic;
+}
+
+mark {}
+
+small { font-size: .7937em; }
+
+sub,
+sup {
+  font-size: 0.85rem;
+}
+sub {
+  vertical-align: sub;
+}
+sup {
+  vertical-align: super;
+}

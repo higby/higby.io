@@ -1,0 +1,33 @@
+$space: #7f5af0;
+
+$invert: 0%;
+
+$background-color: invert(#141619, $weight: $invert);
+
+$dark-grey: invert(rgb(32, 34, 36), $weight: $invert);
+$medium-grey: invert(rgb(48, 50, 52), $weight: $invert);
+$light-grey: invert(rgb(70, 72, 74), $weight: $invert);
+
+$footer-color: invert(rgb(125, 125, 125), $weight: $invert);
+$code-color: invert(rgb(140, 140, 140), $weight: $invert);
+$text-color: invert(rgb(175, 175, 175), $weight: $invert);
+$header-color: invert(rgb(220, 220, 220), $weight: $invert);
+
+$primary-font: 'Inter', sans-serif;
+$mono-font: "IBM Plex Mono", monospace;
+
+$page-width: 650px;
+
+$xs: .25rem; // 4px
+$s: .5rem;   // 8px
+$m: 1rem;    // 16px
+$l: 2rem;    // 32px
+
+$gap: 1rem;
+$border-radius: .25rem;
+
+$border: .125rem;
+
+$font-small: 0.875em;
+
+$bold-weight: 600;

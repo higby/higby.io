@@ -1,0 +1,40 @@
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+:root {}
+
+i.higby {
+  color: $space;
+  font-style: normal;
+}
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  max-width: 650px;
+  margin: 1.5rem auto;
+  overflow-y: scroll;
+  background-color: $background-color;
+  font-family: $primary-font;
+  font-size: 1em;
+  line-height: 1.65;
+  letter-spacing: -0.014em; 
+  color: $text-color;
+}
+
+main, footer {
+  animation: fadeIn 650ms;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

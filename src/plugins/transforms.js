@@ -54,7 +54,7 @@ module.exports = function (config) {
     return content;
   });
 
-  config.addTransform("purgeCSS", async function (content, outputPath) {
+  /* config.addTransform("purgeCSS", async function (content, outputPath) {
     if (outputPath && outputPath.endsWith(".html")) {
       const dom = new JSDOM(content);
       const raw = dom.window.document.querySelector("style").innerHTML;
@@ -78,7 +78,7 @@ module.exports = function (config) {
         });
     }
     return content;
-  });
+  });*/
 
   if (environment == "development") {
     config.addTransform("beautify", function (content, outputPath) {

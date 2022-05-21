@@ -1,3 +1,11 @@
-@import "imports/vars";
-@import "imports/fonts";
-@import "imports/classless";
+@import "base/vars";
+@import "base/fonts";
+@import "base/reset";
+@import "base/base";
+
+@import "components/typography";
+@import "components/layout";
+@import "components/scaffolding";
+@import "components/inline";
+@import "components/embedded";
+@import "components/tables";

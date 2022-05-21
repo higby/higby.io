@@ -3,16 +3,16 @@ layout: base.njk
 ---
 {% include 'header.njk' %}
 <main>
-  <header>
-    <h1>{{ title }}</h1>
-    {% timeAgo page.date, tended %}
-    <p>{{ description }}</p>
-
-    {% if content | toc | safe %}
-    {{ content | toc | safe }}
-    {% endif %}
-    
-  </header>
-  <article>{{ content | safe }}</article>
+  <article>
+    <header>
+      <h1>{{ title }}</h1>
+      <p>{{ description }}</p>
+      {% timeAgo page.date, tended %}
+      {% if content | toc | safe %}
+      {{ content | toc | safe }}
+      {% endif %}
+    </header>
+    {{ content | safe }}
+  </article>
 </main>
 {% include 'footer.njk' %}

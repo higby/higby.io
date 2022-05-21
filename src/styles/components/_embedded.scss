@@ -1,0 +1,21 @@
+figure {
+  margin: $m auto;
+}
+figcaption {
+  text-align: center;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 auto $m auto;
+  background-color: $dark-grey;
+  border-radius: $xs;
+}
+
+svg {}
+video {}
+canvas {}
+audio {}
+object {}

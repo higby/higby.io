@@ -1,0 +1,26 @@
+table {
+  margin: $gap auto;
+  width: 100%;
+  border-collapse: collapse;
+  caption-side: bottom;
+  text-align: center;
+}
+thead {
+  border-bottom: $border solid $medium-grey;
+}
+tfoot {
+  border-top: $border solid $medium-grey;
+}
+tr {
+  &:nth-child(even) {
+    background-color: $dark-grey;
+  }
+}
+th {
+  color: $header-color;
+  font-weight: $bold-weight;
+}
+td {
+  padding: 0.125rem;
+  text-align: center;
+}

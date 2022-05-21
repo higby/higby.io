@@ -1,0 +1,51 @@
+a {
+  cursor: pointer;
+  color: $space;
+  transition: color .5s;
+  &:hover {
+    text-decoration: underline;
+    text-underline-offset: .1em;
+    text-decoration-thickness: .1em;  
+  }
+  &:where(header *, footer *) {
+    &:hover {
+      color: $space;
+      text-decoration: none;
+    }
+  }
+  &:where(header *) {
+    color: $header-color;
+  }
+  &:where(footer *) {
+    color: $footer-color;
+  }
+}
+
+code, pre {
+  color: $code-color;
+  font-family: $mono-font;
+  background-color: $dark-grey;
+}
+code:not(pre *) {
+  border-radius: $border-radius;
+  padding: 0.2rem 0.4rem;
+  font-size: 0.85em;
+}
+pre {
+  overflow: auto;
+  padding: .75rem 1.5rem;
+  white-space: pre;
+  border-radius: $border-radius;
+  font-size: 0.85em;
+}
+
+kbd {
+  border: 1px solid $medium-grey;
+  border-radius: $border-radius;
+  box-shadow: inset 0 -1px 0 $medium-grey;
+  color: $code-color;
+  font-family: $mono-font;
+  font-size: .95em;
+  padding: 0.125rem 0.25rem;
+  vertical-align: middle;
+}

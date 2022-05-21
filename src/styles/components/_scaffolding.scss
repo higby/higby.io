@@ -1,0 +1,36 @@
+p, ol, ul, pre, blockquote, figure, hr, dl {
+  display: block;
+  margin: 1rem 0;
+}
+
+ol, ul {
+  margin: 0 0 0 1.65rem;
+  padding: 0;
+}
+
+ol ol {
+  list-style-type: lower-alpha;
+}
+
+hr {
+  margin: 3rem auto;
+  border-bottom: $border solid $light-grey;
+}
+
+blockquote {
+  margin: 2rem 0;
+  padding: 0 1.5rem;
+  font-style: italic;
+  color: $code-color;
+  border-left: .25rem solid $dark-grey;
+}
+
+cite {
+  display: block;
+  margin: .5rem 0 0 0;
+  font-style: italic;
+  &:before {
+    content: "— ";
+    font-size: 0.95rem;
+  }
+}

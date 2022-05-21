@@ -4,6 +4,7 @@ const path = require("path");
 
 module.exports = function (config) {
   config.addTemplateFormats("scss");
+
   config.addExtension("scss", {
     outputFileExtension: "css",
     compileOptions: {
@@ -11,6 +12,9 @@ module.exports = function (config) {
     },
     compile: function (inputContent, inputPath) {
       let parsed = path.parse(inputPath);
+      if (parsed.name.startsWith("_")) {
+        return;
+      }
       let result = sass.compileString(inputContent, {
         loadPaths: [parsed.dir || ".", this.config.dir.includes],
         style: "compressed",

@@ -1,0 +1,50 @@
+header {
+  color: $header-color;
+  margin-bottom: 3rem;
+}
+
+header:not(article *) {
+  display: flex;
+  justify-content: space-between;
+  nav {
+    align-self: center;
+    display: grid;
+    grid-auto-flow: column;
+    column-gap: .5rem;
+    justify-content: center;
+    i {
+      color: $light-grey;
+      user-select: none;
+      font-style: normal;
+    }
+  }
+}
+
+header:where(article *) {
+  color: $code-color;
+}
+
+footer {
+  margin-top: 3rem;
+  font-size: .8941em;
+  color: $footer-color;
+  /* Layout */
+  display: grid;
+  justify-content: left;
+  grid-auto-flow: column;
+  nav {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-auto-flow: column;
+    column-gap: 3rem;
+    align-content: center;
+    div {
+      display: grid;
+      align-content: start;
+    }
+  }
+  svg {
+    width: 50%;
+    justify-self: right;
+  }
+}

@@ -17,13 +17,17 @@ description: "The styles that you're seeing right now."
 
 ### Fonts
 
-#### Open Sans
+#### Inter
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ultricies, erat non laoreet fringilla, ex tellus commodo tellus, vel dignissim elit elit at neque. Sed fermentum dignissim sodales. Vivamus a nisl diam. Donec a orci ligula. Donec feugiat leo sed magna ultricies ullamcorper. Integer a fermentum quam.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ultricies, erat non laoreet fringilla, ex tellus commodo tellus, vel dignissim elit elit at neque. Sed fermentum dignissim sodales. Vivamus a nisl diam. Donec a orci ligula. Donec feugiat leo sed magna ultricies ullamcorper. Integer a fermentum quam.[^1]
+
+[^1]: Here is the footnote.
 
 #### `IBM Plex Mono`
 
-`Phasellus sit amet lectus nec tortor tempus posuere vitae id magna. Donec ullamcorper, purus id ultricies condimentum, velit elit facilisis leo, id interdum velit tellus eget risus. Fusce condimentum tincidunt ipsum, non varius felis ultricies a. Integer tincidunt mi a odio maximus semper. Ut pharetra urna vel quam ultricies, vehicula ornare urna lacinia.`{.wide}
+`Phasellus sit amet lectus nec tortor tempus posuere vitae id magna. Donec ullamcorper, purus id ultricies condimentum, velit elit facilisis leo, id interdum velit tellus eget risus. Fusce condimentum tincidunt ipsum, non varius felis ultricies a. Integer tincidunt mi a odio maximus semper. Ut pharetra urna vel quam ultricies, vehicula ornare urna lacinia.`{.wide}[^2]
+
+[^2]: Here is the footnote.
 
 - Unordered list item 1
 - Unordered list item 2
@@ -35,7 +39,12 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ultricies, er
 
 ### Code
 
-This is how `inlined code` looks like.
+This is how `inlined code` looks like. [^longnote]
+
+[^longnote]: Here's one with multiple blocks.
+
+    Subsequent paragraphs are indented to show that they
+    belong to the previous footnote.
 
 You can press <kbd>↑</kbd> <kbd>↑</kbd> <kbd>↓</kbd> <kbd>↓</kbd> <kbd>←</kbd> <kbd>→</kbd> <kbd>←</kbd> <kbd>→</kbd> <kbd>B</kbd> <kbd>A</kbd> for a secret.
 
@@ -71,7 +80,9 @@ You can press <kbd>↑</kbd> <kbd>↑</kbd> <kbd>↓</kbd> <kbd>↓</kbd> <kbd>�
 
 ### Blockquotes
 
-Here's a blockquote using the `cite` tag:
+Here's a blockquote using the `cite` tag[^4]:
+
+[^4]: Here is the footnote.
 
 > ...a Blight always upholds their end of the deal.
 > -- Alador Blight

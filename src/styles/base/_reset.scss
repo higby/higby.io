@@ -1,0 +1,6 @@
+// https://github.com/elad2412/the-new-css-reset/ 
+
+*:where(:not(ul, ol, details, summary, iframe, canvas, img, svg, video):not(svg *, symbol *)) {
+  all: unset;
+  display: revert;
+}
