@@ -19,7 +19,9 @@ description: "The styles that you're seeing right now."
 
 #### Open Sans
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ultricies, erat non laoreet fringilla, ex tellus commodo tellus, vel dignissim elit elit at neque. Sed fermentum dignissim sodales. Vivamus a nisl diam. Donec a orci ligula. Donec feugiat leo sed magna ultricies ullamcorper. Integer a fermentum quam.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ultricies, erat non laoreet fringilla, ex tellus commodo tellus, vel dignissim elit elit at neque. Sed fermentum dignissim sodales. Vivamus a nisl diam. Donec a orci ligula. Donec feugiat leo sed magna ultricies ullamcorper. Integer a fermentum quam. [^1]
+
+[^1]: And this is a footnote
 
 #### `IBM Plex Mono`
 
