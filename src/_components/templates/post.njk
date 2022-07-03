@@ -1,0 +1,16 @@
+---
+layout: base
+---
+
+{% include 'organisms/header.njk' %}
+<main>
+  <article>
+    <h1>{{ title }}</h1>
+    {% timeAgo page.date, tended %}
+    {% if content | toc | safe %}
+      {{ content | toc | safe }}
+    {% endif %}
+    {{ content | safe }}
+  </article>
+</main>
+{% include 'organisms/footer.njk' %}

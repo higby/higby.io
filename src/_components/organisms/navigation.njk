@@ -1,0 +1,20 @@
+<nav class="development">
+
+{% for page in collections.all %}
+<a href='{{ page.url }}'>{{ page.url }}</a><br>
+{% endfor %}
+
+</nav>
+
+<style>
+{% renderTemplate 'scss' %}
+
+.development {
+  position: fixed;
+  top: 4rem;
+  left: 1rem;
+  max-width: 15vw;
+}
+
+{% endrenderTemplate %}
+</style>

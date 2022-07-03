@@ -1,0 +1,10 @@
+---
+permalink: "/_redirects"
+eleventyExcludeFromCollections: true
+layout: null
+---
+
+{% for URL in netlify.domain_aliases %}https://{{ URL }}/* https://{{ site.url }}/:splat 301!
+{% endfor %}
+/garden/ocd /ocd
+/garden/paleontology /paleontology

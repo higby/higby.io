@@ -1,0 +1,119 @@
+---
+title: Garden
+tags: collections
+layout: page
+---
+
+<nav class='lattice'>
+  <ul>
+    {% for plant in collections.masonryGrid1 %}
+      <li>
+        <a href="{{ plant.url }}">{{ plant.data.title }}</a>
+        {% timeAgo plant.date, plant.data.tended %}
+        <p>{{ plant.data.description }}</p>
+      </li>
+    {% endfor %}
+  </ul>
+    <ul>
+    {% for plant in collections.masonryGrid2 %}
+      <li>
+        <a href="{{ plant.url }}">{{ plant.data.title }}</a>
+        {% timeAgo plant.date, plant.data.tended %}
+        <p>{{ plant.data.description }}</p>
+      </li>
+    {% endfor %}
+  </ul>
+    <ul>
+    {% for plant in collections.masonryGrid3 %}
+      <li>
+        <a href="{{ plant.url }}">{{ plant.data.title }}</a>
+        {% timeAgo plant.date, plant.data.tended %}
+        <p>{{ plant.data.description }}</p>
+      </li>
+    {% endfor %}
+  </ul>
+</nav>
+
+
+<style>
+  {% renderTemplate "scss" %}
+  @import './src/_styles/vars';
+
+  .lattice {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    ul {
+      display: grid;
+      gap: 1rem;
+      margin: 0;
+      list-style-type: none;
+    }
+    li {
+      background-color: $dark-grey;
+      border-radius: $border-radius;
+      padding: 1rem;
+      margin: 0;
+    }
+    a {
+      font-weight: $bold-weight;
+      font-size: 1em;
+    }
+    p {
+      font-size: 0.95em;
+      margin: 0;
+    }
+    time {
+      margin: .5rem 0;
+      display: block;
+      font-size: 0.85em;
+      color: $footer-color;
+    }
+  }
+
+  @media screen and (max-width: 700px) {
+ .lattice {
+    display: block;
+    ul {
+    margin-top: 1rem;
+    }
+  }
+ 
+}
+
+  {% endrenderTemplate %}
+</style>
+
+{# 
+  For the day when `grid-template-rows: masonry` becomes more widely supported
+  https://www.smashingmagazine.com/native-css-masonry-layout-css-grid/
+  
+  <ol>
+    {% for plant in collections.garden %}
+      <li>
+        <a href="{{ plant.url }}">{{ plant.data.title }}</a>
+        {% timeAgo plant.date, plant.data.tended %}
+        <p>{{ plant.data.description }}</p>
+      </li>
+    {% endfor %}
+  </ol>
+
+  .lattice {
+    ol {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      grid-template-rows: masonry;
+      align-tracks: stretch
+      margin: 0;
+      list-style-type: none;
+    }
+    li {
+      background-color: $dark-grey;
+      border-radius: $border-radius;
+      padding: 1rem;
+      margin: 0;
+    }
+  }
+
+#}

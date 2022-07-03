@@ -1,0 +1,10 @@
+---
+layout: base
+---
+
+{% include 'organisms/header.njk' %}
+<main>
+  <h1>{{ title }}</h1>
+  {{ content | safe }}
+</main>
+{% include 'organisms/footer.njk' %}

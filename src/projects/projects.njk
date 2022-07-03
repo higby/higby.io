@@ -1,0 +1,87 @@
+---
+title: Projects
+---
+
+<nav class='resume'>
+  <h2>Coding</h2>
+  <ol>
+    {% for project in coding %}
+      <li>
+        <time>{{ project.year }}</time>
+        <span><a href="{{ project.url }}">{{ project.name }}</a></span>
+        <p>{{ project.description }}</p>
+      </li>
+    {% endfor %}
+  </ol>
+
+  <h2>Writing</h2>
+    <ol>
+      {% for project in writing %}
+        <li>
+          <time>{{ project.year }}</time>
+          <span><a href="{{ project.url }}">{{ project.name }}</a></span>
+          <p>{{ project.description }}</p>
+        </li>
+      {% endfor %}
+    </ol>
+</nav>
+
+<style>
+  {% renderTemplate "scss" %}
+  @import './src/_styles/vars';
+
+  .resume {
+    font-size: 0.95rem;
+    a {
+      font-size: 1.125em;
+    }
+    p {
+      margin: 0;
+      font-size: 1em;
+      color: $code-color;
+    }
+    ol {
+      list-style: none;
+      margin: 0;
+      display: grid;
+      gap: 2rem;
+    }
+    li {
+      display: grid;
+      grid-template-columns: 12rem auto;
+      row-gap: .5rem;
+      margin: 0;
+    }
+    time {
+      display: grid;
+      grid-auto-flow: column;
+      grid-row: span 2;
+      color: $footer-color;
+      &:after {
+        justify-self: baseline;
+        content: "//";
+        color: $light-grey;
+     }
+    }
+  }
+
+  @media screen and (max-width: 700px) {
+  .resume {
+    ol li {
+      grid-template-columns: 1fr;
+      row-gap: 0.5rem;
+      span {
+        grid-row: 1 / 2;
+      }
+      time {
+        grid-row: 2 / 3;
+        &:after {
+          content: "";
+        }
+      }
+    }
+  }
+}
+
+  {% endrenderTemplate %}
+</style>
