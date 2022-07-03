@@ -7,5 +7,5 @@ module.exports = {
   github: "higby",
   twitter: "higby_",
   instagram: "higby_",
-  url: "www.higby.io",
+  url: "higby.io",
 };
