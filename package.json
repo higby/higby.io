@@ -35,7 +35,7 @@
     "qs": "^6.10.3",
     "rimraf": "^3.0.2",
     "sass": "^1.50.0",
-    "sharp": "^0.30.4",
+    "sharp": "^0.30.5",
     "title-case": "^3.0.3"
   },
   "devDependencies": {
