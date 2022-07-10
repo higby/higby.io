@@ -5,10 +5,7 @@ const shortcodes = require("./utils/shortcodes");
 const markdown = require("./utils/markdown/index");
 const extensions = require("./utils/extensions");
 
-const { EleventyRenderPlugin } = require("@11ty/eleventy");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
-const sass = require("sass");
-const path = require("path");
 
 module.exports = function (config) {
   config.setQuietMode(true);
