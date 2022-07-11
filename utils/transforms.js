@@ -66,6 +66,23 @@ module.exports = function (config) {
     return content;
   });
 
+  config.addTransform(
+    "consolidateStyles",
+    async function (content, outputPath) {
+      if (outputPath && outputPath.endsWith(".html")) {
+        const dom = new JSDOM(content);
+        const styles = [...dom.window.document.querySelectorAll("style")];
+        for (var i = 1; i < styles.length; i++) {
+          // Start at 1 to avoid first
+          styles[0].innerHTML += styles[i].innerHTML;
+          styles[i].remove();
+        }
+        content = dom.serialize();
+      }
+      return content;
+    }
+  );
+
   if (environment == "development") {
     config.addTransform("beautify", function (content, outputPath) {
       if (outputPath && outputPath.endsWith(".html")) {

@@ -8,13 +8,12 @@ module.exports = function (config) {
   });
 
   // UTC
-  /*config.addFilter("technical", (date) => {
-    const utc = date.toUTCString();
-    return moment
-      .utc(utc)
-      .tz("America/Los_Angeles")
-      .format("YYYY-MM-DD, HH:mm:ss z");
-  });*/
+  config.addFilter("dateTechnical", (date) => {
+    if (date == "now") {
+      date = Date.now();
+    }
+    return moment(date).toString();
+  });
 
   config.addPlugin(toc, {
     wrapper: "details",
