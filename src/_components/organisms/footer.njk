@@ -1,17 +1,33 @@
 <footer>
   <nav>
-    <div>
-      <a href="mailto:{{ site.email }}" target="_blank" rel="noopener noreferrer">branden(@)higby.io</a>
-      <a href="https://keys.openpgp.org/search?q=652B8C7D91BC4895" target="_blank" rel="noopener noreferrer">{{ site.pgp }}</a>
-      <a href="https://twitter.com/{{ site.twitter }}" target="_blank" rel="noopener noreferrer">twitter</a>
-      <a href="https://github.com/{{ site.github }}" target="_blank" rel="noopener noreferrer">github</a>
-    </div>
-    <div>
-      <a href="/humans.txt">humans.txt</a>
-      <a href="/styleguide">styleguide</a>
-      <a href="/feed.xml">rss feed</a>
-      <span>{% pageSize %}</span>
-    </div>
+    <ul>
+      <li>
+        <a href="mailto:{{ site.email }}" target="_blank" rel="noopener noreferrer">branden(@)higby.io</a>
+      </li>
+      <li>
+        <a href="https://keys.openpgp.org/search?q=652B8C7D91BC4895" target="_blank" rel="noopener noreferrer">{{ site.pgp }}</a>
+      </li>
+      <li>
+        <a href="https://twitter.com/{{ site.twitter }}" target="_blank" rel="noopener noreferrer">twitter</a>
+      </li>
+      <li>
+        <a href="https://github.com/{{ site.github }}" target="_blank" rel="noopener noreferrer">github</a>
+      </li>
+    </ul>
+    <ul>
+      <li>
+        <a href="/humans.txt">Humans.txt</a>
+      </li>
+      <li>
+       <a href="/styleguide">Styleguide</a>
+      </li>
+      <li>
+        <a href="/feed.xml">RSS feed</a>
+      </li>
+      <li>
+        <span>{% pageSize %}</span>
+      </li>
+    </ul>
   </nav>
 
   {% include 'atoms/higby.svg' %}

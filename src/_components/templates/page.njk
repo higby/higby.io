@@ -4,7 +4,7 @@ layout: base
 
 {% include 'organisms/header.njk' %}
 <main>
-  <h1>{{ title }}</h1>
-  {{ content | safe }}
+  <header><h1>{{ title }}</h1></header>
+  <article>{{ content | safe }}</article>
 </main>
 {% include 'organisms/footer.njk' %}

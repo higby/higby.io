@@ -5,33 +5,15 @@ layout: page
 ---
 
 <nav class='lattice'>
-  <ul>
-    {% for plant in collections.masonryGrid1 %}
+  <ol>
+    {% for plant in collections.garden %}
       <li>
         <a href="{{ plant.url }}">{{ plant.data.title }}</a>
         {% timeAgo plant.date, plant.data.tended %}
         <p>{{ plant.data.description }}</p>
       </li>
     {% endfor %}
-  </ul>
-    <ul>
-    {% for plant in collections.masonryGrid2 %}
-      <li>
-        <a href="{{ plant.url }}">{{ plant.data.title }}</a>
-        {% timeAgo plant.date, plant.data.tended %}
-        <p>{{ plant.data.description }}</p>
-      </li>
-    {% endfor %}
-  </ul>
-    <ul>
-    {% for plant in collections.masonryGrid3 %}
-      <li>
-        <a href="{{ plant.url }}">{{ plant.data.title }}</a>
-        {% timeAgo plant.date, plant.data.tended %}
-        <p>{{ plant.data.description }}</p>
-      </li>
-    {% endfor %}
-  </ul>
+  </ol>
 </nav>
 
 
@@ -88,15 +70,7 @@ layout: page
   For the day when `grid-template-rows: masonry` becomes more widely supported
   https://www.smashingmagazine.com/native-css-masonry-layout-css-grid/
   
-  <ol>
-    {% for plant in collections.garden %}
-      <li>
-        <a href="{{ plant.url }}">{{ plant.data.title }}</a>
-        {% timeAgo plant.date, plant.data.tended %}
-        <p>{{ plant.data.description }}</p>
-      </li>
-    {% endfor %}
-  </ol>
+  
 
   .lattice {
     ol {

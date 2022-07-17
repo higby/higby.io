@@ -11,7 +11,7 @@ module.exports = function (config) {
     const localText = dom.window.document.querySelector("a").innerHTML;
 
     if (this.page.url == localUrl) {
-      return `<span>${localText}</span>`;
+      return `<span class='higby'>${localText}</span>`;
     }
     return data;
   });

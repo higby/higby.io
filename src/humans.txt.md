@@ -5,9 +5,9 @@ description: "The many tools, sites, and people that helped me make this site."
 ---
 
 <div class="neonsign">
-  <h2><span>higby.io <code> Major Revision 3</code></span></h2>
-  <p>v1 Inital Commit: <code>{{ "2017-10-12, 17:56:00 PDT" | dateTechnical }}</code></p>
-  <p>v3 Last Updated: <code>{{ "now" | dateTechnical }}</code></p>
+  <p>higby.io <code> Major Revision 3</code></p>
+  <p>v1 Inital Commit: <time>{{ "2017-10-12, 17:56:00 PDT" | dateTechnical }}</time></p>
+  <p>v3 Last Updated: <time>{{ "now" | dateTechnical }}</time></p>
 </div>
 
 ## Site

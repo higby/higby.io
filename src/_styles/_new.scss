@@ -1,0 +1,444 @@
+$rhythm: #7C7988ff;
+$independence: #363F56ff;
+$glaucous: #5C7BAAff;
+$shadow-blue: #7B8FB0ff;
+$beau-blue: #D1DCEAff;
+$raisin-black: #262221ff;
+
+*, *::before, *::after {}
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+Root
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+:root {}
+
+i.higby, span.higby {
+  font-style: normal;
+  color: $space;
+}
+
+svg.higby {
+  fill: $tattoo-color;
+}
+html {}
+body {
+  max-width: 650px;
+  margin: 1rem auto;
+  letter-spacing: 0.015em;
+  line-height: 1.65;
+  font-family: $primary-font;
+  background-color: $background-color;
+  color: $text-color;
+}
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+Content sectioning
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+h1, h2, h3, h4, h5, h6 {
+  color: $header-color;
+  margin: 1rem 0;
+  font-weight: 600;
+}
+
+h1 { font-size: 2em; }
+h2 { font-size: 1.5874em; }
+h3 { font-size: 1.2599em; }
+p { font-size: 1em; }
+small { font-size: .7937em; }
+
+body > header {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: space-between;
+  h1 {
+    font-size: 1.65rem;
+    a {
+      color: $header-color;
+      &:hover {
+        text-decoration: none;
+        color: $space;
+      }
+    }
+  }
+  nav {
+    align-self: center;
+    display: grid;
+    grid-auto-flow: column;
+    column-gap: .5rem;
+    a {
+      color: $header-color;
+      &:hover {
+        text-decoration: none;
+        color: $space;
+      }
+    }
+  }
+  span {
+    user-select: none;
+    color: $code-color;
+  }
+}
+
+nav {}
+nav ul, nav ol {}
+nav li {}
+nav a {}
+nav a:visited {}
+nav a:hover {}
+nav a:active {}
+
+main {}
+
+article {}
+
+section {}
+
+aside {}
+
+footer {
+  font-size: .875em;
+  display: grid;
+  grid-template-columns: auto 200px;
+  margin: 4rem 0;
+  nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-content: center;
+  }
+  ul {
+    margin: 0;
+    list-style: none;
+  }
+  li {
+    margin: .125rem 0;
+  }
+  a {
+    color: $footer-color;
+    &:hover {
+      text-decoration: none;
+      color: $space;
+    }
+  }
+}
+
+address {}
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+Text block content
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+/* Overall styling, e.g. vertical spacing */
+p, ol, ul, pre, blockquote, figure, figcaption, dl {
+  margin: 1rem 0;
+  display: block;
+}
+
+ol, ul {
+  margin-left: 1.5rem;
+  padding: 0; 
+}
+ol {}
+ul {}
+li {
+  margin: .5rem 0;
+  &>ol, >ul {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+ol ol, ol ul, ul ul, ul ol {}
+li li {}
+
+code, pre {
+  color: #bfbfbf;
+  font-family: $mono-font;
+  background-color: $dark-grey;
+}
+code:not(pre *) {
+  border-radius: $border-radius;
+  padding: 0.2rem 0.4rem;
+  font-size: 0.875em;
+}
+pre {
+  overflow: auto;
+  border-radius: $border-radius;
+  padding: .75rem 1.5rem;
+  font-size: 0.875em;
+}
+pre code {}
+pre samp {}
+
+figure {
+  display: grid;
+}
+figcaption {
+  justify-self: center;
+  font-size: .875em;
+  max-width: calc(650px - 2rem);
+}
+
+hr {
+  all: unset;
+  margin: 2rem auto;
+  border-bottom: $border solid $light-grey;
+  display: block;
+}
+
+dl {}
+dt {}
+dd {}
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+Inline text semantics
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+a {
+  color: $space;
+  text-decoration: none;
+  transition: color .5s;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+strong, b {
+  //font-weight: 600;
+}
+
+blockquote {
+  padding: 0 1.5rem;
+  border-left: .25rem solid $space;
+}
+cite {
+  display: block;
+  margin-top: .5rem;
+  font-style: italic;
+  &:before {
+    content: "— ";
+    font-size: 0.875rem;
+  }
+}
+
+s {}
+
+mark {}
+
+/* If you specify a font size, consider using the `em` unit so that it works
+universally, e.g. for both `h1 small` and `p small` */
+small {}
+sub {}
+sup {}
+
+code {}
+
+dfn {}
+abbr {
+  text-decoration: underline dotted .125rem;
+  &:hover {
+    text-decoration: underline dotted .125rem $space;
+  }
+}
+abbr[title] {}
+
+var {}
+kbd {}
+kbd kbd {}
+samp {}
+
+u {}
+
+data {}
+time {}
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+Demarcating edits
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+del {}
+ins {}
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+Embedded content
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+img {
+  height: auto;
+  border-radius: .25rem;
+}
+svg {}
+video {}
+canvas {}
+audio {}
+object {}
+
+noscript {}
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+Table content
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+table {}
+caption {}
+col:first-child {}
+thead {}
+tbody {}
+tfoot {}
+tr {}
+th {}
+td {}
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+Forms
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+fieldset {}
+fieldset:disabled {}
+legend {}
+
+form {}
+
+label {}
+
+::placeholder {}
+:focus::placeholder {}
+
+/* Overall styling, e.g. vertical spacing */
+input, textarea, select, button {}
+
+/* `textarea` and `input` elements that share a similar look and similar styling
+capabilities */
+/* - common styling */
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+input[type="search"],
+input[type="url"],
+input[type="date"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="week"],
+input[type="time"] {}
+/* - individual styling */
+textarea {}
+input[type="text"] {}
+input[type="password"] {}
+input[type="email"] {}
+input[type="tel"] {}
+input[type="number"] {}
+input[type="search"] {}
+input[type="url"] {}
+input[type="date"] {}
+input[type="datetime-local"] {}
+input[type="month"] {}
+input[type="week"] {}
+input[type="time"] {}
+/* Tick boxes */
+input[type="checkbox"], input[type="radio"] {}
+input[type="checkbox"]:checked, input[type="radio"]:checked {}
+input[type="checkbox"] {}
+input[type="checkbox"]:checked {}
+input[type="radio"] {}
+input[type="radio"]:checked {}
+/* Other input fields, some with limited styling capabilities */
+input[type="file"] {}
+input[type="color"] {}
+input[type="range"] {}
+
+select {}
+optgroup {}
+option {}
+option:checked {}
+datalist {}
+
+button,
+input[type="submit"] {}
+button:disabled,
+input[type="submit"]:disabled {}
+button.secondary {}
+button.secondary:disabled {}
+
+/* This matches forms or form elements that are invalid *and* have been
+interacted with. Note that:
+1) You may need to add the `interacted` class to forms yourself
+2) You may need to add the `touched` class to form fields yourself
+3) `:user-invalid` is a working draft and not yet supported by most browsers
+4) `:-moz-ui-invalid` is non-standard and only works in Firefox
+Form validation error messages will appear (in capable browsers) regardless of
+this styling. You can omit 1) and 2) and still have working forms. Perfect
+example of progressive enhancement. */
+/* Applies to invalid forms */
+form.interacted:invalid {}
+/* Applies to invalid form fields. You would need to repeat your declarations
+for the following three groups of selectors individually. Browsers completely
+ignore any rule that contains a selector they do not know. */
+form.interacted :invalid, form .touched:invalid {}
+:user-invalid {}
+:-moz-ui-invalid {}
+
+output {}
+
+progress {}
+meter {}
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+Interactive elements
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+details {}
+details[open] {}
+summary {}
+details[open] summary {}
+
+dialog {}
+dialog::backdrop {}
+
+/* Some form fields, `details`, elements with `tabindex`, and possibly other
+elements can be focussed. You should use `:focus-visible` instead of `:focus`
+whenever possible. As the former is not yet widely supported, you need to do it
+as follows:
+1) Set styling on focus
+2) If browser supports `:focus-visible`, revert/unset the styling from 1)
+3) If the element matches `:focus-visible`, apply the styling again */
+:focus {}
+:focus:not(:focus-visible) {}
+:focus-visible {}
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+Media queries
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+@media (prefers-reduced-motion: reduce) {
+}
+
+@media (prefers-color-scheme: dark) {
+}
+
+@media (orientation: portrait) {
+}
+
+@media (orientation: landscape) {
+}
+
+@media print {
+}
+
+
+/*
+This file evolved from Natural Selection:
+https://github.com/frontaid/natural-selection
+*/

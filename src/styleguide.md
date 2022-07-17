@@ -1,105 +1,198 @@
 ---
-title: "styleguide"
+title: "Styleguide"
 description: "The styles that you're seeing right now."
+layout: post
 ---
 
-## Typography
+# Headings
 
-| Heading     | Font Size |
-| :---------- | --------: |
-| <h1>h1</h1> |    1.75em |
-| <h2>h2</h2> |  1.5647em |
-| <h3>h3</h3> |   1.399em |
-| <h4>h4</h4> |   1.209em |
-| <h5>h5</h5> |  1.1184em |
+# Heading 1
 
-{.headings}
+## Heading 2
 
-### Fonts
+### Heading 3
 
-#### Inter
+#### Heading 4
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ultricies, erat non laoreet fringilla, ex tellus commodo tellus, vel dignissim elit elit at neque. Sed fermentum dignissim sodales. Vivamus a nisl diam. Donec a orci ligula. Donec feugiat leo sed magna ultricies ullamcorper. Integer a fermentum quam.[^1]
+##### Heading 5
 
-[^1]: Here is the footnote.
+###### Heading 6
 
-#### `IBM Plex Mono`
+---
 
-`Phasellus sit amet lectus nec tortor tempus posuere vitae id magna. Donec ullamcorper, purus id ultricies condimentum, velit elit facilisis leo, id interdum velit tellus eget risus. Fusce condimentum tincidunt ipsum, non varius felis ultricies a. Integer tincidunt mi a odio maximus semper. Ut pharetra urna vel quam ultricies, vehicula ornare urna lacinia.`{.wide}[^2]
+# Headings with Text
 
-[^2]: Here is the footnote.
+# Heading 1
 
-- Unordered list item 1
-- Unordered list item 2
-  - Unordered list item 3
-    - Unordered list item 4
-- Unordered list item 5
-  - Unordered list item 6
+Lorem ipsum dolor sit amet, adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl.
 
-1. Ordered list item 1
-2. Ordered list item 2
-3. Ordered list item 3
+## Heading 2
 
-### Code
+Lorem ipsum dolor sit amet, adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl.
 
-This is how `inlined code` looks like. [^longnote]
+### Heading 3
 
-[^longnote]: Here's one with multiple blocks.
+Lorem ipsum dolor sit amet, adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl.
 
-    Subsequent paragraphs are indented to show that they
-    belong to the previous footnote.
+#### Heading 4
 
-You can press <kbd>↑</kbd> <kbd>↑</kbd> <kbd>↓</kbd> <kbd>↓</kbd> <kbd>←</kbd> <kbd>→</kbd> <kbd>←</kbd> <kbd>→</kbd> <kbd>B</kbd> <kbd>A</kbd> for a secret.
+Lorem ipsum dolor sit amet, adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl.
 
-```html
-<!-- This is a pre with HTML syntax highlighting -->
+##### Heading 5
 
-<body>
-  <p>My favorite number is <code class="higby">65</code>!</p>
-</body>
-```
+Lorem ipsum dolor sit amet, adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl.
 
-## Colors
+###### Heading 6
 
-<div class="colors">
-<span></span>
-<span></span>
-<span></span>
-<span></span>
-<span></span>
-</div>
+Lorem ipsum dolor sit amet, adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl.
 
-## Grid
+---
 
-## Elements
+# Block Elements
 
-### Images
+## Paragraphs and Images
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl. Praesent mattis, massa quis luctus fermentum, turpis mi volutpat justo, eu volutpat enim diam eget metus. Maecenas ornare tortor. ^[Also we've got footnotes]
 
 ![Example Kitten](https://www.shera.gay/gay.jpg "Images Can Be Captioned")
 
-### HR
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem.
+
+## Blockquote
+
+This is a standard paragraph. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+
+> "**This is a blockquote**. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl."
+
+This is a standard paragraph. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+
+_Note: the [Figure-Figcaption](https://html5doctor.com/the-figure-figcaption-elements/) and [Details-Summary](https://html5doctor.com/the-details-and-summary-elements/) elements are not currently supported in markdown._
 
 ---
 
-### Blockquotes
+# Text Elements
 
-Here's a blockquote using the `cite` tag[^4]:
+The [a element](#), [external a element](https://example.com), and [a element with title](# "Example Title") examples
 
-[^4]: Here is the footnote.
+The <abbr>abbr element</abbr> and an <abbr title="Abbreviation">abbr</abbr> element with title examples
 
-> ...a Blight always upholds their end of the deal.
-> -- Alador Blight
+The **b element** example
 
-And one without:
+The <cite>cite element</cite> example
 
-> This site is made with Eleventy
+The `code element` example
 
-### Tables
+The <data value="3967381398">data element</data> example
 
-| Name          | Responsible                                 |
-| :------------ | :------------------------------------------ |
-| Count Chocula | Acts responsible, is not                    |
-| Franken Berry | Is capable, but isn't                       |
-| Boo Berry     | Only when alone                             |
-| Fruit Brute   | Physically incapable                        |
-| Yummy Mummy   | Insists they're the most responsible, isn't |
+The ~~del element~~ example
+
+The <dfn>dfn element</dfn> and <dfn title="Title text">dfn element with title</dfn> examples
+
+The _em element_ example
+
+The _i element_ example
+
+The <ins>ins element</ins> example
+
+The <kbd>kbd element</kbd> example
+
+The <mark>mark element</mark> example
+
+The <q>q element</q> example
+
+The <q>q element <q>inside</q> a q element</q> example
+
+The <s>s element</s> example
+
+The <samp>samp element</samp> example
+
+The <small>small element</small> example
+
+The <span>span element</span> example
+
+The **strong element** example
+
+The <sub>sub element</sub> example
+
+The <sup>sup element</sup> example
+
+The <time datetime="2005-05-15 19:00">time element</time> example
+
+The <u>u element</u> example
+
+The <var>var element</var> example
+
+---
+
+# Monospace / Preformatted
+
+Code block wrapped in "pre" and "code" tags:
+
+```javascript
+// Loop through Divs using Javascript.
+var divs = document.querySelectorAll("div"),
+  i;
+
+for (i = 0; i < divs.length; ++i) {
+  divs[i].style.color = "green";
+}
+```
+
+Monospace Text wrapped in "pre" tags:
+
+<pre>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl.</pre>
+
+---
+
+# List Types
+
+## Ordered List
+
+1. List Item 1
+2. List Item 2
+3. List Item 3
+   1. List Item 3.1
+   2. List Item 3.2
+      1. List Item 3.2.1
+      2. List Item 3.2 2
+   3. List Item 3.3
+4. List Item 4
+
+## Unordered List
+
+- List Item 1
+- List Item 2
+- List Item 3
+  - List Item 3.1
+  - List Item 3.2
+    - List Item 3.2.1
+    - List Item 3.2 2
+  - List Item 3.3
+- List Item 4
+
+## Definition List
+
+<dl>
+  <dt>Definition Term 1</dt>
+  <dd>Definition Description 1</dd>
+  <dt>Definition Term 2</dt>
+  <dd>Definition Description 2</dd>
+</dl>
+
+---
+
+# Tables
+
+| Table Header 1 | Table Header 2 | Table Header 3 |
+| -------------- | -------------- | -------------- |
+| Division 1     | Division 2     | Division 3     |
+| Division 1     | Division 2     | Division 3     |
+| Division 1     | Division 2     | Division 3     |
+
+---
+
+# Media and Form Elements
+
+The remaining sections contain elements that cannot be represented in markdown. Please consult [the HTML version](https://github.com/bryanbraun/poor-mans-styleguide/blob/gh-pages/index.html), to see these elements.

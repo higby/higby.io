@@ -7,8 +7,8 @@ title: Projects
   <ol>
     {% for project in coding %}
       <li>
+        <a href="{{ project.url }}">{{ project.name }}</a>
         <time>{{ project.year }}</time>
-        <span><a href="{{ project.url }}">{{ project.name }}</a></span>
         <p>{{ project.description }}</p>
       </li>
     {% endfor %}
@@ -18,8 +18,8 @@ title: Projects
     <ol>
       {% for project in writing %}
         <li>
-          <time>{{ project.year }}</time>
-          <span><a href="{{ project.url }}">{{ project.name }}</a></span>
+          <a href="{{ project.url }}">{{ project.name }}</a>
+          <time>{{ project.year }}</time> 
           <p>{{ project.description }}</p>
         </li>
       {% endfor %}

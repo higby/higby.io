@@ -22,12 +22,12 @@ body {
   max-width: 650px;
   margin: 1.5rem auto;
   overflow-y: scroll;
-  background-color: $background-color;
   font-family: $primary-font;
   font-size: 1em;
   line-height: 1.65;
   letter-spacing: -0.014em; 
   color: $text-color;
+  background-color: $background-color;
 }
 
 main, footer {
