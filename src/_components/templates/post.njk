@@ -7,12 +7,10 @@ layout: base
   <header>
     <h1>{{ title }}</h1>
     {% timeAgo page.date, tended %}
-  </header>
-  <aside>
     {% if content | toc | safe %}
       {{ content | toc | safe }}
     {% endif %}
-  </aside>
+  </header>
   <article>{{ content | safe }}</article>
 </main>
 {% include 'organisms/footer.njk' %}

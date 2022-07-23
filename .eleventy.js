@@ -11,6 +11,10 @@ module.exports = function (config) {
   config.setQuietMode(true);
   config.setUseGitIgnore(false);
 
+  config.setFrontMatterParsingOptions({
+    sections: true,
+  });
+
   config.ignores.add("src/_assets/");
   config.addWatchTarget("src/_assets/");
   config.addPassthroughCopy({ "src/_assets": "/" });

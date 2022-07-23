@@ -8,7 +8,8 @@ tags: essay
 
 > **Note:** This was originally written for a Speech and Debate tournament and is in an early/ draft form. Please ignore any strange tenses or references to tournaments/ competitions.
 
-Paleontologists are the first graders of the professional world.
+---aaa
+---
 
 Remember the dinosaur kids back in elementary school? Reading time, they had the dinosaur encyclopedia, lunch, dinosaur lunchbox. And at sleepovers they busted out the dinosaur pajamas, and you got to watch Land Before Time.
 

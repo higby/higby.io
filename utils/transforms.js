@@ -74,7 +74,7 @@ module.exports = function (config) {
         const styles = [...dom.window.document.querySelectorAll("style")];
         for (var i = 1; i < styles.length; i++) {
           // Start at 1 to avoid first
-          styles[0].innerHTML += styles[i].innerHTML;
+          //styles[0].innerHTML += styles[i].innerHTML;
           styles[i].remove();
         }
         content = dom.serialize();
