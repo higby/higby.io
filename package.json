@@ -1,0 +1,10 @@
+{
+  "name": "higby.io",
+  "private": true,
+  "license": "MIT",
+  "type": "module",
+  "author": "Branden Higby <b@higby.io> (https://www.higby.io)",
+  "scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	}
+}
