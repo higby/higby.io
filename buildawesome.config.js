@@ -1,4 +1,5 @@
 import { eleventyImageTransformPlugin } from "@11ty/eleventy-img"
+import { VentoPlugin } from "eleventy-plugin-vento"
 import { bundle, Features } from "lightningcss"
 
 export default async function ($config) {
@@ -22,4 +23,10 @@ export default async function ($config) {
 		formats: ["avif", "webp", "jpeg"],
 		transformOnRequest: false
 	})
+
+	$config.addPlugin(VentoPlugin)
+
+	$config.setHtmlTemplateEngine("vto")
+	$config.setMarkdownTemplateEngine("vto")
+	$config.setTemplateFormats(["html", "md", "css", "vto"])
 }
