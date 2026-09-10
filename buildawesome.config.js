@@ -1,3 +1,4 @@
+import { EleventyHtmlBasePlugin, IdAttributePlugin } from "@11ty/eleventy"
 import { eleventyImageTransformPlugin } from "@11ty/eleventy-img"
 import { VentoPlugin } from "eleventy-plugin-vento"
 import { bundle, Features } from "lightningcss"
@@ -24,6 +25,8 @@ export default async function ($config) {
 		transformOnRequest: false
 	})
 
+	$config.addPlugin(EleventyHtmlBasePlugin)
+	$config.addPlugin(IdAttributePlugin)
 	$config.addPlugin(VentoPlugin)
 
 	$config.setHtmlTemplateEngine("vto")
