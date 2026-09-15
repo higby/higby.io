@@ -10,10 +10,10 @@
 		"lint": "npx @biomejs/biome check"
 	},
 	"dependencies": {
-		"@11ty/eleventy-img": "^7.0.0",
 		"@awesome.me/buildawesome": "^4.0.0-alpha.10",
-		"eleventy-plugin-vento": "^6.0.0",
-		"lightningcss": "^1.33.0"
+		"@higby/eleventy-config": "^3.0.0",
+		"@higby/reset": "^4.0.1",
+		"eleventy-plugin-vento": "^6.0.0"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "2.5.11"
