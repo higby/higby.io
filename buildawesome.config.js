@@ -14,5 +14,5 @@ export default async function ($config) {
 
 	$config.setHtmlTemplateEngine("vto")
 	$config.setMarkdownTemplateEngine("vto")
-	$config.setTemplateFormats(["html", "md", "css", "vto"])
+	$config.setTemplateFormats(["html", "md", "css", "js", "vto"])
 }
