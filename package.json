@@ -12,7 +12,7 @@
 	"dependencies": {
 		"@awesome.me/buildawesome": "^4.0.0-alpha.10",
 		"@higby/eleventy-config": "^3.0.0",
-		"@higby/reset": "^4.0.1",
+		"@higby/reset.css": "^5.0.0",
 		"eleventy-plugin-vento": "^6.0.0"
 	},
 	"devDependencies": {
