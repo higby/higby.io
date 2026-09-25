@@ -1,11 +1,18 @@
 import { EleventyHtmlBasePlugin, IdAttributePlugin } from "@11ty/eleventy"
 import config from "@higby/eleventy-config"
 import { VentoPlugin } from "eleventy-plugin-vento"
+import markdownIt from "markdown-it"
 
 export default async function ($config) {
 	$config.setInputDirectory("source")
 	$config.addPassthroughCopy({ "source/_static/": "/" })
 	$config.ignores.add("source/_static/")
+	$config.setLibrary(
+		"md",
+		markdownIt({
+			breaks: true
+		})
+	)
 
 	$config.addPlugin(config)
 	$config.addPlugin(EleventyHtmlBasePlugin)
